@@ -58,21 +58,21 @@
    "block": 1,
    "focus": "opening",
    "focus_name": "Opening, moves 9-12 (mostly Black Sicilian and vs London/Zukertort)",
-   "games": 10,
-   "analysed": 10,
+   "games": 19,
+   "analysed": 19,
    "complete": false,
    "from": "2026-11-15",
    "to": "2026-11-15",
-   "focus_blunders": 4,
-   "focus_blunders_per50": 20.0,
+   "focus_blunders": 7,
+   "focus_blunders_per50": 18.4,
    "baseline_per50": 21.4,
    "baseline_sd": 5.2,
-   "points_lost_per50": 4.17,
-   "all_blunders_per_game": 2.0,
-   "score_pct": 90.0,
-   "vs_expected": 38.5,
-   "rating_end": 1881,
-   "verdict": "innenfor normal variasjon"
+   "points_lost_per50": 3.44,
+   "all_blunders_per_game": 2.11,
+   "score_pct": 63.2,
+   "vs_expected": 11.8,
+   "rating_end": 1863,
+   "verdict": "trolig bedre"
   }
  ]
 }

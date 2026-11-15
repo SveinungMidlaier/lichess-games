@@ -1,18 +1,18 @@
 # Fokusplan – fremdrift
 
-Oppdatert 2026-11-15 19:05. Blitz 3+0, rated, fra 2026-11-15 18:16. Hver blokk = 50 partier med ett fokus.
+Oppdatert 2026-11-15 22:38. Blitz 3+0, rated, fra 2026-11-15 18:16. Hver blokk = 50 partier med ett fokus.
 
 ## Nå: Opening, moves 9-12 (mostly Black Sicilian and vs London/Zukertort) (blokk 1)
 
-- Partier i blokken: **10 / 50** (motoranalysert: 10)
-- Bukker i fokuskategorien: **20.0** per 50 partier (utgangspunkt 21.4 ± 5.2)
-- Vurdering: **innenfor normal variasjon**
-- Score 90.0 % (+38.5 mot forventet), rating 1881
+- Partier i blokken: **19 / 50** (motoranalysert: 19)
+- Bukker i fokuskategorien: **18.4** per 50 partier (utgangspunkt 21.4 ± 5.2)
+- Vurdering: **trolig bedre**
+- Score 63.2 % (+11.8 mot forventet), rating 1863
 
 ## Alle blokker
 
 | Blokk | Fokus | Partier | Fokusbukker/50 | Utgangspunkt | Vurdering | Score | Mot forventet | Rating |
 |---|---|---|---|---|---|---|---|---|
-| 1 | Opening, moves 9-12 (mostly Black Sicilian and vs London/Zukertort) | 10 | 20.0 | 21.4 ± 5.2 | innenfor normal variasjon | 90.0 % | +38.5 | 1881 |
+| 1 | Opening, moves 9-12 (mostly Black Sicilian and vs London/Zukertort) | 19 | 18.4 | 21.4 ± 5.2 | trolig bedre | 63.2 % | +11.8 | 1863 |
 
 Vurdering: «klar forbedring» = under utgangspunkt − 1,5 standardavvik for 50-partiersblokker; «trolig bedre» = under − 0,5 sd. Tilfeldig variasjon mellom blokker er stor, så se på flere blokker.
