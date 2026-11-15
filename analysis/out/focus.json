@@ -3,7 +3,7 @@
   "games": 1563,
   "from": "2025-11-16",
   "to": "2026-11-15",
-  "analysed_total": 9313,
+  "analysed_total": 9553,
   "earlier_games": 1500,
   "earlier_from": "2024-04-01"
  },
@@ -271,27 +271,27 @@
    "excess": 0.07
   },
   {
-   "theme": "enPassant",
-   "me": 0.09,
-   "opp": 0.05,
-   "excess": 0.05
-  },
-  {
    "theme": "intermezzo",
    "me": 0.29,
    "opp": 0.24,
    "excess": 0.05
   },
   {
-   "theme": "defensiveMove",
-   "me": 10.45,
-   "opp": 10.41,
-   "excess": 0.03
+   "theme": "enPassant",
+   "me": 0.09,
+   "opp": 0.05,
+   "excess": 0.05
   },
   {
    "theme": "queenRookEndgame",
    "me": 0.2,
    "opp": 0.17,
+   "excess": 0.03
+  },
+  {
+   "theme": "defensiveMove",
+   "me": 10.45,
+   "opp": 10.41,
    "excess": 0.03
   },
   {
@@ -301,15 +301,15 @@
    "excess": 0.02
   },
   {
-   "theme": "backRankMate",
-   "me": 0.15,
-   "opp": 0.14,
-   "excess": 0.01
-  },
-  {
    "theme": "hookMate",
    "me": 0.01,
    "opp": 0.0,
+   "excess": 0.01
+  },
+  {
+   "theme": "backRankMate",
+   "me": 0.15,
+   "opp": 0.14,
    "excess": 0.01
   },
   {
@@ -373,15 +373,15 @@
    "excess": -0.06
   },
   {
-   "theme": "rookEndgame",
-   "me": 1.07,
-   "opp": 1.14,
-   "excess": -0.07
-  },
-  {
    "theme": "attraction",
    "me": 0.29,
    "opp": 0.36,
+   "excess": -0.07
+  },
+  {
+   "theme": "rookEndgame",
+   "me": 1.07,
+   "opp": 1.14,
    "excess": -0.07
   },
   {
