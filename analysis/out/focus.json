@@ -1,0 +1,4360 @@
+{
+ "window": {
+  "games": 1563,
+  "from": "2025-11-16",
+  "to": "2026-11-15",
+  "analysed_total": 9313,
+  "earlier_games": 1500,
+  "earlier_from": "2024-04-01"
+ },
+ "rank": [
+  {
+   "id": "opening",
+   "name": "Opening phase",
+   "description": "Blunders in moves 1-12.",
+   "lichess_theme": "opening",
+   "points_lost_per50": 5.71,
+   "opp_points_lost_per50": 4.92,
+   "excess_per50": 0.79,
+   "blunders_per50": 21.4,
+   "avoidable_pct": 65.0,
+   "excess_earlier": 0.98,
+   "block_sd_blunders": 5.2
+  },
+  {
+   "id": "fork",
+   "name": "Allowing forks",
+   "description": "Moves that let one enemy piece attack two of yours.",
+   "lichess_theme": "fork",
+   "points_lost_per50": 3.0,
+   "opp_points_lost_per50": 2.27,
+   "excess_per50": 0.74,
+   "blunders_per50": 8.1,
+   "avoidable_pct": 48.0,
+   "excess_earlier": 0.31,
+   "block_sd_blunders": 2.4
+  },
+  {
+   "id": "hanging",
+   "name": "Hanging pieces",
+   "description": "Leaving a piece or pawn en prise, so the opponent simply takes it.",
+   "lichess_theme": "hangingPiece",
+   "points_lost_per50": 4.47,
+   "opp_points_lost_per50": 4.12,
+   "excess_per50": 0.35,
+   "blunders_per50": 10.2,
+   "avoidable_pct": 71.0,
+   "excess_earlier": 0.64,
+   "block_sd_blunders": 4.3
+  },
+  {
+   "id": "king_safety",
+   "name": "Mating attacks against you",
+   "description": "Blunders that allow a forced mate.",
+   "lichess_theme": "mateIn2",
+   "points_lost_per50": 2.13,
+   "opp_points_lost_per50": 1.97,
+   "excess_per50": 0.16,
+   "blunders_per50": 3.9,
+   "avoidable_pct": 47.0,
+   "excess_earlier": 0.12,
+   "block_sd_blunders": 2.1
+  },
+  {
+   "id": "pin_skewer",
+   "name": "Pins and skewers",
+   "description": "Moves that walk into a pin or a skewer.",
+   "lichess_theme": "pin",
+   "points_lost_per50": 1.83,
+   "opp_points_lost_per50": 1.7,
+   "excess_per50": 0.14,
+   "blunders_per50": 4.8,
+   "avoidable_pct": 42.0,
+   "excess_earlier": 0.07,
+   "block_sd_blunders": 2.5
+  },
+  {
+   "id": "defending",
+   "name": "Defending worse positions",
+   "description": "Blunders while already worse (10-35%), which turn a fight into a loss.",
+   "lichess_theme": "defensiveMove",
+   "points_lost_per50": 2.64,
+   "opp_points_lost_per50": 2.51,
+   "excess_per50": 0.13,
+   "blunders_per50": 13.2,
+   "avoidable_pct": 48.0,
+   "excess_earlier": 0.77,
+   "block_sd_blunders": 4.8
+  },
+  {
+   "id": "converting",
+   "name": "Converting better positions",
+   "description": "Blunders while you were clearly better (65-90% winning chance).",
+   "lichess_theme": null,
+   "points_lost_per50": 13.86,
+   "opp_points_lost_per50": 13.91,
+   "excess_per50": -0.05,
+   "blunders_per50": 42.8,
+   "avoidable_pct": 53.0,
+   "excess_earlier": -1.59,
+   "block_sd_blunders": 9.8
+  },
+  {
+   "id": "discovered",
+   "name": "Discovered attacks",
+   "description": "Missing that moving one enemy piece unmasks another (incl. double check).",
+   "lichess_theme": "discoveredAttack",
+   "points_lost_per50": 1.19,
+   "opp_points_lost_per50": 1.31,
+   "excess_per50": -0.12,
+   "blunders_per50": 3.5,
+   "avoidable_pct": 56.0,
+   "excess_earlier": 0.15,
+   "block_sd_blunders": 2.0
+  },
+  {
+   "id": "combination",
+   "name": "Deflection, attraction and sacrifices",
+   "description": "Allowing combinations that need a sacrifice or remove a defender.",
+   "lichess_theme": "deflection",
+   "points_lost_per50": 2.73,
+   "opp_points_lost_per50": 2.94,
+   "excess_per50": -0.21,
+   "blunders_per50": 8.0,
+   "avoidable_pct": 54.0,
+   "excess_earlier": 0.62,
+   "block_sd_blunders": 3.3
+  },
+  {
+   "id": "endgame",
+   "name": "Endgame technique",
+   "description": "Blunders after the endgame starts (six or fewer pieces).",
+   "lichess_theme": "endgame",
+   "points_lost_per50": 12.26,
+   "opp_points_lost_per50": 12.53,
+   "excess_per50": -0.28,
+   "blunders_per50": 35.7,
+   "avoidable_pct": 52.0,
+   "excess_earlier": -0.43,
+   "block_sd_blunders": 9.6
+  },
+  {
+   "id": "scramble",
+   "name": "Time scrambles",
+   "description": "Blunders with under 10 seconds left.",
+   "lichess_theme": null,
+   "points_lost_per50": 1.5,
+   "opp_points_lost_per50": 1.94,
+   "excess_per50": -0.45,
+   "blunders_per50": 3.6,
+   "avoidable_pct": 55.0,
+   "excess_earlier": -0.67,
+   "block_sd_blunders": 2.3
+  },
+  {
+   "id": "long_think",
+   "name": "Calculation on long thinks",
+   "description": "Blunders on moves where you spent 8 seconds or more.",
+   "lichess_theme": null,
+   "points_lost_per50": 6.84,
+   "opp_points_lost_per50": 7.3,
+   "excess_per50": -0.46,
+   "blunders_per50": 22.2,
+   "avoidable_pct": 56.0,
+   "excess_earlier": -0.43,
+   "block_sd_blunders": 5.2
+  },
+  {
+   "id": "missed",
+   "name": "Missed punishments",
+   "description": "The opponent just blundered and your reply let the chance go.",
+   "lichess_theme": "hangingPiece",
+   "points_lost_per50": 13.67,
+   "opp_points_lost_per50": 14.17,
+   "excess_per50": -0.5,
+   "blunders_per50": 40.3,
+   "avoidable_pct": 48.0,
+   "excess_earlier": -0.3,
+   "block_sd_blunders": 6.6
+  },
+  {
+   "id": "pawns",
+   "name": "Passed pawns and promotion",
+   "description": "Underestimating advanced pawns and promotion threats.",
+   "lichess_theme": "advancedPawn",
+   "points_lost_per50": 0.88,
+   "opp_points_lost_per50": 1.39,
+   "excess_per50": -0.51,
+   "blunders_per50": 2.4,
+   "avoidable_pct": 55.0,
+   "excess_earlier": -0.36,
+   "block_sd_blunders": 1.9
+  }
+ ],
+ "themes": [
+  {
+   "theme": "fork",
+   "me": 3.0,
+   "opp": 2.27,
+   "excess": 0.74
+  },
+  {
+   "theme": "trappedPiece",
+   "me": 0.81,
+   "opp": 0.3,
+   "excess": 0.51
+  },
+  {
+   "theme": "kingsideAttack",
+   "me": 1.39,
+   "opp": 1.02,
+   "excess": 0.37
+  },
+  {
+   "theme": "hangingPiece",
+   "me": 4.47,
+   "opp": 4.12,
+   "excess": 0.35
+  },
+  {
+   "theme": "pin",
+   "me": 1.57,
+   "opp": 1.33,
+   "excess": 0.24
+  },
+  {
+   "theme": "mateIn3",
+   "me": 0.38,
+   "opp": 0.2,
+   "excess": 0.18
+  },
+  {
+   "theme": "sacrifice",
+   "me": 0.8,
+   "opp": 0.64,
+   "excess": 0.16
+  },
+  {
+   "theme": "mateIn4",
+   "me": 0.21,
+   "opp": 0.09,
+   "excess": 0.12
+  },
+  {
+   "theme": "castling",
+   "me": 0.66,
+   "opp": 0.56,
+   "excess": 0.1
+  },
+  {
+   "theme": "queenEndgame",
+   "me": 0.29,
+   "opp": 0.19,
+   "excess": 0.09
+  },
+  {
+   "theme": "mateIn5",
+   "me": 0.18,
+   "opp": 0.1,
+   "excess": 0.08
+  },
+  {
+   "theme": "interference",
+   "me": 0.13,
+   "opp": 0.06,
+   "excess": 0.08
+  },
+  {
+   "theme": "bishopEndgame",
+   "me": 0.19,
+   "opp": 0.12,
+   "excess": 0.07
+  },
+  {
+   "theme": "enPassant",
+   "me": 0.09,
+   "opp": 0.05,
+   "excess": 0.05
+  },
+  {
+   "theme": "intermezzo",
+   "me": 0.29,
+   "opp": 0.24,
+   "excess": 0.05
+  },
+  {
+   "theme": "defensiveMove",
+   "me": 10.45,
+   "opp": 10.41,
+   "excess": 0.03
+  },
+  {
+   "theme": "queenRookEndgame",
+   "me": 0.2,
+   "opp": 0.17,
+   "excess": 0.03
+  },
+  {
+   "theme": "collinearMove",
+   "me": 0.09,
+   "opp": 0.07,
+   "excess": 0.02
+  },
+  {
+   "theme": "backRankMate",
+   "me": 0.15,
+   "opp": 0.14,
+   "excess": 0.01
+  },
+  {
+   "theme": "hookMate",
+   "me": 0.01,
+   "opp": 0.0,
+   "excess": 0.01
+  },
+  {
+   "theme": "knightEndgame",
+   "me": 0.17,
+   "opp": 0.16,
+   "excess": 0.01
+  },
+  {
+   "theme": "underPromotion",
+   "me": 0.05,
+   "opp": 0.05,
+   "excess": -0.0
+  },
+  {
+   "theme": "smotheredMate",
+   "me": 0.02,
+   "opp": 0.03,
+   "excess": -0.01
+  },
+  {
+   "theme": "xRayAttack",
+   "me": 0.0,
+   "opp": 0.01,
+   "excess": -0.01
+  },
+  {
+   "theme": "arabianMate",
+   "me": 0.0,
+   "opp": 0.01,
+   "excess": -0.01
+  },
+  {
+   "theme": "pawnEndgame",
+   "me": 0.15,
+   "opp": 0.18,
+   "excess": -0.03
+  },
+  {
+   "theme": "discoveredAttack",
+   "me": 1.13,
+   "opp": 1.17,
+   "excess": -0.04
+  },
+  {
+   "theme": "mateIn2",
+   "me": 0.45,
+   "opp": 0.5,
+   "excess": -0.05
+  },
+  {
+   "theme": "doubleCheck",
+   "me": 0.09,
+   "opp": 0.14,
+   "excess": -0.05
+  },
+  {
+   "theme": "capturingDefender",
+   "me": 0.24,
+   "opp": 0.3,
+   "excess": -0.06
+  },
+  {
+   "theme": "rookEndgame",
+   "me": 1.07,
+   "opp": 1.14,
+   "excess": -0.07
+  },
+  {
+   "theme": "attraction",
+   "me": 0.29,
+   "opp": 0.36,
+   "excess": -0.07
+  },
+  {
+   "theme": "clearance",
+   "me": 0.99,
+   "opp": 1.07,
+   "excess": -0.08
+  },
+  {
+   "theme": "attackingF2F7",
+   "me": 0.12,
+   "opp": 0.2,
+   "excess": -0.09
+  },
+  {
+   "theme": "?",
+   "me": 0.03,
+   "opp": 0.15,
+   "excess": -0.12
+  },
+  {
+   "theme": "skewer",
+   "me": 0.26,
+   "opp": 0.42,
+   "excess": -0.15
+  },
+  {
+   "theme": "queensideAttack",
+   "me": 0.08,
+   "opp": 0.23,
+   "excess": -0.16
+  },
+  {
+   "theme": "mateIn1",
+   "me": 0.91,
+   "opp": 1.08,
+   "excess": -0.17
+  },
+  {
+   "theme": "deflection",
+   "me": 0.55,
+   "opp": 0.74,
+   "excess": -0.19
+  },
+  {
+   "theme": "exposedKing",
+   "me": 0.84,
+   "opp": 1.07,
+   "excess": -0.23
+  },
+  {
+   "theme": "promotion",
+   "me": 0.31,
+   "opp": 0.66,
+   "excess": -0.35
+  },
+  {
+   "theme": "advancedPawn",
+   "me": 0.88,
+   "opp": 1.39,
+   "excess": -0.51
+  },
+  {
+   "theme": "quietMove",
+   "me": 5.04,
+   "opp": 5.56,
+   "excess": -0.52
+  }
+ ],
+ "blocks": [
+  {
+   "block": 1,
+   "start": "2025-11-16",
+   "cat": "hanging",
+   "points_lost": 6.44,
+   "blunders": 17.0
+  },
+  {
+   "block": 2,
+   "start": "2025-12-21",
+   "cat": "hanging",
+   "points_lost": 1.7,
+   "blunders": 4.0
+  },
+  {
+   "block": 3,
+   "start": "2025-12-28",
+   "cat": "hanging",
+   "points_lost": 4.86,
+   "blunders": 10.0
+  },
+  {
+   "block": 4,
+   "start": "2026-01-04",
+   "cat": "hanging",
+   "points_lost": 3.68,
+   "blunders": 9.0
+  },
+  {
+   "block": 5,
+   "start": "2026-01-08",
+   "cat": "hanging",
+   "points_lost": 6.66,
+   "blunders": 14.0
+  },
+  {
+   "block": 6,
+   "start": "2026-01-13",
+   "cat": "hanging",
+   "points_lost": 3.6,
+   "blunders": 8.0
+  },
+  {
+   "block": 7,
+   "start": "2026-01-21",
+   "cat": "hanging",
+   "points_lost": 4.19,
+   "blunders": 10.0
+  },
+  {
+   "block": 8,
+   "start": "2026-01-30",
+   "cat": "hanging",
+   "points_lost": 1.7,
+   "blunders": 4.0
+  },
+  {
+   "block": 9,
+   "start": "2026-02-06",
+   "cat": "hanging",
+   "points_lost": 5.72,
+   "blunders": 13.0
+  },
+  {
+   "block": 10,
+   "start": "2026-02-12",
+   "cat": "hanging",
+   "points_lost": 3.19,
+   "blunders": 8.0
+  },
+  {
+   "block": 11,
+   "start": "2026-02-17",
+   "cat": "hanging",
+   "points_lost": 5.84,
+   "blunders": 13.0
+  },
+  {
+   "block": 12,
+   "start": "2026-02-23",
+   "cat": "hanging",
+   "points_lost": 2.67,
+   "blunders": 6.0
+  },
+  {
+   "block": 13,
+   "start": "2026-03-03",
+   "cat": "hanging",
+   "points_lost": 6.2,
+   "blunders": 14.0
+  },
+  {
+   "block": 14,
+   "start": "2026-03-23",
+   "cat": "hanging",
+   "points_lost": 6.35,
+   "blunders": 15.0
+  },
+  {
+   "block": 15,
+   "start": "2026-04-15",
+   "cat": "hanging",
+   "points_lost": 5.8,
+   "blunders": 13.0
+  },
+  {
+   "block": 16,
+   "start": "2026-04-24",
+   "cat": "hanging",
+   "points_lost": 3.47,
+   "blunders": 8.0
+  },
+  {
+   "block": 17,
+   "start": "2026-05-05",
+   "cat": "hanging",
+   "points_lost": 4.85,
+   "blunders": 11.0
+  },
+  {
+   "block": 18,
+   "start": "2026-05-12",
+   "cat": "hanging",
+   "points_lost": 4.17,
+   "blunders": 8.0
+  },
+  {
+   "block": 19,
+   "start": "2026-05-18",
+   "cat": "hanging",
+   "points_lost": 8.7,
+   "blunders": 21.0
+  },
+  {
+   "block": 20,
+   "start": "2026-05-25",
+   "cat": "hanging",
+   "points_lost": 6.97,
+   "blunders": 15.0
+  },
+  {
+   "block": 21,
+   "start": "2026-06-05",
+   "cat": "hanging",
+   "points_lost": 4.34,
+   "blunders": 9.0
+  },
+  {
+   "block": 22,
+   "start": "2026-06-22",
+   "cat": "hanging",
+   "points_lost": 3.3,
+   "blunders": 9.0
+  },
+  {
+   "block": 23,
+   "start": "2026-07-06",
+   "cat": "hanging",
+   "points_lost": 3.49,
+   "blunders": 8.0
+  },
+  {
+   "block": 24,
+   "start": "2026-07-12",
+   "cat": "hanging",
+   "points_lost": 0.42,
+   "blunders": 2.0
+  },
+  {
+   "block": 25,
+   "start": "2026-07-23",
+   "cat": "hanging",
+   "points_lost": 4.49,
+   "blunders": 8.0
+  },
+  {
+   "block": 26,
+   "start": "2026-08-25",
+   "cat": "hanging",
+   "points_lost": 7.0,
+   "blunders": 13.0
+  },
+  {
+   "block": 27,
+   "start": "2026-09-10",
+   "cat": "hanging",
+   "points_lost": 5.57,
+   "blunders": 14.0
+  },
+  {
+   "block": 28,
+   "start": "2026-09-22",
+   "cat": "hanging",
+   "points_lost": 2.96,
+   "blunders": 9.0
+  },
+  {
+   "block": 29,
+   "start": "2026-10-08",
+   "cat": "hanging",
+   "points_lost": 4.19,
+   "blunders": 9.0
+  },
+  {
+   "block": 30,
+   "start": "2026-10-28",
+   "cat": "hanging",
+   "points_lost": 3.57,
+   "blunders": 11.0
+  },
+  {
+   "block": 31,
+   "start": "2026-11-07",
+   "cat": "hanging",
+   "points_lost": 0.53,
+   "blunders": 1.0
+  },
+  {
+   "block": 1,
+   "start": "2025-11-16",
+   "cat": "fork",
+   "points_lost": 3.21,
+   "blunders": 11.0
+  },
+  {
+   "block": 2,
+   "start": "2025-12-21",
+   "cat": "fork",
+   "points_lost": 2.12,
+   "blunders": 7.0
+  },
+  {
+   "block": 3,
+   "start": "2025-12-28",
+   "cat": "fork",
+   "points_lost": 2.02,
+   "blunders": 7.0
+  },
+  {
+   "block": 4,
+   "start": "2026-01-04",
+   "cat": "fork",
+   "points_lost": 3.07,
+   "blunders": 9.0
+  },
+  {
+   "block": 5,
+   "start": "2026-01-08",
+   "cat": "fork",
+   "points_lost": 3.18,
+   "blunders": 7.0
+  },
+  {
+   "block": 6,
+   "start": "2026-01-13",
+   "cat": "fork",
+   "points_lost": 2.08,
+   "blunders": 6.0
+  },
+  {
+   "block": 7,
+   "start": "2026-01-21",
+   "cat": "fork",
+   "points_lost": 1.18,
+   "blunders": 2.0
+  },
+  {
+   "block": 8,
+   "start": "2026-01-30",
+   "cat": "fork",
+   "points_lost": 2.81,
+   "blunders": 7.0
+  },
+  {
+   "block": 9,
+   "start": "2026-02-06",
+   "cat": "fork",
+   "points_lost": 1.96,
+   "blunders": 6.0
+  },
+  {
+   "block": 10,
+   "start": "2026-02-12",
+   "cat": "fork",
+   "points_lost": 2.52,
+   "blunders": 9.0
+  },
+  {
+   "block": 11,
+   "start": "2026-02-17",
+   "cat": "fork",
+   "points_lost": 4.06,
+   "blunders": 9.0
+  },
+  {
+   "block": 12,
+   "start": "2026-02-23",
+   "cat": "fork",
+   "points_lost": 2.29,
+   "blunders": 7.0
+  },
+  {
+   "block": 13,
+   "start": "2026-03-03",
+   "cat": "fork",
+   "points_lost": 1.79,
+   "blunders": 6.0
+  },
+  {
+   "block": 14,
+   "start": "2026-03-23",
+   "cat": "fork",
+   "points_lost": 2.71,
+   "blunders": 7.0
+  },
+  {
+   "block": 15,
+   "start": "2026-04-15",
+   "cat": "fork",
+   "points_lost": 6.23,
+   "blunders": 14.0
+  },
+  {
+   "block": 16,
+   "start": "2026-04-24",
+   "cat": "fork",
+   "points_lost": 2.65,
+   "blunders": 11.0
+  },
+  {
+   "block": 17,
+   "start": "2026-05-05",
+   "cat": "fork",
+   "points_lost": 2.22,
+   "blunders": 8.0
+  },
+  {
+   "block": 18,
+   "start": "2026-05-12",
+   "cat": "fork",
+   "points_lost": 1.79,
+   "blunders": 6.0
+  },
+  {
+   "block": 19,
+   "start": "2026-05-18",
+   "cat": "fork",
+   "points_lost": 3.7,
+   "blunders": 8.0
+  },
+  {
+   "block": 20,
+   "start": "2026-05-25",
+   "cat": "fork",
+   "points_lost": 2.78,
+   "blunders": 7.0
+  },
+  {
+   "block": 21,
+   "start": "2026-06-05",
+   "cat": "fork",
+   "points_lost": 4.01,
+   "blunders": 10.0
+  },
+  {
+   "block": 22,
+   "start": "2026-06-22",
+   "cat": "fork",
+   "points_lost": 4.15,
+   "blunders": 11.0
+  },
+  {
+   "block": 23,
+   "start": "2026-07-06",
+   "cat": "fork",
+   "points_lost": 2.94,
+   "blunders": 9.0
+  },
+  {
+   "block": 24,
+   "start": "2026-07-12",
+   "cat": "fork",
+   "points_lost": 2.58,
+   "blunders": 6.0
+  },
+  {
+   "block": 25,
+   "start": "2026-07-23",
+   "cat": "fork",
+   "points_lost": 3.23,
+   "blunders": 8.0
+  },
+  {
+   "block": 26,
+   "start": "2026-08-25",
+   "cat": "fork",
+   "points_lost": 4.6,
+   "blunders": 10.0
+  },
+  {
+   "block": 27,
+   "start": "2026-09-10",
+   "cat": "fork",
+   "points_lost": 1.1,
+   "blunders": 3.0
+  },
+  {
+   "block": 28,
+   "start": "2026-09-22",
+   "cat": "fork",
+   "points_lost": 4.32,
+   "blunders": 10.0
+  },
+  {
+   "block": 29,
+   "start": "2026-10-08",
+   "cat": "fork",
+   "points_lost": 5.51,
+   "blunders": 12.0
+  },
+  {
+   "block": 30,
+   "start": "2026-10-28",
+   "cat": "fork",
+   "points_lost": 2.97,
+   "blunders": 8.0
+  },
+  {
+   "block": 31,
+   "start": "2026-11-07",
+   "cat": "fork",
+   "points_lost": 3.07,
+   "blunders": 9.0
+  },
+  {
+   "block": 1,
+   "start": "2025-11-16",
+   "cat": "pin_skewer",
+   "points_lost": 0.32,
+   "blunders": 1.0
+  },
+  {
+   "block": 2,
+   "start": "2025-12-21",
+   "cat": "pin_skewer",
+   "points_lost": 3.18,
+   "blunders": 8.0
+  },
+  {
+   "block": 3,
+   "start": "2025-12-28",
+   "cat": "pin_skewer",
+   "points_lost": 1.38,
+   "blunders": 5.0
+  },
+  {
+   "block": 4,
+   "start": "2026-01-04",
+   "cat": "pin_skewer",
+   "points_lost": 3.0,
+   "blunders": 9.0
+  },
+  {
+   "block": 5,
+   "start": "2026-01-08",
+   "cat": "pin_skewer",
+   "points_lost": 3.07,
+   "blunders": 6.0
+  },
+  {
+   "block": 6,
+   "start": "2026-01-13",
+   "cat": "pin_skewer",
+   "points_lost": 0.91,
+   "blunders": 1.0
+  },
+  {
+   "block": 7,
+   "start": "2026-01-21",
+   "cat": "pin_skewer",
+   "points_lost": 1.53,
+   "blunders": 5.0
+  },
+  {
+   "block": 8,
+   "start": "2026-01-30",
+   "cat": "pin_skewer",
+   "points_lost": 1.54,
+   "blunders": 4.0
+  },
+  {
+   "block": 9,
+   "start": "2026-02-06",
+   "cat": "pin_skewer",
+   "points_lost": 1.18,
+   "blunders": 3.0
+  },
+  {
+   "block": 10,
+   "start": "2026-02-12",
+   "cat": "pin_skewer",
+   "points_lost": 1.67,
+   "blunders": 5.0
+  },
+  {
+   "block": 11,
+   "start": "2026-02-17",
+   "cat": "pin_skewer",
+   "points_lost": 3.2,
+   "blunders": 9.0
+  },
+  {
+   "block": 12,
+   "start": "2026-02-23",
+   "cat": "pin_skewer",
+   "points_lost": 3.36,
+   "blunders": 10.0
+  },
+  {
+   "block": 13,
+   "start": "2026-03-03",
+   "cat": "pin_skewer",
+   "points_lost": 2.03,
+   "blunders": 5.0
+  },
+  {
+   "block": 14,
+   "start": "2026-03-23",
+   "cat": "pin_skewer",
+   "points_lost": 2.81,
+   "blunders": 7.0
+  },
+  {
+   "block": 15,
+   "start": "2026-04-15",
+   "cat": "pin_skewer",
+   "points_lost": 0.98,
+   "blunders": 2.0
+  },
+  {
+   "block": 16,
+   "start": "2026-04-24",
+   "cat": "pin_skewer",
+   "points_lost": 0.58,
+   "blunders": 3.0
+  },
+  {
+   "block": 17,
+   "start": "2026-05-05",
+   "cat": "pin_skewer",
+   "points_lost": 0.95,
+   "blunders": 4.0
+  },
+  {
+   "block": 18,
+   "start": "2026-05-12",
+   "cat": "pin_skewer",
+   "points_lost": 0.99,
+   "blunders": 3.0
+  },
+  {
+   "block": 19,
+   "start": "2026-05-18",
+   "cat": "pin_skewer",
+   "points_lost": 1.78,
+   "blunders": 3.0
+  },
+  {
+   "block": 20,
+   "start": "2026-05-25",
+   "cat": "pin_skewer",
+   "points_lost": 1.71,
+   "blunders": 4.0
+  },
+  {
+   "block": 21,
+   "start": "2026-06-05",
+   "cat": "pin_skewer",
+   "points_lost": 2.74,
+   "blunders": 8.0
+  },
+  {
+   "block": 22,
+   "start": "2026-06-22",
+   "cat": "pin_skewer",
+   "points_lost": 1.12,
+   "blunders": 4.0
+  },
+  {
+   "block": 23,
+   "start": "2026-07-06",
+   "cat": "pin_skewer",
+   "points_lost": 2.92,
+   "blunders": 7.0
+  },
+  {
+   "block": 24,
+   "start": "2026-07-12",
+   "cat": "pin_skewer",
+   "points_lost": 2.86,
+   "blunders": 9.0
+  },
+  {
+   "block": 25,
+   "start": "2026-07-23",
+   "cat": "pin_skewer",
+   "points_lost": 2.47,
+   "blunders": 6.0
+  },
+  {
+   "block": 26,
+   "start": "2026-08-25",
+   "cat": "pin_skewer",
+   "points_lost": 1.31,
+   "blunders": 2.0
+  },
+  {
+   "block": 27,
+   "start": "2026-09-10",
+   "cat": "pin_skewer",
+   "points_lost": 3.06,
+   "blunders": 7.0
+  },
+  {
+   "block": 28,
+   "start": "2026-09-22",
+   "cat": "pin_skewer",
+   "points_lost": 1.67,
+   "blunders": 4.0
+  },
+  {
+   "block": 29,
+   "start": "2026-10-08",
+   "cat": "pin_skewer",
+   "points_lost": 1.69,
+   "blunders": 3.0
+  },
+  {
+   "block": 30,
+   "start": "2026-10-28",
+   "cat": "pin_skewer",
+   "points_lost": 0.6,
+   "blunders": 2.0
+  },
+  {
+   "block": 31,
+   "start": "2026-11-07",
+   "cat": "pin_skewer",
+   "points_lost": 0.68,
+   "blunders": 2.0
+  },
+  {
+   "block": 1,
+   "start": "2025-11-16",
+   "cat": "discovered",
+   "points_lost": 1.53,
+   "blunders": 6.0
+  },
+  {
+   "block": 2,
+   "start": "2025-12-21",
+   "cat": "discovered",
+   "points_lost": 1.22,
+   "blunders": 2.0
+  },
+  {
+   "block": 3,
+   "start": "2025-12-28",
+   "cat": "discovered",
+   "points_lost": 0.65,
+   "blunders": 3.0
+  },
+  {
+   "block": 4,
+   "start": "2026-01-04",
+   "cat": "discovered",
+   "points_lost": 0.35,
+   "blunders": 2.0
+  },
+  {
+   "block": 5,
+   "start": "2026-01-08",
+   "cat": "discovered",
+   "points_lost": 0.41,
+   "blunders": 2.0
+  },
+  {
+   "block": 6,
+   "start": "2026-01-13",
+   "cat": "discovered",
+   "points_lost": 1.31,
+   "blunders": 5.0
+  },
+  {
+   "block": 7,
+   "start": "2026-01-21",
+   "cat": "discovered",
+   "points_lost": 1.74,
+   "blunders": 5.0
+  },
+  {
+   "block": 8,
+   "start": "2026-01-30",
+   "cat": "discovered",
+   "points_lost": 1.55,
+   "blunders": 4.0
+  },
+  {
+   "block": 9,
+   "start": "2026-02-06",
+   "cat": "discovered",
+   "points_lost": 0.0,
+   "blunders": 0.0
+  },
+  {
+   "block": 10,
+   "start": "2026-02-12",
+   "cat": "discovered",
+   "points_lost": 0.99,
+   "blunders": 2.0
+  },
+  {
+   "block": 11,
+   "start": "2026-02-17",
+   "cat": "discovered",
+   "points_lost": 1.78,
+   "blunders": 4.0
+  },
+  {
+   "block": 12,
+   "start": "2026-02-23",
+   "cat": "discovered",
+   "points_lost": 0.77,
+   "blunders": 3.0
+  },
+  {
+   "block": 13,
+   "start": "2026-03-03",
+   "cat": "discovered",
+   "points_lost": 0.8,
+   "blunders": 3.0
+  },
+  {
+   "block": 14,
+   "start": "2026-03-23",
+   "cat": "discovered",
+   "points_lost": 0.52,
+   "blunders": 3.0
+  },
+  {
+   "block": 15,
+   "start": "2026-04-15",
+   "cat": "discovered",
+   "points_lost": 0.36,
+   "blunders": 1.0
+  },
+  {
+   "block": 16,
+   "start": "2026-04-24",
+   "cat": "discovered",
+   "points_lost": 0.18,
+   "blunders": 1.0
+  },
+  {
+   "block": 17,
+   "start": "2026-05-05",
+   "cat": "discovered",
+   "points_lost": 0.82,
+   "blunders": 4.0
+  },
+  {
+   "block": 18,
+   "start": "2026-05-12",
+   "cat": "discovered",
+   "points_lost": 2.44,
+   "blunders": 6.0
+  },
+  {
+   "block": 19,
+   "start": "2026-05-18",
+   "cat": "discovered",
+   "points_lost": 0.69,
+   "blunders": 2.0
+  },
+  {
+   "block": 20,
+   "start": "2026-05-25",
+   "cat": "discovered",
+   "points_lost": 1.7,
+   "blunders": 5.0
+  },
+  {
+   "block": 21,
+   "start": "2026-06-05",
+   "cat": "discovered",
+   "points_lost": 3.53,
+   "blunders": 8.0
+  },
+  {
+   "block": 22,
+   "start": "2026-06-22",
+   "cat": "discovered",
+   "points_lost": 1.52,
+   "blunders": 3.0
+  },
+  {
+   "block": 23,
+   "start": "2026-07-06",
+   "cat": "discovered",
+   "points_lost": 1.22,
+   "blunders": 4.0
+  },
+  {
+   "block": 24,
+   "start": "2026-07-12",
+   "cat": "discovered",
+   "points_lost": 1.89,
+   "blunders": 7.0
+  },
+  {
+   "block": 25,
+   "start": "2026-07-23",
+   "cat": "discovered",
+   "points_lost": 0.76,
+   "blunders": 2.0
+  },
+  {
+   "block": 26,
+   "start": "2026-08-25",
+   "cat": "discovered",
+   "points_lost": 0.24,
+   "blunders": 1.0
+  },
+  {
+   "block": 27,
+   "start": "2026-09-10",
+   "cat": "discovered",
+   "points_lost": 0.72,
+   "blunders": 2.0
+  },
+  {
+   "block": 28,
+   "start": "2026-09-22",
+   "cat": "discovered",
+   "points_lost": 3.26,
+   "blunders": 8.0
+  },
+  {
+   "block": 29,
+   "start": "2026-10-08",
+   "cat": "discovered",
+   "points_lost": 1.46,
+   "blunders": 4.0
+  },
+  {
+   "block": 30,
+   "start": "2026-10-28",
+   "cat": "discovered",
+   "points_lost": 0.8,
+   "blunders": 3.0
+  },
+  {
+   "block": 31,
+   "start": "2026-11-07",
+   "cat": "discovered",
+   "points_lost": 1.41,
+   "blunders": 2.0
+  },
+  {
+   "block": 1,
+   "start": "2025-11-16",
+   "cat": "king_safety",
+   "points_lost": 3.1,
+   "blunders": 6.0
+  },
+  {
+   "block": 2,
+   "start": "2025-12-21",
+   "cat": "king_safety",
+   "points_lost": 4.03,
+   "blunders": 6.0
+  },
+  {
+   "block": 3,
+   "start": "2025-12-28",
+   "cat": "king_safety",
+   "points_lost": 0.4,
+   "blunders": 1.0
+  },
+  {
+   "block": 4,
+   "start": "2026-01-04",
+   "cat": "king_safety",
+   "points_lost": 1.84,
+   "blunders": 3.0
+  },
+  {
+   "block": 5,
+   "start": "2026-01-08",
+   "cat": "king_safety",
+   "points_lost": 0.6,
+   "blunders": 2.0
+  },
+  {
+   "block": 6,
+   "start": "2026-01-13",
+   "cat": "king_safety",
+   "points_lost": 2.97,
+   "blunders": 7.0
+  },
+  {
+   "block": 7,
+   "start": "2026-01-21",
+   "cat": "king_safety",
+   "points_lost": 2.81,
+   "blunders": 4.0
+  },
+  {
+   "block": 8,
+   "start": "2026-01-30",
+   "cat": "king_safety",
+   "points_lost": 1.39,
+   "blunders": 3.0
+  },
+  {
+   "block": 9,
+   "start": "2026-02-06",
+   "cat": "king_safety",
+   "points_lost": 2.3,
+   "blunders": 4.0
+  },
+  {
+   "block": 10,
+   "start": "2026-02-12",
+   "cat": "king_safety",
+   "points_lost": 4.82,
+   "blunders": 8.0
+  },
+  {
+   "block": 11,
+   "start": "2026-02-17",
+   "cat": "king_safety",
+   "points_lost": 3.32,
+   "blunders": 4.0
+  },
+  {
+   "block": 12,
+   "start": "2026-02-23",
+   "cat": "king_safety",
+   "points_lost": 0.94,
+   "blunders": 3.0
+  },
+  {
+   "block": 13,
+   "start": "2026-03-03",
+   "cat": "king_safety",
+   "points_lost": 0.87,
+   "blunders": 1.0
+  },
+  {
+   "block": 14,
+   "start": "2026-03-23",
+   "cat": "king_safety",
+   "points_lost": 0.45,
+   "blunders": 1.0
+  },
+  {
+   "block": 15,
+   "start": "2026-04-15",
+   "cat": "king_safety",
+   "points_lost": 1.84,
+   "blunders": 4.0
+  },
+  {
+   "block": 16,
+   "start": "2026-04-24",
+   "cat": "king_safety",
+   "points_lost": 0.68,
+   "blunders": 2.0
+  },
+  {
+   "block": 17,
+   "start": "2026-05-05",
+   "cat": "king_safety",
+   "points_lost": 3.15,
+   "blunders": 8.0
+  },
+  {
+   "block": 18,
+   "start": "2026-05-12",
+   "cat": "king_safety",
+   "points_lost": 4.61,
+   "blunders": 7.0
+  },
+  {
+   "block": 19,
+   "start": "2026-05-18",
+   "cat": "king_safety",
+   "points_lost": 1.81,
+   "blunders": 3.0
+  },
+  {
+   "block": 20,
+   "start": "2026-05-25",
+   "cat": "king_safety",
+   "points_lost": 3.02,
+   "blunders": 5.0
+  },
+  {
+   "block": 21,
+   "start": "2026-06-05",
+   "cat": "king_safety",
+   "points_lost": 0.0,
+   "blunders": 0.0
+  },
+  {
+   "block": 22,
+   "start": "2026-06-22",
+   "cat": "king_safety",
+   "points_lost": 2.58,
+   "blunders": 5.0
+  },
+  {
+   "block": 23,
+   "start": "2026-07-06",
+   "cat": "king_safety",
+   "points_lost": 3.23,
+   "blunders": 4.0
+  },
+  {
+   "block": 24,
+   "start": "2026-07-12",
+   "cat": "king_safety",
+   "points_lost": 2.68,
+   "blunders": 7.0
+  },
+  {
+   "block": 25,
+   "start": "2026-07-23",
+   "cat": "king_safety",
+   "points_lost": 1.3,
+   "blunders": 3.0
+  },
+  {
+   "block": 26,
+   "start": "2026-08-25",
+   "cat": "king_safety",
+   "points_lost": 2.21,
+   "blunders": 3.0
+  },
+  {
+   "block": 27,
+   "start": "2026-09-10",
+   "cat": "king_safety",
+   "points_lost": 2.33,
+   "blunders": 4.0
+  },
+  {
+   "block": 28,
+   "start": "2026-09-22",
+   "cat": "king_safety",
+   "points_lost": 1.78,
+   "blunders": 3.0
+  },
+  {
+   "block": 29,
+   "start": "2026-10-08",
+   "cat": "king_safety",
+   "points_lost": 2.06,
+   "blunders": 4.0
+  },
+  {
+   "block": 30,
+   "start": "2026-10-28",
+   "cat": "king_safety",
+   "points_lost": 0.9,
+   "blunders": 3.0
+  },
+  {
+   "block": 31,
+   "start": "2026-11-07",
+   "cat": "king_safety",
+   "points_lost": 0.48,
+   "blunders": 1.0
+  },
+  {
+   "block": 1,
+   "start": "2025-11-16",
+   "cat": "combination",
+   "points_lost": 2.48,
+   "blunders": 8.0
+  },
+  {
+   "block": 2,
+   "start": "2025-12-21",
+   "cat": "combination",
+   "points_lost": 3.36,
+   "blunders": 9.0
+  },
+  {
+   "block": 3,
+   "start": "2025-12-28",
+   "cat": "combination",
+   "points_lost": 3.0,
+   "blunders": 9.0
+  },
+  {
+   "block": 4,
+   "start": "2026-01-04",
+   "cat": "combination",
+   "points_lost": 2.91,
+   "blunders": 10.0
+  },
+  {
+   "block": 5,
+   "start": "2026-01-08",
+   "cat": "combination",
+   "points_lost": 0.6,
+   "blunders": 3.0
+  },
+  {
+   "block": 6,
+   "start": "2026-01-13",
+   "cat": "combination",
+   "points_lost": 2.14,
+   "blunders": 8.0
+  },
+  {
+   "block": 7,
+   "start": "2026-01-21",
+   "cat": "combination",
+   "points_lost": 3.33,
+   "blunders": 9.0
+  },
+  {
+   "block": 8,
+   "start": "2026-01-30",
+   "cat": "combination",
+   "points_lost": 1.8,
+   "blunders": 6.0
+  },
+  {
+   "block": 9,
+   "start": "2026-02-06",
+   "cat": "combination",
+   "points_lost": 1.56,
+   "blunders": 3.0
+  },
+  {
+   "block": 10,
+   "start": "2026-02-12",
+   "cat": "combination",
+   "points_lost": 5.75,
+   "blunders": 18.0
+  },
+  {
+   "block": 11,
+   "start": "2026-02-17",
+   "cat": "combination",
+   "points_lost": 4.46,
+   "blunders": 11.0
+  },
+  {
+   "block": 12,
+   "start": "2026-02-23",
+   "cat": "combination",
+   "points_lost": 3.74,
+   "blunders": 12.0
+  },
+  {
+   "block": 13,
+   "start": "2026-03-03",
+   "cat": "combination",
+   "points_lost": 2.4,
+   "blunders": 7.0
+  },
+  {
+   "block": 14,
+   "start": "2026-03-23",
+   "cat": "combination",
+   "points_lost": 0.99,
+   "blunders": 4.0
+  },
+  {
+   "block": 15,
+   "start": "2026-04-15",
+   "cat": "combination",
+   "points_lost": 2.78,
+   "blunders": 7.0
+  },
+  {
+   "block": 16,
+   "start": "2026-04-24",
+   "cat": "combination",
+   "points_lost": 2.17,
+   "blunders": 6.0
+  },
+  {
+   "block": 17,
+   "start": "2026-05-05",
+   "cat": "combination",
+   "points_lost": 3.01,
+   "blunders": 10.0
+  },
+  {
+   "block": 18,
+   "start": "2026-05-12",
+   "cat": "combination",
+   "points_lost": 2.57,
+   "blunders": 6.0
+  },
+  {
+   "block": 19,
+   "start": "2026-05-18",
+   "cat": "combination",
+   "points_lost": 3.06,
+   "blunders": 7.0
+  },
+  {
+   "block": 20,
+   "start": "2026-05-25",
+   "cat": "combination",
+   "points_lost": 1.78,
+   "blunders": 5.0
+  },
+  {
+   "block": 21,
+   "start": "2026-06-05",
+   "cat": "combination",
+   "points_lost": 4.53,
+   "blunders": 13.0
+  },
+  {
+   "block": 22,
+   "start": "2026-06-22",
+   "cat": "combination",
+   "points_lost": 3.65,
+   "blunders": 11.0
+  },
+  {
+   "block": 23,
+   "start": "2026-07-06",
+   "cat": "combination",
+   "points_lost": 3.01,
+   "blunders": 11.0
+  },
+  {
+   "block": 24,
+   "start": "2026-07-12",
+   "cat": "combination",
+   "points_lost": 2.03,
+   "blunders": 7.0
+  },
+  {
+   "block": 25,
+   "start": "2026-07-23",
+   "cat": "combination",
+   "points_lost": 5.48,
+   "blunders": 13.0
+  },
+  {
+   "block": 26,
+   "start": "2026-08-25",
+   "cat": "combination",
+   "points_lost": 1.81,
+   "blunders": 4.0
+  },
+  {
+   "block": 27,
+   "start": "2026-09-10",
+   "cat": "combination",
+   "points_lost": 2.05,
+   "blunders": 7.0
+  },
+  {
+   "block": 28,
+   "start": "2026-09-22",
+   "cat": "combination",
+   "points_lost": 1.07,
+   "blunders": 4.0
+  },
+  {
+   "block": 29,
+   "start": "2026-10-08",
+   "cat": "combination",
+   "points_lost": 2.55,
+   "blunders": 6.0
+  },
+  {
+   "block": 30,
+   "start": "2026-10-28",
+   "cat": "combination",
+   "points_lost": 1.88,
+   "blunders": 7.0
+  },
+  {
+   "block": 31,
+   "start": "2026-11-07",
+   "cat": "combination",
+   "points_lost": 3.15,
+   "blunders": 9.0
+  },
+  {
+   "block": 1,
+   "start": "2025-11-16",
+   "cat": "pawns",
+   "points_lost": 0.28,
+   "blunders": 1.0
+  },
+  {
+   "block": 2,
+   "start": "2025-12-21",
+   "cat": "pawns",
+   "points_lost": 3.88,
+   "blunders": 9.0
+  },
+  {
+   "block": 3,
+   "start": "2025-12-28",
+   "cat": "pawns",
+   "points_lost": 1.45,
+   "blunders": 4.0
+  },
+  {
+   "block": 4,
+   "start": "2026-01-04",
+   "cat": "pawns",
+   "points_lost": 0.19,
+   "blunders": 1.0
+  },
+  {
+   "block": 5,
+   "start": "2026-01-08",
+   "cat": "pawns",
+   "points_lost": 1.23,
+   "blunders": 5.0
+  },
+  {
+   "block": 6,
+   "start": "2026-01-13",
+   "cat": "pawns",
+   "points_lost": 0.0,
+   "blunders": 0.0
+  },
+  {
+   "block": 7,
+   "start": "2026-01-21",
+   "cat": "pawns",
+   "points_lost": 1.95,
+   "blunders": 3.0
+  },
+  {
+   "block": 8,
+   "start": "2026-01-30",
+   "cat": "pawns",
+   "points_lost": 0.52,
+   "blunders": 2.0
+  },
+  {
+   "block": 9,
+   "start": "2026-02-06",
+   "cat": "pawns",
+   "points_lost": 0.83,
+   "blunders": 3.0
+  },
+  {
+   "block": 10,
+   "start": "2026-02-12",
+   "cat": "pawns",
+   "points_lost": 0.31,
+   "blunders": 1.0
+  },
+  {
+   "block": 11,
+   "start": "2026-02-17",
+   "cat": "pawns",
+   "points_lost": 0.68,
+   "blunders": 2.0
+  },
+  {
+   "block": 12,
+   "start": "2026-02-23",
+   "cat": "pawns",
+   "points_lost": 0.72,
+   "blunders": 1.0
+  },
+  {
+   "block": 13,
+   "start": "2026-03-03",
+   "cat": "pawns",
+   "points_lost": 0.63,
+   "blunders": 2.0
+  },
+  {
+   "block": 14,
+   "start": "2026-03-23",
+   "cat": "pawns",
+   "points_lost": 0.3,
+   "blunders": 1.0
+  },
+  {
+   "block": 15,
+   "start": "2026-04-15",
+   "cat": "pawns",
+   "points_lost": 0.0,
+   "blunders": 0.0
+  },
+  {
+   "block": 16,
+   "start": "2026-04-24",
+   "cat": "pawns",
+   "points_lost": 0.0,
+   "blunders": 0.0
+  },
+  {
+   "block": 17,
+   "start": "2026-05-05",
+   "cat": "pawns",
+   "points_lost": 0.81,
+   "blunders": 1.0
+  },
+  {
+   "block": 18,
+   "start": "2026-05-12",
+   "cat": "pawns",
+   "points_lost": 0.17,
+   "blunders": 1.0
+  },
+  {
+   "block": 19,
+   "start": "2026-05-18",
+   "cat": "pawns",
+   "points_lost": 0.25,
+   "blunders": 1.0
+  },
+  {
+   "block": 20,
+   "start": "2026-05-25",
+   "cat": "pawns",
+   "points_lost": 0.25,
+   "blunders": 1.0
+  },
+  {
+   "block": 21,
+   "start": "2026-06-05",
+   "cat": "pawns",
+   "points_lost": 2.08,
+   "blunders": 6.0
+  },
+  {
+   "block": 22,
+   "start": "2026-06-22",
+   "cat": "pawns",
+   "points_lost": 1.66,
+   "blunders": 4.0
+  },
+  {
+   "block": 23,
+   "start": "2026-07-06",
+   "cat": "pawns",
+   "points_lost": 0.15,
+   "blunders": 1.0
+  },
+  {
+   "block": 24,
+   "start": "2026-07-12",
+   "cat": "pawns",
+   "points_lost": 0.92,
+   "blunders": 4.0
+  },
+  {
+   "block": 25,
+   "start": "2026-07-23",
+   "cat": "pawns",
+   "points_lost": 1.41,
+   "blunders": 4.0
+  },
+  {
+   "block": 26,
+   "start": "2026-08-25",
+   "cat": "pawns",
+   "points_lost": 0.85,
+   "blunders": 2.0
+  },
+  {
+   "block": 27,
+   "start": "2026-09-10",
+   "cat": "pawns",
+   "points_lost": 0.95,
+   "blunders": 3.0
+  },
+  {
+   "block": 28,
+   "start": "2026-09-22",
+   "cat": "pawns",
+   "points_lost": 1.6,
+   "blunders": 4.0
+  },
+  {
+   "block": 29,
+   "start": "2026-10-08",
+   "cat": "pawns",
+   "points_lost": 0.73,
+   "blunders": 2.0
+  },
+  {
+   "block": 30,
+   "start": "2026-10-28",
+   "cat": "pawns",
+   "points_lost": 1.28,
+   "blunders": 4.0
+  },
+  {
+   "block": 31,
+   "start": "2026-11-07",
+   "cat": "pawns",
+   "points_lost": 0.67,
+   "blunders": 2.0
+  },
+  {
+   "block": 1,
+   "start": "2025-11-16",
+   "cat": "missed",
+   "points_lost": 12.87,
+   "blunders": 43.0
+  },
+  {
+   "block": 2,
+   "start": "2025-12-21",
+   "cat": "missed",
+   "points_lost": 14.68,
+   "blunders": 44.0
+  },
+  {
+   "block": 3,
+   "start": "2025-12-28",
+   "cat": "missed",
+   "points_lost": 14.35,
+   "blunders": 46.0
+  },
+  {
+   "block": 4,
+   "start": "2026-01-04",
+   "cat": "missed",
+   "points_lost": 12.63,
+   "blunders": 40.0
+  },
+  {
+   "block": 5,
+   "start": "2026-01-08",
+   "cat": "missed",
+   "points_lost": 15.19,
+   "blunders": 43.0
+  },
+  {
+   "block": 6,
+   "start": "2026-01-13",
+   "cat": "missed",
+   "points_lost": 12.64,
+   "blunders": 39.0
+  },
+  {
+   "block": 7,
+   "start": "2026-01-21",
+   "cat": "missed",
+   "points_lost": 14.15,
+   "blunders": 42.0
+  },
+  {
+   "block": 8,
+   "start": "2026-01-30",
+   "cat": "missed",
+   "points_lost": 13.89,
+   "blunders": 35.0
+  },
+  {
+   "block": 9,
+   "start": "2026-02-06",
+   "cat": "missed",
+   "points_lost": 15.43,
+   "blunders": 41.0
+  },
+  {
+   "block": 10,
+   "start": "2026-02-12",
+   "cat": "missed",
+   "points_lost": 13.72,
+   "blunders": 45.0
+  },
+  {
+   "block": 11,
+   "start": "2026-02-17",
+   "cat": "missed",
+   "points_lost": 17.52,
+   "blunders": 46.0
+  },
+  {
+   "block": 12,
+   "start": "2026-02-23",
+   "cat": "missed",
+   "points_lost": 12.36,
+   "blunders": 43.0
+  },
+  {
+   "block": 13,
+   "start": "2026-03-03",
+   "cat": "missed",
+   "points_lost": 13.3,
+   "blunders": 37.0
+  },
+  {
+   "block": 14,
+   "start": "2026-03-23",
+   "cat": "missed",
+   "points_lost": 12.47,
+   "blunders": 39.0
+  },
+  {
+   "block": 15,
+   "start": "2026-04-15",
+   "cat": "missed",
+   "points_lost": 11.29,
+   "blunders": 32.0
+  },
+  {
+   "block": 16,
+   "start": "2026-04-24",
+   "cat": "missed",
+   "points_lost": 9.96,
+   "blunders": 29.0
+  },
+  {
+   "block": 17,
+   "start": "2026-05-05",
+   "cat": "missed",
+   "points_lost": 12.44,
+   "blunders": 37.0
+  },
+  {
+   "block": 18,
+   "start": "2026-05-12",
+   "cat": "missed",
+   "points_lost": 10.76,
+   "blunders": 33.0
+  },
+  {
+   "block": 19,
+   "start": "2026-05-18",
+   "cat": "missed",
+   "points_lost": 11.81,
+   "blunders": 30.0
+  },
+  {
+   "block": 20,
+   "start": "2026-05-25",
+   "cat": "missed",
+   "points_lost": 17.58,
+   "blunders": 51.0
+  },
+  {
+   "block": 21,
+   "start": "2026-06-05",
+   "cat": "missed",
+   "points_lost": 15.79,
+   "blunders": 46.0
+  },
+  {
+   "block": 22,
+   "start": "2026-06-22",
+   "cat": "missed",
+   "points_lost": 11.51,
+   "blunders": 36.0
+  },
+  {
+   "block": 23,
+   "start": "2026-07-06",
+   "cat": "missed",
+   "points_lost": 10.18,
+   "blunders": 31.0
+  },
+  {
+   "block": 24,
+   "start": "2026-07-12",
+   "cat": "missed",
+   "points_lost": 17.71,
+   "blunders": 56.0
+  },
+  {
+   "block": 25,
+   "start": "2026-07-23",
+   "cat": "missed",
+   "points_lost": 10.63,
+   "blunders": 32.0
+  },
+  {
+   "block": 26,
+   "start": "2026-08-25",
+   "cat": "missed",
+   "points_lost": 10.77,
+   "blunders": 28.0
+  },
+  {
+   "block": 27,
+   "start": "2026-09-10",
+   "cat": "missed",
+   "points_lost": 15.56,
+   "blunders": 43.0
+  },
+  {
+   "block": 28,
+   "start": "2026-09-22",
+   "cat": "missed",
+   "points_lost": 15.36,
+   "blunders": 44.0
+  },
+  {
+   "block": 29,
+   "start": "2026-10-08",
+   "cat": "missed",
+   "points_lost": 17.61,
+   "blunders": 48.0
+  },
+  {
+   "block": 30,
+   "start": "2026-10-28",
+   "cat": "missed",
+   "points_lost": 13.45,
+   "blunders": 42.0
+  },
+  {
+   "block": 31,
+   "start": "2026-11-07",
+   "cat": "missed",
+   "points_lost": 13.84,
+   "blunders": 43.0
+  },
+  {
+   "block": 1,
+   "start": "2025-11-16",
+   "cat": "converting",
+   "points_lost": 7.83,
+   "blunders": 28.0
+  },
+  {
+   "block": 2,
+   "start": "2025-12-21",
+   "cat": "converting",
+   "points_lost": 15.37,
+   "blunders": 44.0
+  },
+  {
+   "block": 3,
+   "start": "2025-12-28",
+   "cat": "converting",
+   "points_lost": 14.14,
+   "blunders": 47.0
+  },
+  {
+   "block": 4,
+   "start": "2026-01-04",
+   "cat": "converting",
+   "points_lost": 13.88,
+   "blunders": 47.0
+  },
+  {
+   "block": 5,
+   "start": "2026-01-08",
+   "cat": "converting",
+   "points_lost": 14.43,
+   "blunders": 39.0
+  },
+  {
+   "block": 6,
+   "start": "2026-01-13",
+   "cat": "converting",
+   "points_lost": 10.94,
+   "blunders": 38.0
+  },
+  {
+   "block": 7,
+   "start": "2026-01-21",
+   "cat": "converting",
+   "points_lost": 13.85,
+   "blunders": 36.0
+  },
+  {
+   "block": 8,
+   "start": "2026-01-30",
+   "cat": "converting",
+   "points_lost": 14.63,
+   "blunders": 49.0
+  },
+  {
+   "block": 9,
+   "start": "2026-02-06",
+   "cat": "converting",
+   "points_lost": 9.62,
+   "blunders": 33.0
+  },
+  {
+   "block": 10,
+   "start": "2026-02-12",
+   "cat": "converting",
+   "points_lost": 22.37,
+   "blunders": 70.0
+  },
+  {
+   "block": 11,
+   "start": "2026-02-17",
+   "cat": "converting",
+   "points_lost": 17.35,
+   "blunders": 52.0
+  },
+  {
+   "block": 12,
+   "start": "2026-02-23",
+   "cat": "converting",
+   "points_lost": 12.11,
+   "blunders": 41.0
+  },
+  {
+   "block": 13,
+   "start": "2026-03-03",
+   "cat": "converting",
+   "points_lost": 12.69,
+   "blunders": 36.0
+  },
+  {
+   "block": 14,
+   "start": "2026-03-23",
+   "cat": "converting",
+   "points_lost": 14.88,
+   "blunders": 50.0
+  },
+  {
+   "block": 15,
+   "start": "2026-04-15",
+   "cat": "converting",
+   "points_lost": 15.2,
+   "blunders": 40.0
+  },
+  {
+   "block": 16,
+   "start": "2026-04-24",
+   "cat": "converting",
+   "points_lost": 8.05,
+   "blunders": 26.0
+  },
+  {
+   "block": 17,
+   "start": "2026-05-05",
+   "cat": "converting",
+   "points_lost": 12.57,
+   "blunders": 41.0
+  },
+  {
+   "block": 18,
+   "start": "2026-05-12",
+   "cat": "converting",
+   "points_lost": 12.75,
+   "blunders": 37.0
+  },
+  {
+   "block": 19,
+   "start": "2026-05-18",
+   "cat": "converting",
+   "points_lost": 11.08,
+   "blunders": 30.0
+  },
+  {
+   "block": 20,
+   "start": "2026-05-25",
+   "cat": "converting",
+   "points_lost": 17.98,
+   "blunders": 53.0
+  },
+  {
+   "block": 21,
+   "start": "2026-06-05",
+   "cat": "converting",
+   "points_lost": 13.54,
+   "blunders": 42.0
+  },
+  {
+   "block": 22,
+   "start": "2026-06-22",
+   "cat": "converting",
+   "points_lost": 12.31,
+   "blunders": 44.0
+  },
+  {
+   "block": 23,
+   "start": "2026-07-06",
+   "cat": "converting",
+   "points_lost": 20.91,
+   "blunders": 56.0
+  },
+  {
+   "block": 24,
+   "start": "2026-07-12",
+   "cat": "converting",
+   "points_lost": 17.47,
+   "blunders": 54.0
+  },
+  {
+   "block": 25,
+   "start": "2026-07-23",
+   "cat": "converting",
+   "points_lost": 7.48,
+   "blunders": 22.0
+  },
+  {
+   "block": 26,
+   "start": "2026-08-25",
+   "cat": "converting",
+   "points_lost": 14.16,
+   "blunders": 37.0
+  },
+  {
+   "block": 27,
+   "start": "2026-09-10",
+   "cat": "converting",
+   "points_lost": 13.36,
+   "blunders": 45.0
+  },
+  {
+   "block": 28,
+   "start": "2026-09-22",
+   "cat": "converting",
+   "points_lost": 15.53,
+   "blunders": 53.0
+  },
+  {
+   "block": 29,
+   "start": "2026-10-08",
+   "cat": "converting",
+   "points_lost": 13.26,
+   "blunders": 36.0
+  },
+  {
+   "block": 30,
+   "start": "2026-10-28",
+   "cat": "converting",
+   "points_lost": 14.13,
+   "blunders": 47.0
+  },
+  {
+   "block": 31,
+   "start": "2026-11-07",
+   "cat": "converting",
+   "points_lost": 13.56,
+   "blunders": 47.0
+  },
+  {
+   "block": 1,
+   "start": "2025-11-16",
+   "cat": "defending",
+   "points_lost": 3.56,
+   "blunders": 18.0
+  },
+  {
+   "block": 2,
+   "start": "2025-12-21",
+   "cat": "defending",
+   "points_lost": 3.68,
+   "blunders": 19.0
+  },
+  {
+   "block": 3,
+   "start": "2025-12-28",
+   "cat": "defending",
+   "points_lost": 2.69,
+   "blunders": 13.0
+  },
+  {
+   "block": 4,
+   "start": "2026-01-04",
+   "cat": "defending",
+   "points_lost": 2.91,
+   "blunders": 15.0
+  },
+  {
+   "block": 5,
+   "start": "2026-01-08",
+   "cat": "defending",
+   "points_lost": 3.07,
+   "blunders": 15.0
+  },
+  {
+   "block": 6,
+   "start": "2026-01-13",
+   "cat": "defending",
+   "points_lost": 3.45,
+   "blunders": 19.0
+  },
+  {
+   "block": 7,
+   "start": "2026-01-21",
+   "cat": "defending",
+   "points_lost": 3.94,
+   "blunders": 20.0
+  },
+  {
+   "block": 8,
+   "start": "2026-01-30",
+   "cat": "defending",
+   "points_lost": 1.97,
+   "blunders": 9.0
+  },
+  {
+   "block": 9,
+   "start": "2026-02-06",
+   "cat": "defending",
+   "points_lost": 1.0,
+   "blunders": 5.0
+  },
+  {
+   "block": 10,
+   "start": "2026-02-12",
+   "cat": "defending",
+   "points_lost": 2.77,
+   "blunders": 14.0
+  },
+  {
+   "block": 11,
+   "start": "2026-02-17",
+   "cat": "defending",
+   "points_lost": 1.88,
+   "blunders": 10.0
+  },
+  {
+   "block": 12,
+   "start": "2026-02-23",
+   "cat": "defending",
+   "points_lost": 5.12,
+   "blunders": 25.0
+  },
+  {
+   "block": 13,
+   "start": "2026-03-03",
+   "cat": "defending",
+   "points_lost": 3.07,
+   "blunders": 15.0
+  },
+  {
+   "block": 14,
+   "start": "2026-03-23",
+   "cat": "defending",
+   "points_lost": 2.02,
+   "blunders": 11.0
+  },
+  {
+   "block": 15,
+   "start": "2026-04-15",
+   "cat": "defending",
+   "points_lost": 2.87,
+   "blunders": 15.0
+  },
+  {
+   "block": 16,
+   "start": "2026-04-24",
+   "cat": "defending",
+   "points_lost": 3.41,
+   "blunders": 16.0
+  },
+  {
+   "block": 17,
+   "start": "2026-05-05",
+   "cat": "defending",
+   "points_lost": 3.89,
+   "blunders": 20.0
+  },
+  {
+   "block": 18,
+   "start": "2026-05-12",
+   "cat": "defending",
+   "points_lost": 2.4,
+   "blunders": 13.0
+  },
+  {
+   "block": 19,
+   "start": "2026-05-18",
+   "cat": "defending",
+   "points_lost": 1.62,
+   "blunders": 8.0
+  },
+  {
+   "block": 20,
+   "start": "2026-05-25",
+   "cat": "defending",
+   "points_lost": 2.32,
+   "blunders": 11.0
+  },
+  {
+   "block": 21,
+   "start": "2026-06-05",
+   "cat": "defending",
+   "points_lost": 1.65,
+   "blunders": 9.0
+  },
+  {
+   "block": 22,
+   "start": "2026-06-22",
+   "cat": "defending",
+   "points_lost": 1.99,
+   "blunders": 10.0
+  },
+  {
+   "block": 23,
+   "start": "2026-07-06",
+   "cat": "defending",
+   "points_lost": 1.45,
+   "blunders": 8.0
+  },
+  {
+   "block": 24,
+   "start": "2026-07-12",
+   "cat": "defending",
+   "points_lost": 4.11,
+   "blunders": 20.0
+  },
+  {
+   "block": 25,
+   "start": "2026-07-23",
+   "cat": "defending",
+   "points_lost": 2.27,
+   "blunders": 10.0
+  },
+  {
+   "block": 26,
+   "start": "2026-08-25",
+   "cat": "defending",
+   "points_lost": 1.65,
+   "blunders": 8.0
+  },
+  {
+   "block": 27,
+   "start": "2026-09-10",
+   "cat": "defending",
+   "points_lost": 1.53,
+   "blunders": 8.0
+  },
+  {
+   "block": 28,
+   "start": "2026-09-22",
+   "cat": "defending",
+   "points_lost": 2.74,
+   "blunders": 13.0
+  },
+  {
+   "block": 29,
+   "start": "2026-10-08",
+   "cat": "defending",
+   "points_lost": 2.72,
+   "blunders": 13.0
+  },
+  {
+   "block": 30,
+   "start": "2026-10-28",
+   "cat": "defending",
+   "points_lost": 3.06,
+   "blunders": 15.0
+  },
+  {
+   "block": 31,
+   "start": "2026-11-07",
+   "cat": "defending",
+   "points_lost": 0.94,
+   "blunders": 4.0
+  },
+  {
+   "block": 1,
+   "start": "2025-11-16",
+   "cat": "endgame",
+   "points_lost": 14.6,
+   "blunders": 44.0
+  },
+  {
+   "block": 2,
+   "start": "2025-12-21",
+   "cat": "endgame",
+   "points_lost": 15.42,
+   "blunders": 40.0
+  },
+  {
+   "block": 3,
+   "start": "2025-12-28",
+   "cat": "endgame",
+   "points_lost": 13.77,
+   "blunders": 41.0
+  },
+  {
+   "block": 4,
+   "start": "2026-01-04",
+   "cat": "endgame",
+   "points_lost": 5.64,
+   "blunders": 19.0
+  },
+  {
+   "block": 5,
+   "start": "2026-01-08",
+   "cat": "endgame",
+   "points_lost": 15.38,
+   "blunders": 49.0
+  },
+  {
+   "block": 6,
+   "start": "2026-01-13",
+   "cat": "endgame",
+   "points_lost": 10.11,
+   "blunders": 34.0
+  },
+  {
+   "block": 7,
+   "start": "2026-01-21",
+   "cat": "endgame",
+   "points_lost": 11.94,
+   "blunders": 34.0
+  },
+  {
+   "block": 8,
+   "start": "2026-01-30",
+   "cat": "endgame",
+   "points_lost": 8.9,
+   "blunders": 28.0
+  },
+  {
+   "block": 9,
+   "start": "2026-02-06",
+   "cat": "endgame",
+   "points_lost": 8.23,
+   "blunders": 23.0
+  },
+  {
+   "block": 10,
+   "start": "2026-02-12",
+   "cat": "endgame",
+   "points_lost": 13.33,
+   "blunders": 40.0
+  },
+  {
+   "block": 11,
+   "start": "2026-02-17",
+   "cat": "endgame",
+   "points_lost": 14.56,
+   "blunders": 45.0
+  },
+  {
+   "block": 12,
+   "start": "2026-02-23",
+   "cat": "endgame",
+   "points_lost": 15.77,
+   "blunders": 53.0
+  },
+  {
+   "block": 13,
+   "start": "2026-03-03",
+   "cat": "endgame",
+   "points_lost": 8.45,
+   "blunders": 27.0
+  },
+  {
+   "block": 14,
+   "start": "2026-03-23",
+   "cat": "endgame",
+   "points_lost": 9.66,
+   "blunders": 28.0
+  },
+  {
+   "block": 15,
+   "start": "2026-04-15",
+   "cat": "endgame",
+   "points_lost": 12.09,
+   "blunders": 32.0
+  },
+  {
+   "block": 16,
+   "start": "2026-04-24",
+   "cat": "endgame",
+   "points_lost": 5.7,
+   "blunders": 18.0
+  },
+  {
+   "block": 17,
+   "start": "2026-05-05",
+   "cat": "endgame",
+   "points_lost": 13.09,
+   "blunders": 39.0
+  },
+  {
+   "block": 18,
+   "start": "2026-05-12",
+   "cat": "endgame",
+   "points_lost": 14.84,
+   "blunders": 43.0
+  },
+  {
+   "block": 19,
+   "start": "2026-05-18",
+   "cat": "endgame",
+   "points_lost": 11.25,
+   "blunders": 28.0
+  },
+  {
+   "block": 20,
+   "start": "2026-05-25",
+   "cat": "endgame",
+   "points_lost": 15.07,
+   "blunders": 44.0
+  },
+  {
+   "block": 21,
+   "start": "2026-06-05",
+   "cat": "endgame",
+   "points_lost": 12.65,
+   "blunders": 37.0
+  },
+  {
+   "block": 22,
+   "start": "2026-06-22",
+   "cat": "endgame",
+   "points_lost": 15.55,
+   "blunders": 43.0
+  },
+  {
+   "block": 23,
+   "start": "2026-07-06",
+   "cat": "endgame",
+   "points_lost": 5.3,
+   "blunders": 12.0
+  },
+  {
+   "block": 24,
+   "start": "2026-07-12",
+   "cat": "endgame",
+   "points_lost": 15.18,
+   "blunders": 46.0
+  },
+  {
+   "block": 25,
+   "start": "2026-07-23",
+   "cat": "endgame",
+   "points_lost": 12.29,
+   "blunders": 29.0
+  },
+  {
+   "block": 26,
+   "start": "2026-08-25",
+   "cat": "endgame",
+   "points_lost": 13.54,
+   "blunders": 37.0
+  },
+  {
+   "block": 27,
+   "start": "2026-09-10",
+   "cat": "endgame",
+   "points_lost": 16.11,
+   "blunders": 46.0
+  },
+  {
+   "block": 28,
+   "start": "2026-09-22",
+   "cat": "endgame",
+   "points_lost": 12.36,
+   "blunders": 35.0
+  },
+  {
+   "block": 29,
+   "start": "2026-10-08",
+   "cat": "endgame",
+   "points_lost": 10.7,
+   "blunders": 29.0
+  },
+  {
+   "block": 30,
+   "start": "2026-10-28",
+   "cat": "endgame",
+   "points_lost": 13.1,
+   "blunders": 42.0
+  },
+  {
+   "block": 31,
+   "start": "2026-11-07",
+   "cat": "endgame",
+   "points_lost": 10.06,
+   "blunders": 29.0
+  },
+  {
+   "block": 1,
+   "start": "2025-11-16",
+   "cat": "opening",
+   "points_lost": 5.52,
+   "blunders": 21.0
+  },
+  {
+   "block": 2,
+   "start": "2025-12-21",
+   "cat": "opening",
+   "points_lost": 7.68,
+   "blunders": 29.0
+  },
+  {
+   "block": 3,
+   "start": "2025-12-28",
+   "cat": "opening",
+   "points_lost": 6.44,
+   "blunders": 26.0
+  },
+  {
+   "block": 4,
+   "start": "2026-01-04",
+   "cat": "opening",
+   "points_lost": 7.88,
+   "blunders": 28.0
+  },
+  {
+   "block": 5,
+   "start": "2026-01-08",
+   "cat": "opening",
+   "points_lost": 5.38,
+   "blunders": 21.0
+  },
+  {
+   "block": 6,
+   "start": "2026-01-13",
+   "cat": "opening",
+   "points_lost": 5.89,
+   "blunders": 24.0
+  },
+  {
+   "block": 7,
+   "start": "2026-01-21",
+   "cat": "opening",
+   "points_lost": 6.0,
+   "blunders": 23.0
+  },
+  {
+   "block": 8,
+   "start": "2026-01-30",
+   "cat": "opening",
+   "points_lost": 5.25,
+   "blunders": 16.0
+  },
+  {
+   "block": 9,
+   "start": "2026-02-06",
+   "cat": "opening",
+   "points_lost": 6.25,
+   "blunders": 19.0
+  },
+  {
+   "block": 10,
+   "start": "2026-02-12",
+   "cat": "opening",
+   "points_lost": 5.5,
+   "blunders": 20.0
+  },
+  {
+   "block": 11,
+   "start": "2026-02-17",
+   "cat": "opening",
+   "points_lost": 5.43,
+   "blunders": 23.0
+  },
+  {
+   "block": 12,
+   "start": "2026-02-23",
+   "cat": "opening",
+   "points_lost": 5.83,
+   "blunders": 26.0
+  },
+  {
+   "block": 13,
+   "start": "2026-03-03",
+   "cat": "opening",
+   "points_lost": 7.45,
+   "blunders": 29.0
+  },
+  {
+   "block": 14,
+   "start": "2026-03-23",
+   "cat": "opening",
+   "points_lost": 6.26,
+   "blunders": 21.0
+  },
+  {
+   "block": 15,
+   "start": "2026-04-15",
+   "cat": "opening",
+   "points_lost": 6.78,
+   "blunders": 25.0
+  },
+  {
+   "block": 16,
+   "start": "2026-04-24",
+   "cat": "opening",
+   "points_lost": 6.74,
+   "blunders": 27.0
+  },
+  {
+   "block": 17,
+   "start": "2026-05-05",
+   "cat": "opening",
+   "points_lost": 3.92,
+   "blunders": 16.0
+  },
+  {
+   "block": 18,
+   "start": "2026-05-12",
+   "cat": "opening",
+   "points_lost": 2.66,
+   "blunders": 8.0
+  },
+  {
+   "block": 19,
+   "start": "2026-05-18",
+   "cat": "opening",
+   "points_lost": 6.32,
+   "blunders": 23.0
+  },
+  {
+   "block": 20,
+   "start": "2026-05-25",
+   "cat": "opening",
+   "points_lost": 8.25,
+   "blunders": 27.0
+  },
+  {
+   "block": 21,
+   "start": "2026-06-05",
+   "cat": "opening",
+   "points_lost": 6.56,
+   "blunders": 26.0
+  },
+  {
+   "block": 22,
+   "start": "2026-06-22",
+   "cat": "opening",
+   "points_lost": 4.4,
+   "blunders": 19.0
+  },
+  {
+   "block": 23,
+   "start": "2026-07-06",
+   "cat": "opening",
+   "points_lost": 7.44,
+   "blunders": 23.0
+  },
+  {
+   "block": 24,
+   "start": "2026-07-12",
+   "cat": "opening",
+   "points_lost": 3.23,
+   "blunders": 12.0
+  },
+  {
+   "block": 25,
+   "start": "2026-07-23",
+   "cat": "opening",
+   "points_lost": 5.68,
+   "blunders": 24.0
+  },
+  {
+   "block": 26,
+   "start": "2026-08-25",
+   "cat": "opening",
+   "points_lost": 3.36,
+   "blunders": 13.0
+  },
+  {
+   "block": 27,
+   "start": "2026-09-10",
+   "cat": "opening",
+   "points_lost": 3.19,
+   "blunders": 15.0
+  },
+  {
+   "block": 28,
+   "start": "2026-09-22",
+   "cat": "opening",
+   "points_lost": 6.4,
+   "blunders": 25.0
+  },
+  {
+   "block": 29,
+   "start": "2026-10-08",
+   "cat": "opening",
+   "points_lost": 5.91,
+   "blunders": 21.0
+  },
+  {
+   "block": 30,
+   "start": "2026-10-28",
+   "cat": "opening",
+   "points_lost": 4.86,
+   "blunders": 20.0
+  },
+  {
+   "block": 31,
+   "start": "2026-11-07",
+   "cat": "opening",
+   "points_lost": 4.12,
+   "blunders": 14.0
+  },
+  {
+   "block": 1,
+   "start": "2025-11-16",
+   "cat": "long_think",
+   "points_lost": 10.69,
+   "blunders": 39.0
+  },
+  {
+   "block": 2,
+   "start": "2025-12-21",
+   "cat": "long_think",
+   "points_lost": 6.61,
+   "blunders": 21.0
+  },
+  {
+   "block": 3,
+   "start": "2025-12-28",
+   "cat": "long_think",
+   "points_lost": 5.99,
+   "blunders": 21.0
+  },
+  {
+   "block": 4,
+   "start": "2026-01-04",
+   "cat": "long_think",
+   "points_lost": 5.85,
+   "blunders": 22.0
+  },
+  {
+   "block": 5,
+   "start": "2026-01-08",
+   "cat": "long_think",
+   "points_lost": 10.61,
+   "blunders": 29.0
+  },
+  {
+   "block": 6,
+   "start": "2026-01-13",
+   "cat": "long_think",
+   "points_lost": 5.34,
+   "blunders": 22.0
+  },
+  {
+   "block": 7,
+   "start": "2026-01-21",
+   "cat": "long_think",
+   "points_lost": 7.07,
+   "blunders": 25.0
+  },
+  {
+   "block": 8,
+   "start": "2026-01-30",
+   "cat": "long_think",
+   "points_lost": 3.92,
+   "blunders": 15.0
+  },
+  {
+   "block": 9,
+   "start": "2026-02-06",
+   "cat": "long_think",
+   "points_lost": 4.55,
+   "blunders": 13.0
+  },
+  {
+   "block": 10,
+   "start": "2026-02-12",
+   "cat": "long_think",
+   "points_lost": 8.86,
+   "blunders": 29.0
+  },
+  {
+   "block": 11,
+   "start": "2026-02-17",
+   "cat": "long_think",
+   "points_lost": 5.42,
+   "blunders": 18.0
+  },
+  {
+   "block": 12,
+   "start": "2026-02-23",
+   "cat": "long_think",
+   "points_lost": 4.91,
+   "blunders": 19.0
+  },
+  {
+   "block": 13,
+   "start": "2026-03-03",
+   "cat": "long_think",
+   "points_lost": 7.19,
+   "blunders": 24.0
+  },
+  {
+   "block": 14,
+   "start": "2026-03-23",
+   "cat": "long_think",
+   "points_lost": 8.18,
+   "blunders": 26.0
+  },
+  {
+   "block": 15,
+   "start": "2026-04-15",
+   "cat": "long_think",
+   "points_lost": 9.41,
+   "blunders": 26.0
+  },
+  {
+   "block": 16,
+   "start": "2026-04-24",
+   "cat": "long_think",
+   "points_lost": 3.69,
+   "blunders": 13.0
+  },
+  {
+   "block": 17,
+   "start": "2026-05-05",
+   "cat": "long_think",
+   "points_lost": 7.88,
+   "blunders": 30.0
+  },
+  {
+   "block": 18,
+   "start": "2026-05-12",
+   "cat": "long_think",
+   "points_lost": 6.8,
+   "blunders": 20.0
+  },
+  {
+   "block": 19,
+   "start": "2026-05-18",
+   "cat": "long_think",
+   "points_lost": 9.64,
+   "blunders": 23.0
+  },
+  {
+   "block": 20,
+   "start": "2026-05-25",
+   "cat": "long_think",
+   "points_lost": 7.26,
+   "blunders": 23.0
+  },
+  {
+   "block": 21,
+   "start": "2026-06-05",
+   "cat": "long_think",
+   "points_lost": 6.47,
+   "blunders": 19.0
+  },
+  {
+   "block": 22,
+   "start": "2026-06-22",
+   "cat": "long_think",
+   "points_lost": 5.93,
+   "blunders": 21.0
+  },
+  {
+   "block": 23,
+   "start": "2026-07-06",
+   "cat": "long_think",
+   "points_lost": 5.62,
+   "blunders": 20.0
+  },
+  {
+   "block": 24,
+   "start": "2026-07-12",
+   "cat": "long_think",
+   "points_lost": 5.77,
+   "blunders": 19.0
+  },
+  {
+   "block": 25,
+   "start": "2026-07-23",
+   "cat": "long_think",
+   "points_lost": 5.39,
+   "blunders": 19.0
+  },
+  {
+   "block": 26,
+   "start": "2026-08-25",
+   "cat": "long_think",
+   "points_lost": 6.67,
+   "blunders": 21.0
+  },
+  {
+   "block": 27,
+   "start": "2026-09-10",
+   "cat": "long_think",
+   "points_lost": 6.54,
+   "blunders": 21.0
+  },
+  {
+   "block": 28,
+   "start": "2026-09-22",
+   "cat": "long_think",
+   "points_lost": 9.95,
+   "blunders": 28.0
+  },
+  {
+   "block": 29,
+   "start": "2026-10-08",
+   "cat": "long_think",
+   "points_lost": 5.32,
+   "blunders": 19.0
+  },
+  {
+   "block": 30,
+   "start": "2026-10-28",
+   "cat": "long_think",
+   "points_lost": 7.66,
+   "blunders": 24.0
+  },
+  {
+   "block": 31,
+   "start": "2026-11-07",
+   "cat": "long_think",
+   "points_lost": 6.43,
+   "blunders": 20.0
+  },
+  {
+   "block": 1,
+   "start": "2025-11-16",
+   "cat": "scramble",
+   "points_lost": 1.78,
+   "blunders": 5.0
+  },
+  {
+   "block": 2,
+   "start": "2025-12-21",
+   "cat": "scramble",
+   "points_lost": 3.46,
+   "blunders": 7.0
+  },
+  {
+   "block": 3,
+   "start": "2025-12-28",
+   "cat": "scramble",
+   "points_lost": 0.85,
+   "blunders": 1.0
+  },
+  {
+   "block": 4,
+   "start": "2026-01-04",
+   "cat": "scramble",
+   "points_lost": 1.88,
+   "blunders": 5.0
+  },
+  {
+   "block": 5,
+   "start": "2026-01-08",
+   "cat": "scramble",
+   "points_lost": 2.77,
+   "blunders": 7.0
+  },
+  {
+   "block": 6,
+   "start": "2026-01-13",
+   "cat": "scramble",
+   "points_lost": 2.26,
+   "blunders": 5.0
+  },
+  {
+   "block": 7,
+   "start": "2026-01-21",
+   "cat": "scramble",
+   "points_lost": 1.83,
+   "blunders": 3.0
+  },
+  {
+   "block": 8,
+   "start": "2026-01-30",
+   "cat": "scramble",
+   "points_lost": 1.11,
+   "blunders": 3.0
+  },
+  {
+   "block": 9,
+   "start": "2026-02-06",
+   "cat": "scramble",
+   "points_lost": 2.07,
+   "blunders": 5.0
+  },
+  {
+   "block": 10,
+   "start": "2026-02-12",
+   "cat": "scramble",
+   "points_lost": 3.24,
+   "blunders": 9.0
+  },
+  {
+   "block": 11,
+   "start": "2026-02-17",
+   "cat": "scramble",
+   "points_lost": 1.37,
+   "blunders": 5.0
+  },
+  {
+   "block": 12,
+   "start": "2026-02-23",
+   "cat": "scramble",
+   "points_lost": 2.29,
+   "blunders": 5.0
+  },
+  {
+   "block": 13,
+   "start": "2026-03-03",
+   "cat": "scramble",
+   "points_lost": 0.0,
+   "blunders": 0.0
+  },
+  {
+   "block": 14,
+   "start": "2026-03-23",
+   "cat": "scramble",
+   "points_lost": 1.81,
+   "blunders": 4.0
+  },
+  {
+   "block": 15,
+   "start": "2026-04-15",
+   "cat": "scramble",
+   "points_lost": 1.82,
+   "blunders": 7.0
+  },
+  {
+   "block": 16,
+   "start": "2026-04-24",
+   "cat": "scramble",
+   "points_lost": 0.7,
+   "blunders": 1.0
+  },
+  {
+   "block": 17,
+   "start": "2026-05-05",
+   "cat": "scramble",
+   "points_lost": 0.66,
+   "blunders": 2.0
+  },
+  {
+   "block": 18,
+   "start": "2026-05-12",
+   "cat": "scramble",
+   "points_lost": 1.87,
+   "blunders": 4.0
+  },
+  {
+   "block": 19,
+   "start": "2026-05-18",
+   "cat": "scramble",
+   "points_lost": 0.0,
+   "blunders": 0.0
+  },
+  {
+   "block": 20,
+   "start": "2026-05-25",
+   "cat": "scramble",
+   "points_lost": 1.99,
+   "blunders": 4.0
+  },
+  {
+   "block": 21,
+   "start": "2026-06-05",
+   "cat": "scramble",
+   "points_lost": 1.98,
+   "blunders": 5.0
+  },
+  {
+   "block": 22,
+   "start": "2026-06-22",
+   "cat": "scramble",
+   "points_lost": 0.43,
+   "blunders": 1.0
+  },
+  {
+   "block": 23,
+   "start": "2026-07-06",
+   "cat": "scramble",
+   "points_lost": 0.0,
+   "blunders": 0.0
+  },
+  {
+   "block": 24,
+   "start": "2026-07-12",
+   "cat": "scramble",
+   "points_lost": 0.89,
+   "blunders": 2.0
+  },
+  {
+   "block": 25,
+   "start": "2026-07-23",
+   "cat": "scramble",
+   "points_lost": 0.41,
+   "blunders": 1.0
+  },
+  {
+   "block": 26,
+   "start": "2026-08-25",
+   "cat": "scramble",
+   "points_lost": 1.96,
+   "blunders": 4.0
+  },
+  {
+   "block": 27,
+   "start": "2026-09-10",
+   "cat": "scramble",
+   "points_lost": 1.29,
+   "blunders": 4.0
+  },
+  {
+   "block": 28,
+   "start": "2026-09-22",
+   "cat": "scramble",
+   "points_lost": 2.14,
+   "blunders": 5.0
+  },
+  {
+   "block": 29,
+   "start": "2026-10-08",
+   "cat": "scramble",
+   "points_lost": 0.86,
+   "blunders": 1.0
+  },
+  {
+   "block": 30,
+   "start": "2026-10-28",
+   "cat": "scramble",
+   "points_lost": 1.13,
+   "blunders": 2.0
+  },
+  {
+   "block": 31,
+   "start": "2026-11-07",
+   "cat": "scramble",
+   "points_lost": 0.98,
+   "blunders": 3.0
+  }
+ ],
+ "practice": [
+  {
+   "cat": "opening",
+   "key": "pqaOc2AL-23",
+   "date": "2026-11-14",
+   "move_no": 12,
+   "played": "Bxb3",
+   "best": "d5",
+   "drop": 29.7,
+   "maia_avoids": true,
+   "themes": "defensiveMove",
+   "url": "https://lichess.org/pqaOc2AL#23"
+  },
+  {
+   "cat": "opening",
+   "key": "W8Gv2YiO-16",
+   "date": "2026-11-14",
+   "move_no": 9,
+   "played": "Nc3",
+   "best": "Bb2",
+   "drop": 43.3,
+   "maia_avoids": true,
+   "themes": "quietMove, discoveredAttack",
+   "url": "https://lichess.org/W8Gv2YiO#16"
+  },
+  {
+   "cat": "opening",
+   "key": "tKPo9afy-19",
+   "date": "2026-11-13",
+   "move_no": 10,
+   "played": "Ne5",
+   "best": "Nd8",
+   "drop": 20.9,
+   "maia_avoids": true,
+   "themes": "",
+   "url": "https://lichess.org/tKPo9afy#19"
+  },
+  {
+   "cat": "opening",
+   "key": "PyxvgPAf-14",
+   "date": "2026-11-13",
+   "move_no": 8,
+   "played": "Bxd5",
+   "best": "Qh5",
+   "drop": 85.5,
+   "maia_avoids": true,
+   "themes": "defensiveMove, hangingPiece",
+   "url": "https://lichess.org/PyxvgPAf#14"
+  },
+  {
+   "cat": "opening",
+   "key": "KMEzGwYt-7",
+   "date": "2026-11-13",
+   "move_no": 4,
+   "played": "c4",
+   "best": "cxd4",
+   "drop": 30.7,
+   "maia_avoids": true,
+   "themes": "defensiveMove",
+   "url": "https://lichess.org/KMEzGwYt#7"
+  },
+  {
+   "cat": "opening",
+   "key": "ymi6Ofo6-16",
+   "date": "2026-11-13",
+   "move_no": 9,
+   "played": "Be3",
+   "best": "axb5",
+   "drop": 20.9,
+   "maia_avoids": true,
+   "themes": "",
+   "url": "https://lichess.org/ymi6Ofo6#16"
+  },
+  {
+   "cat": "opening",
+   "key": "sidyhre5-21",
+   "date": "2026-11-12",
+   "move_no": 11,
+   "played": "Nh5",
+   "best": "Be6",
+   "drop": 44.4,
+   "maia_avoids": true,
+   "themes": "",
+   "url": "https://lichess.org/sidyhre5#21"
+  },
+  {
+   "cat": "opening",
+   "key": "8FLd30uV-13",
+   "date": "2026-11-10",
+   "move_no": 7,
+   "played": "e5",
+   "best": "e6",
+   "drop": 31.5,
+   "maia_avoids": true,
+   "themes": "",
+   "url": "https://lichess.org/8FLd30uV#13"
+  },
+  {
+   "cat": "opening",
+   "key": "us0zijKL-22",
+   "date": "2026-11-09",
+   "move_no": 12,
+   "played": "Bd2",
+   "best": "Nxe5",
+   "drop": 32.3,
+   "maia_avoids": true,
+   "themes": "",
+   "url": "https://lichess.org/us0zijKL#22"
+  },
+  {
+   "cat": "opening",
+   "key": "CpK3R3iF-7",
+   "date": "2026-11-08",
+   "move_no": 4,
+   "played": "c4",
+   "best": "cxd4",
+   "drop": 30.7,
+   "maia_avoids": true,
+   "themes": "defensiveMove",
+   "url": "https://lichess.org/CpK3R3iF#7"
+  },
+  {
+   "cat": "opening",
+   "key": "ZscwNX6q-18",
+   "date": "2026-11-07",
+   "move_no": 10,
+   "played": "Qe2",
+   "best": "d4",
+   "drop": 36.9,
+   "maia_avoids": true,
+   "themes": "defensiveMove",
+   "url": "https://lichess.org/ZscwNX6q#18"
+  },
+  {
+   "cat": "opening",
+   "key": "mvKkFcZA-19",
+   "date": "2026-11-07",
+   "move_no": 10,
+   "played": "Qf6",
+   "best": "Nf6",
+   "drop": 26.9,
+   "maia_avoids": true,
+   "themes": "defensiveMove, castling",
+   "url": "https://lichess.org/mvKkFcZA#19"
+  },
+  {
+   "cat": "fork",
+   "key": "bo9DGMjQ-78",
+   "date": "2026-11-13",
+   "move_no": 40,
+   "played": "Nb6",
+   "best": "a6",
+   "drop": 66.9,
+   "maia_avoids": true,
+   "themes": "fork",
+   "url": "https://lichess.org/bo9DGMjQ#78"
+  },
+  {
+   "cat": "fork",
+   "key": "DizUueob-35",
+   "date": "2026-11-13",
+   "move_no": 18,
+   "played": "Qb6",
+   "best": "Bg6",
+   "drop": 31.0,
+   "maia_avoids": true,
+   "themes": "fork",
+   "url": "https://lichess.org/DizUueob#35"
+  },
+  {
+   "cat": "fork",
+   "key": "haXsBijk-29",
+   "date": "2026-11-12",
+   "move_no": 15,
+   "played": "Nd7",
+   "best": "Qd7",
+   "drop": 24.8,
+   "maia_avoids": true,
+   "themes": "defensiveMove, fork",
+   "url": "https://lichess.org/haXsBijk#29"
+  },
+  {
+   "cat": "fork",
+   "key": "vpysCXzQ-29",
+   "date": "2026-11-09",
+   "move_no": 15,
+   "played": "Bf6",
+   "best": "Nxb4",
+   "drop": 22.9,
+   "maia_avoids": true,
+   "themes": "deflection, fork",
+   "url": "https://lichess.org/vpysCXzQ#29"
+  },
+  {
+   "cat": "fork",
+   "key": "QL8lr13l-25",
+   "date": "2026-11-05",
+   "move_no": 13,
+   "played": "Qd7",
+   "best": "e4",
+   "drop": 33.9,
+   "maia_avoids": true,
+   "themes": "fork",
+   "url": "https://lichess.org/QL8lr13l#25"
+  },
+  {
+   "cat": "fork",
+   "key": "48ZRSFBC-45",
+   "date": "2026-11-04",
+   "move_no": 23,
+   "played": "Bf6",
+   "best": "Kg8",
+   "drop": 61.4,
+   "maia_avoids": true,
+   "themes": "fork, exposedKing",
+   "url": "https://lichess.org/48ZRSFBC#45"
+  },
+  {
+   "cat": "fork",
+   "key": "EfdTLHKK-47",
+   "date": "2026-10-26",
+   "move_no": 24,
+   "played": "Ne5",
+   "best": "Be8",
+   "drop": 30.0,
+   "maia_avoids": true,
+   "themes": "fork",
+   "url": "https://lichess.org/EfdTLHKK#47"
+  },
+  {
+   "cat": "fork",
+   "key": "4B8qotFr-71",
+   "date": "2026-10-26",
+   "move_no": 36,
+   "played": "Kf6",
+   "best": "Kh8",
+   "drop": 88.2,
+   "maia_avoids": true,
+   "themes": "defensiveMove, fork",
+   "url": "https://lichess.org/4B8qotFr#71"
+  },
+  {
+   "cat": "fork",
+   "key": "XI4ZI05g-40",
+   "date": "2026-10-21",
+   "move_no": 21,
+   "played": "Ne2",
+   "best": "Rd1",
+   "drop": 62.3,
+   "maia_avoids": true,
+   "themes": "fork",
+   "url": "https://lichess.org/XI4ZI05g#40"
+  },
+  {
+   "cat": "fork",
+   "key": "sqpksLoW-61",
+   "date": "2026-10-17",
+   "move_no": 31,
+   "played": "Rf8",
+   "best": "Qe3+",
+   "drop": 47.5,
+   "maia_avoids": true,
+   "themes": "mateIn5, mate, advancedPawn, fork, exposedKing, promotion, underPromotion",
+   "url": "https://lichess.org/sqpksLoW#61"
+  },
+  {
+   "cat": "fork",
+   "key": "VAv8T6Ap-41",
+   "date": "2026-10-14",
+   "move_no": 21,
+   "played": "Bxf3",
+   "best": "Kf7",
+   "drop": 24.5,
+   "maia_avoids": true,
+   "themes": "fork",
+   "url": "https://lichess.org/VAv8T6Ap#41"
+  },
+  {
+   "cat": "fork",
+   "key": "VAv8T6Ap-93",
+   "date": "2026-10-14",
+   "move_no": 47,
+   "played": "Rd7",
+   "best": "Qe1#",
+   "drop": 95.0,
+   "maia_avoids": true,
+   "themes": "deflection, fork, pin",
+   "url": "https://lichess.org/VAv8T6Ap#93"
+  },
+  {
+   "cat": "hanging",
+   "key": "74a9QevG-87",
+   "date": "2026-11-15",
+   "move_no": 44,
+   "played": "Bg3",
+   "best": "Rc1+",
+   "drop": 48.6,
+   "maia_avoids": true,
+   "themes": "quietMove, defensiveMove, hangingPiece",
+   "url": "https://lichess.org/74a9QevG#87"
+  },
+  {
+   "cat": "hanging",
+   "key": "74a9QevG-95",
+   "date": "2026-11-15",
+   "move_no": 48,
+   "played": "Ra8",
+   "best": "Bf4",
+   "drop": 52.0,
+   "maia_avoids": true,
+   "themes": "hangingPiece",
+   "url": "https://lichess.org/74a9QevG#95"
+  },
+  {
+   "cat": "hanging",
+   "key": "74a9QevG-101",
+   "date": "2026-11-15",
+   "move_no": 51,
+   "played": "Be5",
+   "best": "Bd6",
+   "drop": 43.7,
+   "maia_avoids": true,
+   "themes": "hangingPiece",
+   "url": "https://lichess.org/74a9QevG#101"
+  },
+  {
+   "cat": "hanging",
+   "key": "K79ngiuD-30",
+   "date": "2026-11-13",
+   "move_no": 16,
+   "played": "b4",
+   "best": "Nhf3",
+   "drop": 41.9,
+   "maia_avoids": true,
+   "themes": "quietMove, hangingPiece",
+   "url": "https://lichess.org/K79ngiuD#30"
+  },
+  {
+   "cat": "hanging",
+   "key": "PyxvgPAf-14",
+   "date": "2026-11-13",
+   "move_no": 8,
+   "played": "Bxd5",
+   "best": "Qh5",
+   "drop": 85.5,
+   "maia_avoids": true,
+   "themes": "defensiveMove, hangingPiece",
+   "url": "https://lichess.org/PyxvgPAf#14"
+  },
+  {
+   "cat": "hanging",
+   "key": "F0TmVtDh-33",
+   "date": "2026-11-07",
+   "move_no": 17,
+   "played": "Bc5",
+   "best": "Rc7",
+   "drop": 42.3,
+   "maia_avoids": true,
+   "themes": "defensiveMove, hangingPiece",
+   "url": "https://lichess.org/F0TmVtDh#33"
+  },
+  {
+   "cat": "hanging",
+   "key": "APg9UCQR-39",
+   "date": "2026-11-07",
+   "move_no": 20,
+   "played": "fxe4",
+   "best": "dxe5",
+   "drop": 24.0,
+   "maia_avoids": true,
+   "themes": "hangingPiece, kingsideAttack",
+   "url": "https://lichess.org/APg9UCQR#39"
+  },
+  {
+   "cat": "hanging",
+   "key": "595qrwKl-13",
+   "date": "2026-11-06",
+   "move_no": 7,
+   "played": "Ne4",
+   "best": "Re8",
+   "drop": 43.0,
+   "maia_avoids": true,
+   "themes": "hangingPiece",
+   "url": "https://lichess.org/595qrwKl#13"
+  },
+  {
+   "cat": "hanging",
+   "key": "cTfmlGfX-24",
+   "date": "2026-11-05",
+   "move_no": 13,
+   "played": "dxe5",
+   "best": "Qe1",
+   "drop": 35.2,
+   "maia_avoids": true,
+   "themes": "hangingPiece",
+   "url": "https://lichess.org/cTfmlGfX#24"
+  },
+  {
+   "cat": "hanging",
+   "key": "5kM2cBrl-58",
+   "date": "2026-11-05",
+   "move_no": 30,
+   "played": "Nh5",
+   "best": "Qxf6",
+   "drop": 31.9,
+   "maia_avoids": true,
+   "themes": "defensiveMove, hangingPiece",
+   "url": "https://lichess.org/5kM2cBrl#58"
+  },
+  {
+   "cat": "hanging",
+   "key": "2W5tzqB0-48",
+   "date": "2026-11-04",
+   "move_no": 25,
+   "played": "Qe3",
+   "best": "Qb2",
+   "drop": 29.2,
+   "maia_avoids": true,
+   "themes": "hangingPiece",
+   "url": "https://lichess.org/2W5tzqB0#48"
+  },
+  {
+   "cat": "hanging",
+   "key": "52LBwSJu-8",
+   "date": "2026-11-04",
+   "move_no": 5,
+   "played": "O-O",
+   "best": "d3",
+   "drop": 29.8,
+   "maia_avoids": true,
+   "themes": "quietMove, hangingPiece",
+   "url": "https://lichess.org/52LBwSJu#8"
+  },
+  {
+   "cat": "king_safety",
+   "key": "4mw3Cf8N-104",
+   "date": "2026-11-15",
+   "move_no": 53,
+   "played": "d7",
+   "best": "Nxe4",
+   "drop": 86.6,
+   "maia_avoids": true,
+   "themes": "mateIn5, mate, advancedPawn, quietMove, exposedKing, promotion",
+   "url": "https://lichess.org/4mw3Cf8N#104"
+  },
+  {
+   "cat": "king_safety",
+   "key": "EOr01OaQ-43",
+   "date": "2026-11-03",
+   "move_no": 22,
+   "played": "Kf8",
+   "best": "Kh7",
+   "drop": 23.0,
+   "maia_avoids": true,
+   "themes": "mateIn1, mate",
+   "url": "https://lichess.org/EOr01OaQ#43"
+  },
+  {
+   "cat": "king_safety",
+   "key": "sqpksLoW-61",
+   "date": "2026-10-17",
+   "move_no": 31,
+   "played": "Rf8",
+   "best": "Qe3+",
+   "drop": 47.5,
+   "maia_avoids": true,
+   "themes": "mateIn5, mate, advancedPawn, fork, exposedKing, promotion, underPromotion",
+   "url": "https://lichess.org/sqpksLoW#61"
+  },
+  {
+   "cat": "king_safety",
+   "key": "Ryhh9Ow0-61",
+   "date": "2026-10-15",
+   "move_no": 31,
+   "played": "Be6",
+   "best": "fxg6",
+   "drop": 47.5,
+   "maia_avoids": true,
+   "themes": "mateIn2, mate, discoveredAttack",
+   "url": "https://lichess.org/Ryhh9Ow0#61"
+  },
+  {
+   "cat": "king_safety",
+   "key": "VAv8T6Ap-97",
+   "date": "2026-10-14",
+   "move_no": 49,
+   "played": "g3",
+   "best": "Qe1#",
+   "drop": 95.1,
+   "maia_avoids": true,
+   "themes": "mateIn1, mate",
+   "url": "https://lichess.org/VAv8T6Ap#97"
+  },
+  {
+   "cat": "king_safety",
+   "key": "nd4zuze9-44",
+   "date": "2026-09-27",
+   "move_no": 23,
+   "played": "Nxf3",
+   "best": "Kh1",
+   "drop": 92.0,
+   "maia_avoids": true,
+   "themes": "mateIn3, mate, kingsideAttack",
+   "url": "https://lichess.org/nd4zuze9#44"
+  },
+  {
+   "cat": "king_safety",
+   "key": "yVcR07AJ-51",
+   "date": "2026-09-26",
+   "move_no": 26,
+   "played": "Nc5",
+   "best": "Kg7",
+   "drop": 38.1,
+   "maia_avoids": true,
+   "themes": "mateIn4, mate",
+   "url": "https://lichess.org/yVcR07AJ#51"
+  },
+  {
+   "cat": "king_safety",
+   "key": "eyXB4ClP-31",
+   "date": "2026-09-19",
+   "move_no": 16,
+   "played": "Rc4",
+   "best": "Ng6",
+   "drop": 52.4,
+   "maia_avoids": true,
+   "themes": "mateIn1, mate, kingsideAttack",
+   "url": "https://lichess.org/eyXB4ClP#31"
+  },
+  {
+   "cat": "king_safety",
+   "key": "SGozBOx3-62",
+   "date": "2026-09-18",
+   "move_no": 32,
+   "played": "Qh5",
+   "best": "g4",
+   "drop": 57.4,
+   "maia_avoids": true,
+   "themes": "mateIn1, mate, kingsideAttack",
+   "url": "https://lichess.org/SGozBOx3#62"
+  },
+  {
+   "cat": "king_safety",
+   "key": "IDaWtPDW-43",
+   "date": "2026-09-12",
+   "move_no": 22,
+   "played": "Qb6",
+   "best": "g6",
+   "drop": 87.9,
+   "maia_avoids": true,
+   "themes": "mateIn1, mate, kingsideAttack",
+   "url": "https://lichess.org/IDaWtPDW#43"
+  },
+  {
+   "cat": "king_safety",
+   "key": "SKfsprIK-43",
+   "date": "2026-09-11",
+   "move_no": 22,
+   "played": "Ng3",
+   "best": "h6",
+   "drop": 35.4,
+   "maia_avoids": true,
+   "themes": "mateIn1, mate, kingsideAttack",
+   "url": "https://lichess.org/SKfsprIK#43"
+  },
+  {
+   "cat": "king_safety",
+   "key": "k1ZaU2pM-29",
+   "date": "2026-07-31",
+   "move_no": 15,
+   "played": "Kxf8",
+   "best": "hxg5",
+   "drop": 21.8,
+   "maia_avoids": true,
+   "themes": "mateIn1, mate",
+   "url": "https://lichess.org/k1ZaU2pM#29"
+  },
+  {
+   "cat": "pin_skewer",
+   "key": "qjc71Npi-87",
+   "date": "2026-10-29",
+   "move_no": 44,
+   "played": "Nf5",
+   "best": "Nf1+",
+   "drop": 44.9,
+   "maia_avoids": true,
+   "themes": "defensiveMove, pin",
+   "url": "https://lichess.org/qjc71Npi#87"
+  },
+  {
+   "cat": "pin_skewer",
+   "key": "VAv8T6Ap-93",
+   "date": "2026-10-14",
+   "move_no": 47,
+   "played": "Rd7",
+   "best": "Qe1#",
+   "drop": 95.0,
+   "maia_avoids": true,
+   "themes": "deflection, fork, pin",
+   "url": "https://lichess.org/VAv8T6Ap#93"
+  },
+  {
+   "cat": "pin_skewer",
+   "key": "wf1xPnWu-19",
+   "date": "2026-10-09",
+   "move_no": 10,
+   "played": "O-O",
+   "best": "Bxf3",
+   "drop": 34.7,
+   "maia_avoids": true,
+   "themes": "pin",
+   "url": "https://lichess.org/wf1xPnWu#19"
+  },
+  {
+   "cat": "pin_skewer",
+   "key": "L7axZ4ei-80",
+   "date": "2026-09-10",
+   "move_no": 41,
+   "played": "Qf3",
+   "best": "Qg3",
+   "drop": 46.8,
+   "maia_avoids": true,
+   "themes": "attraction, pin",
+   "url": "https://lichess.org/L7axZ4ei#80"
+  },
+  {
+   "cat": "pin_skewer",
+   "key": "tW1mUlCP-41",
+   "date": "2026-09-10",
+   "move_no": 21,
+   "played": "Nc6",
+   "best": "exf5",
+   "drop": 41.3,
+   "maia_avoids": true,
+   "themes": "pin, enPassant",
+   "url": "https://lichess.org/tW1mUlCP#41"
+  },
+  {
+   "cat": "pin_skewer",
+   "key": "LhSHyuql-66",
+   "date": "2026-09-08",
+   "move_no": 34,
+   "played": "Qf5+",
+   "best": "Qf6",
+   "drop": 90.0,
+   "maia_avoids": true,
+   "themes": "pin",
+   "url": "https://lichess.org/LhSHyuql#66"
+  },
+  {
+   "cat": "pin_skewer",
+   "key": "BX2HfcOy-32",
+   "date": "2026-08-06",
+   "move_no": 17,
+   "played": "Nh4",
+   "best": "bxa6",
+   "drop": 44.3,
+   "maia_avoids": true,
+   "themes": "pin",
+   "url": "https://lichess.org/BX2HfcOy#32"
+  },
+  {
+   "cat": "pin_skewer",
+   "key": "YbeTwejQ-46",
+   "date": "2026-08-04",
+   "move_no": 24,
+   "played": "Rg4",
+   "best": "Re3",
+   "drop": 78.0,
+   "maia_avoids": true,
+   "themes": "hangingPiece, pin, kingsideAttack",
+   "url": "https://lichess.org/YbeTwejQ#46"
+  },
+  {
+   "cat": "pin_skewer",
+   "key": "zwsqJe40-57",
+   "date": "2026-07-18",
+   "move_no": 29,
+   "played": "Ne5",
+   "best": "cxd4",
+   "drop": 21.1,
+   "maia_avoids": true,
+   "themes": "quietMove, sacrifice, discoveredAttack, pin",
+   "url": "https://lichess.org/zwsqJe40#57"
+  },
+  {
+   "cat": "pin_skewer",
+   "key": "Up6DXGS5-117",
+   "date": "2026-07-12",
+   "move_no": 59,
+   "played": "Qe3+",
+   "best": "Qxg3",
+   "drop": 46.7,
+   "maia_avoids": true,
+   "themes": "mateIn4, mate, exposedKing, pin",
+   "url": "https://lichess.org/Up6DXGS5#117"
+  },
+  {
+   "cat": "pin_skewer",
+   "key": "IlIDYB64-13",
+   "date": "2026-07-11",
+   "move_no": 7,
+   "played": "Nc6",
+   "best": "Nf6",
+   "drop": 29.9,
+   "maia_avoids": true,
+   "themes": "quietMove, pin",
+   "url": "https://lichess.org/IlIDYB64#13"
+  },
+  {
+   "cat": "pin_skewer",
+   "key": "mzhmXXja-34",
+   "date": "2026-07-08",
+   "move_no": 18,
+   "played": "h3",
+   "best": "Rfd1",
+   "drop": 28.9,
+   "maia_avoids": true,
+   "themes": "pin",
+   "url": "https://lichess.org/mzhmXXja#34"
+  },
+  {
+   "cat": "defending",
+   "key": "pqaOc2AL-33",
+   "date": "2026-11-14",
+   "move_no": 17,
+   "played": "gxf6",
+   "best": "Bxf6",
+   "drop": 21.1,
+   "maia_avoids": true,
+   "themes": "",
+   "url": "https://lichess.org/pqaOc2AL#33"
+  },
+  {
+   "cat": "defending",
+   "key": "APg9UCQR-39",
+   "date": "2026-11-07",
+   "move_no": 20,
+   "played": "fxe4",
+   "best": "dxe5",
+   "drop": 24.0,
+   "maia_avoids": true,
+   "themes": "hangingPiece, kingsideAttack",
+   "url": "https://lichess.org/APg9UCQR#39"
+  },
+  {
+   "cat": "defending",
+   "key": "gaHNoRHb-55",
+   "date": "2026-11-05",
+   "move_no": 28,
+   "played": "Qf4",
+   "best": "h5",
+   "drop": 23.6,
+   "maia_avoids": true,
+   "themes": "discoveredAttack",
+   "url": "https://lichess.org/gaHNoRHb#55"
+  },
+  {
+   "cat": "defending",
+   "key": "EOr01OaQ-43",
+   "date": "2026-11-03",
+   "move_no": 22,
+   "played": "Kf8",
+   "best": "Kh7",
+   "drop": 23.0,
+   "maia_avoids": true,
+   "themes": "mateIn1, mate",
+   "url": "https://lichess.org/EOr01OaQ#43"
+  },
+  {
+   "cat": "defending",
+   "key": "qNLIRjq8-69",
+   "date": "2026-10-28",
+   "move_no": 35,
+   "played": "Qc4",
+   "best": "Qd6",
+   "drop": 23.1,
+   "maia_avoids": true,
+   "themes": "hangingPiece",
+   "url": "https://lichess.org/qNLIRjq8#69"
+  },
+  {
+   "cat": "defending",
+   "key": "ChSXmISq-18",
+   "date": "2026-10-24",
+   "move_no": 10,
+   "played": "Be3",
+   "best": "Qc2",
+   "drop": 21.9,
+   "maia_avoids": true,
+   "themes": "",
+   "url": "https://lichess.org/ChSXmISq#18"
+  },
+  {
+   "cat": "defending",
+   "key": "VAv8T6Ap-41",
+   "date": "2026-10-14",
+   "move_no": 21,
+   "played": "Bxf3",
+   "best": "Kf7",
+   "drop": 24.5,
+   "maia_avoids": true,
+   "themes": "fork",
+   "url": "https://lichess.org/VAv8T6Ap#41"
+  },
+  {
+   "cat": "defending",
+   "key": "bz08VqLW-28",
+   "date": "2026-10-06",
+   "move_no": 15,
+   "played": "O-O",
+   "best": "Nc3",
+   "drop": 23.5,
+   "maia_avoids": true,
+   "themes": "quietMove, defensiveMove",
+   "url": "https://lichess.org/bz08VqLW#28"
+  },
+  {
+   "cat": "defending",
+   "key": "YodRW28I-30",
+   "date": "2026-09-24",
+   "move_no": 16,
+   "played": "Bxg6",
+   "best": "Bxg5",
+   "drop": 24.8,
+   "maia_avoids": true,
+   "themes": "",
+   "url": "https://lichess.org/YodRW28I#30"
+  },
+  {
+   "cat": "defending",
+   "key": "lKB1CBDQ-27",
+   "date": "2026-09-23",
+   "move_no": 14,
+   "played": "Nd4",
+   "best": "g5",
+   "drop": 26.0,
+   "maia_avoids": true,
+   "themes": "",
+   "url": "https://lichess.org/lKB1CBDQ#27"
+  },
+  {
+   "cat": "defending",
+   "key": "Iv3BbXJO-40",
+   "date": "2026-09-09",
+   "move_no": 21,
+   "played": "Nd2",
+   "best": "Bd2",
+   "drop": 21.0,
+   "maia_avoids": true,
+   "themes": "trappedPiece",
+   "url": "https://lichess.org/Iv3BbXJO#40"
+  },
+  {
+   "cat": "defending",
+   "key": "fq5fiQ5v-25",
+   "date": "2026-08-25",
+   "move_no": 13,
+   "played": "Bb6",
+   "best": "exd5",
+   "drop": 27.0,
+   "maia_avoids": true,
+   "themes": "advancedPawn, kingsideAttack",
+   "url": "https://lichess.org/fq5fiQ5v#25"
+  }
+ ]
+}

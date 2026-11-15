@@ -1,0 +1,5 @@
+__pycache__/
+# Store mellomfiler som kan regenereres
+analysis/out/moments_full.json
+analysis/out/blunders_*.json
+analysis/out/*.log
