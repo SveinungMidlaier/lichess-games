@@ -1,6 +1,6 @@
 # Fokusplan – fremdrift
 
-Oppdatert 2026-11-15 22:38. Blitz 3+0, rated, fra 2026-11-15 18:16. Hver blokk = 50 partier med ett fokus.
+Oppdatert 2026-11-16 06:32. Blitz 3+0, rated, fra 2026-11-15 18:16. Hver blokk = 50 partier med ett fokus.
 
 ## Nå: Opening, moves 9-12 (mostly Black Sicilian and vs London/Zukertort) (blokk 1)
 
