@@ -288,7 +288,7 @@ function tryMove(from, to) {
     game.arrows = [{ u: p.played, c: 'bad' }, { u: uci, c: 'good' }];
     game.solved = true; game.byUser = true;
     const same = uci.slice(0, 4) === p.ok[0].slice(0, 4) || san === p.best_san;
-    fb(`Riktig! ${san}${same ? '' : ` holder også. Motoren foretrakk ${p.best_san}.`} I partiet spilte du ${p.played_san}.`, 'good');
+    fb(`Riktig! ${san}${same ? '' : ` holder også. Motoren foretrakk ${p.best_san}.`} ${lossText(p)}`, 'good');
     finish(game.wrongs === 0 && !game.hint ? 'right' : 'wrong');
   } else {
     game.wrongs++;
@@ -303,6 +303,9 @@ function fenAfter(fen, ucis) {
   const c = new Chess(fen);
   for (const u of ucis) { if (!c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] || 'q' })) return null }
   return c.fen();
+}
+function lossText(p) {
+  return `I partiet spilte du ${p.played_san}, som kostet ${Math.round(p.drop)} prosentpoeng vinnersjanse (${Math.round(p.wp_before)} % → ${Math.round(p.wp_after)} %).`;
 }
 function prevMarks() { const p = game.p; return p.prev ? { [p.prev.slice(0, 2)]: 'prev', [p.prev.slice(2, 4)]: 'prev' } : {} }
 function fb(t, cls) { const e = $('fb'); e.textContent = t; e.className = 'feedback' + (cls ? ' ' + cls : '') }
@@ -350,7 +353,7 @@ function showStory() {
   const clock = p.clock != null ? `${Math.round(p.clock)} s igjen` : '';
   s.innerHTML =
     `<div class="legend"><span><i style="background:var(--good)"></i>${game.byUser ? 'Ditt trekk' : 'Løsningen'}</span>` +
-    `<span><i style="background:var(--bad)"></i>Det du spilte i partiet: <b class="mono">${esc(p.played_san)}</b></span></div>` +
+    `<span><i style="background:var(--bad)"></i>Det du spilte i partiet: <b class="mono">${esc(p.played_san)}</b> (−${Math.round(p.drop)} poeng)</span></div>` +
     `<p><span class="pill cat">${esc(p.cat_name)}</span> <span class="pill">${PHASE[p.phase] || ''}</span></p>` +
     `<p>Beste trekk: <b class="mono">${esc(p.best_san)}</b>.</p>` +
     `<p>I partiet spilte du <b class="mono">${esc(p.played_san)}</b>${clock ? ' med ' + clock : ''}. Vinnersjansen falt fra ${Math.round(p.wp_before)} % til ${Math.round(p.wp_after)} %.</p>` +
@@ -398,7 +401,7 @@ $('show').onclick = () => {
   game.fen = p.fen;
   game.marks = prevMarks();
   game.arrows = [{ u: p.played, c: 'bad' }, { u, c: 'good' }];
-  fb(`Løsning: ${p.best_san}. I partiet spilte du ${p.played_san}.`, '');
+  fb(`Løsning: ${p.best_san}. ${lossText(p)}`, '');
   drawBoard();
   finish('wrong');
 };
