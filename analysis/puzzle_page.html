@@ -436,8 +436,9 @@ function refreshStats() {
     `</tbody></table><p class="note">Bruk av hint eller «Vis løsning» teller som bom. Oppgavene der Maia-1900 fant et godt trekk er feil du burde unngå på ditt nivå.</p>`;
 }
 function refreshAll() {
-  renderChips(); rebuild(true);
+  renderChips();
   const untouched = !game.p || (!game.solved && game.wrongs === 0 && !game.hint && !game.sel);
+  rebuild(!untouched);   // en urørt oppgave kan byttes ut hvis den viser seg å være forsøkt før
   if (untouched) load();
   refreshStats();
 }
