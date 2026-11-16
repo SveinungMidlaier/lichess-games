@@ -3,3 +3,5 @@ __pycache__/
 analysis/out/moments_full.json
 analysis/out/blunders_*.json
 analysis/out/*.log
+analysis/out/puzzles.json
+analysis/out/puzzles.html

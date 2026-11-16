@@ -1,0 +1,418 @@
+<title>Mine bukker som oppgaver</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: brett til venstre som hovedobjekt, smalt arbeidspanel til høyre; stables på mobil. */
+:root {
+  --bg: #f4f5f2; --panel: #ffffff; --fg: #1c2220; --muted: #5b6662; --line: #dde2de;
+  --accent: #1f6b5f; --accent-fg: #ffffff; --good: #2b7d45; --bad: #b8402b; --warn: #a96d0c;
+  --sq-light: #e8e4d6; --sq-dark: #8b9b8d; --hl-prev: rgba(222, 170, 50, .5); --hl-sel: rgba(31, 107, 95, .55);
+  --dot: rgba(20, 30, 25, .32); --chip: #eaeee9;
+  --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #121614; --panel: #1a1f1d; --fg: #e4e9e6; --muted: #98a49f; --line: #2b3330;
+  --accent: #5cbcaa; --accent-fg: #0e1412; --good: #5cc27a; --bad: #ec7a62; --warn: #e2a944;
+  --sq-light: #c9c5b7; --sq-dark: #6e7e71; --hl-prev: rgba(226, 169, 68, .5); --hl-sel: rgba(92, 188, 170, .55);
+  --dot: rgba(10, 14, 12, .4); --chip: #232a27; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #121614; --panel: #1a1f1d; --fg: #e4e9e6; --muted: #98a49f; --line: #2b3330;
+  --accent: #5cbcaa; --accent-fg: #0e1412; --good: #5cc27a; --bad: #ec7a62; --warn: #e2a944;
+  --sq-light: #c9c5b7; --sq-dark: #6e7e71; --hl-prev: rgba(226, 169, 68, .5); --hl-sel: rgba(92, 188, 170, .55);
+  --dot: rgba(10, 14, 12, .4); --chip: #232a27; color-scheme: dark }
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--fg); font-family: var(--f-body); font-size: 15px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 20px 40px }
+.wrap { max-width: 1080px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px }
+header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 20px }
+h1 { font-size: 1.35rem; font-weight: 600; margin: 0; text-wrap: balance }
+.sub { color: var(--muted); margin: 2px 0 0; max-width: 62ch }
+.filters { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; padding: 12px 14px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px }
+.chips { display: flex; flex-wrap: wrap; gap: 6px }
+.chip { font: inherit; font-size: .85rem; border: 1px solid var(--line); background: var(--chip); color: var(--fg); padding: 4px 10px; border-radius: 999px; cursor: pointer }
+.chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-fg); border-color: var(--accent) }
+.chip .n { opacity: .7; font-variant-numeric: tabular-nums; margin-left: 4px }
+label.ctl { display: inline-flex; gap: 6px; align-items: center; font-size: .88rem; color: var(--muted) }
+select { font: inherit; font-size: .88rem; color: var(--fg); background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 3px 6px }
+.app { display: grid; grid-template-columns: minmax(0, 560px) minmax(0, 1fr); gap: 22px; align-items: start }
+@media (max-width: 820px) { .app { grid-template-columns: minmax(0, 1fr) } }
+.boardbox { position: relative; width: 100%; max-width: 560px }
+.board { display: grid; grid-template-columns: repeat(8, 1fr); width: 100%; aspect-ratio: 1; max-width: 100%; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 0 var(--line), 0 6px 22px rgba(0,0,0,.12); user-select: none; -webkit-user-select: none }
+.board.shake { animation: shake .32s }
+@keyframes shake { 25% { transform: translateX(-6px) } 50% { transform: translateX(5px) } 75% { transform: translateX(-3px) } }
+@media (prefers-reduced-motion: reduce) { .board.shake { animation: none } }
+.sq { position: relative; border: 0; padding: 0; margin: 0; background: var(--sq-light); cursor: pointer; display: block }
+.sq.d { background: var(--sq-dark) }
+.sq:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; z-index: 2 }
+.sq .hl { position: absolute; inset: 0; pointer-events: none }
+.sq.prev .hl { background: var(--hl-prev) }
+.sq.sel .hl { background: var(--hl-sel) }
+.sq.good .hl { background: color-mix(in srgb, var(--good) 55%, transparent) }
+.sq.bad .hl { background: color-mix(in srgb, var(--bad) 55%, transparent) }
+.sq.hint .hl { box-shadow: inset 0 0 0 4px var(--warn) }
+.sq img { position: absolute; inset: 4%; width: 92%; height: 92%; pointer-events: none }
+.sq.tgt::after { content: ""; position: absolute; left: 50%; top: 50%; width: 28%; height: 28%; transform: translate(-50%, -50%); border-radius: 50%; background: var(--dot); pointer-events: none }
+.sq.tgt.cap::after { width: 86%; height: 86%; background: transparent; border: 5px solid var(--dot) }
+.coord { position: absolute; font: 600 10px/1 var(--f-body); pointer-events: none; opacity: .75 }
+.coord.f { right: 3px; bottom: 2px } .coord.r { left: 3px; top: 3px }
+.sq .coord { color: var(--sq-dark) } .sq.d .coord { color: var(--sq-light) }
+.panel { display: flex; flex-direction: column; gap: 14px; min-width: 0 }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; min-width: 0 }
+.task { font-size: 1.15rem; font-weight: 600; margin: 0 }
+.meta { color: var(--muted); font-size: .85rem; margin: 0 }
+.feedback { margin: 0; min-height: 1.5em }
+.feedback.good { color: var(--good); font-weight: 600 } .feedback.bad { color: var(--bad); font-weight: 600 }
+.btns { display: flex; flex-wrap: wrap; gap: 8px }
+button.b { font: inherit; font-size: .9rem; padding: 6px 12px; border-radius: 7px; border: 1px solid var(--line); background: var(--chip); color: var(--fg); cursor: pointer }
+button.b.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-fg); font-weight: 600 }
+button.b:disabled { opacity: .45; cursor: default }
+button:focus-visible, select:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.mono { font-family: var(--f-mono); font-size: .92em }
+.story { display: flex; flex-direction: column; gap: 6px; font-size: .92rem }
+.story p { margin: 0 }
+.pill { display: inline-block; font-size: .75rem; letter-spacing: .03em; padding: 1px 8px; border-radius: 999px; background: var(--chip); border: 1px solid var(--line); color: var(--muted) }
+.pill.cat { color: var(--fg) }
+a { color: var(--accent) }
+.stats table { width: 100%; border-collapse: collapse; font-size: .86rem; font-variant-numeric: tabular-nums }
+.stats th, .stats td { text-align: left; padding: 4px 6px; border-bottom: 1px solid var(--line) }
+.stats th { color: var(--muted); font-weight: 500; font-size: .78rem; letter-spacing: .03em; text-transform: uppercase }
+.stats td.r, .stats th.r { text-align: right }
+.bar { height: 6px; border-radius: 3px; background: var(--chip); overflow: hidden; min-width: 50px }
+.bar i { display: block; height: 100%; background: var(--accent) }
+.big { font-size: 1.6rem; font-weight: 600; font-variant-numeric: tabular-nums; line-height: 1.1 }
+.kpis { display: flex; flex-wrap: wrap; gap: 8px 26px }
+.kpis div span { display: block; color: var(--muted); font-size: .78rem }
+.note { color: var(--muted); font-size: .8rem; margin: 0 }
+.empty { padding: 40px 10px; text-align: center; color: var(--muted) }
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Mine bukker som oppgaver</h1>
+      <p class="sub">Hver stilling er rett før en bukk du gjorde i blitz 3+0 det siste året. Finn et trekk som holder stillingen. Alle trekk Stockfish regner som like gode godtas.</p>
+    </div>
+    <p class="note" id="syncnote">Laster lagrede forsøk …</p>
+  </header>
+
+  <section class="filters" aria-label="Utvalg">
+    <div class="chips" id="cats" role="group" aria-label="Tema"></div>
+    <label class="ctl" for="phase">Fase
+      <select id="phase"><option value="">Alle</option><option value="opening">Åpning (trekk 1–12)</option><option value="middlegame">Midtspill</option><option value="endgame">Sluttspill</option></select>
+    </label>
+    <label class="ctl" for="which">Vis
+      <select id="which"><option value="new">Ikke forsøkt</option><option value="failed">Bommet sist</option><option value="all">Alle</option></select>
+    </label>
+    <label class="ctl" for="order">Rekkefølge
+      <select id="order"><option value="new">Nyeste først</option><option value="rand">Tilfeldig</option></select>
+    </label>
+    <label class="ctl" for="maia"><input type="checkbox" id="maia" checked> Bare de Maia-1900 ville unngått</label>
+  </section>
+
+  <div class="app">
+    <div class="boardbox">
+      <div class="board" id="board" aria-label="Sjakkbrett"></div>
+    </div>
+    <div class="panel">
+      <div class="card" id="taskcard">
+        <p class="task" id="task">–</p>
+        <p class="meta" id="meta"></p>
+        <p class="feedback" id="fb" aria-live="polite"></p>
+        <div class="btns">
+          <button class="b" id="hint" type="button">Hint</button>
+          <button class="b" id="show" type="button">Vis løsning</button>
+          <button class="b primary" id="next" type="button">Neste oppgave</button>
+        </div>
+        <div class="story" id="story" hidden></div>
+        <div class="btns" id="replay" hidden>
+          <button class="b" id="rpStart" type="button" aria-label="Til start">⏮</button>
+          <button class="b" id="rpBack" type="button" aria-label="Ett trekk tilbake">◀</button>
+          <button class="b" id="rpFwd" type="button" aria-label="Ett trekk frem">▶</button>
+          <span class="meta" id="rpLabel"></span>
+        </div>
+      </div>
+      <div class="card stats" id="stats"></div>
+    </div>
+  </div>
+</div>
+
+<script type="application/json" id="pz">__PUZZLES__</script>
+<script type="application/json" id="pc">__PIECES__</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+<script>
+(() => {
+const P = JSON.parse(document.getElementById('pz').textContent);
+const PIECES = JSON.parse(document.getElementById('pc').textContent);
+const HAS_CHESS = typeof window.Chess === 'function';
+const CATS = [['', 'Alle'], ['mate', 'Matt'], ['fork', 'Gaffel'], ['hanging', 'Hengt brikke'], ['pin', 'Binding / spidd'], ['discovered', 'Avdekket angrep'], ['other', 'Annen taktikk']];
+const PHASE = { opening: 'Åpning', middlegame: 'Midtspill', endgame: 'Sluttspill' };
+const $ = id => document.getElementById(id);
+
+/* ---------- lagring av forsøk: db (delt, Claude kan lese) med localStorage som reserve ---------- */
+const LS = 'bukk-oppgaver-v1';
+const store = {
+  recs: {}, months: new Set(), db: null, queue: Promise.resolve(),
+  async init() {
+    try { this.db = window.claude?.use ? await window.claude.use('db') : null } catch (e) { this.db = null }
+    if (!this.db) { this.loadLocal(); $('syncnote').textContent = 'Forsøk lagres bare i denne nettleseren.'; refreshAll(); return }
+    this.db.collection('attempts').onSnapshot(snap => {
+      const r = {};
+      snap.docs.forEach(d => { if (d.exists) { this.months.add(d.id); Object.assign(r, d.data().items || {}) } });
+      this.recs = r;
+      $('syncnote').textContent = 'Forsøkene dine lagres og kan analyseres av Claude.';
+      refreshAll();
+    }, () => { this.db = null; this.loadLocal(); $('syncnote').textContent = 'Forsøk lagres bare i denne nettleseren.'; refreshAll() });
+  },
+  loadLocal() { try { this.recs = JSON.parse(localStorage.getItem(LS) || '{}') } catch (e) { this.recs = {} } },
+  save(p, rec) {
+    this.recs[p.k] = rec;
+    if (!this.db) { try { localStorage.setItem(LS, JSON.stringify(this.recs)) } catch (e) {} return }
+    const mid = p.date.slice(0, 7), ref = this.db.doc('attempts/' + mid), body = { items: { [p.k]: rec } };
+    this.queue = this.queue.then(async () => {
+      try {
+        if (this.months.has(mid)) await ref.update(body);
+        else { const s = await ref.get(); if (s.exists) await ref.update(body); else await ref.set(body); this.months.add(mid) }
+      } catch (e) { $('syncnote').textContent = 'Klarte ikke å lagre forsøket (' + (e?.code || 'feil') + ').' }
+    });
+  }
+};
+
+/* ---------- utvalg ---------- */
+const st = { cat: '', phase: '', which: 'new', order: 'new', maia: true, list: [], idx: 0, seed: Math.random() };
+function filtered(ignoreCat) {
+  return P.filter(p => (ignoreCat || !st.cat || p.cat === st.cat) && (!st.phase || p.phase === st.phase) && (!st.maia || p.maia_ok));
+}
+function hash(s) { let h = 2166136261 ^ Math.floor(st.seed * 1e9); for (const c of s) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619) } return h >>> 0 }
+function rebuild(keepCurrent) {
+  const cur = keepCurrent && game.p ? game.p.k : null;
+  let l = filtered(false).filter(p => {
+    const r = store.recs[p.k];
+    if (st.which === 'new') return !r || p.k === cur;
+    if (st.which === 'failed') return (r && r.lastres !== 'right') || p.k === cur;
+    return true;
+  });
+  if (st.order === 'rand') l = l.slice().sort((a, b) => hash(a.k) - hash(b.k));
+  st.list = l;
+  st.idx = cur ? Math.max(0, l.findIndex(p => p.k === cur)) : 0;
+}
+function renderChips() {
+  const base = filtered(true);
+  $('cats').innerHTML = '';
+  CATS.forEach(([id, name]) => {
+    const n = id ? base.filter(p => p.cat === id).length : base.length;
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'chip'; b.setAttribute('aria-pressed', String(st.cat === id));
+    b.innerHTML = `${name}<span class="n">${n}</span>`;
+    b.onclick = () => { st.cat = id; renderChips(); rebuild(false); load() };
+    $('cats').appendChild(b);
+  });
+}
+
+/* ---------- brett ---------- */
+const game = { p: null, fen: null, sel: null, targets: [], marks: {}, chess: null, solved: false, wrongs: 0, hint: false, positions: [], pos: 0, recorded: false };
+function parseFen(fen) {
+  const rows = fen.split(' ')[0].split('/'), m = {};
+  rows.forEach((row, ri) => { let f = 0; for (const ch of row) { if (/\d/.test(ch)) f += +ch; else { m['abcdefgh'[f] + (8 - ri)] = ch; f++ } } });
+  return m;
+}
+function drawBoard() {
+  const p = game.p, el = $('board');
+  el.innerHTML = '';
+  if (!p) return;
+  const flip = p.color === 'black', pcs = parseFen(game.fen);
+  for (let r = 0; r < 8; r++) for (let c = 0; c < 8; c++) {
+    const file = flip ? 7 - c : c, rank = flip ? r + 1 : 8 - r, sq = 'abcdefgh'[file] + rank;
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'sq' + ((file + rank) % 2 === 1 ? ' d' : '');
+    b.dataset.sq = sq;
+    const pc = pcs[sq];
+    b.setAttribute('aria-label', sq + (pc ? ' ' + pc : ''));
+    const mk = game.marks[sq]; if (mk) b.classList.add(...mk.split(' '));
+    if (game.sel === sq) b.classList.add('sel');
+    const t = game.targets.find(x => x.to === sq);
+    if (t) b.classList.add('tgt'); if (t && pc) b.classList.add('cap');
+    b.innerHTML = '<span class="hl"></span>' + (pc ? `<img alt="" src="${PIECES[pc]}">` : '') +
+      (r === 7 ? `<span class="coord f">${'abcdefgh'[file]}</span>` : '') + (c === 0 ? `<span class="coord r">${rank}</span>` : '');
+    b.onclick = () => clickSq(sq, pc);
+    el.appendChild(b);
+  }
+}
+function myPiece(pc) { return pc && ((game.p.color === 'white') === (pc === pc.toUpperCase())) }
+function legalFrom(sq) {
+  if (HAS_CHESS) return game.chess.moves({ square: sq, verbose: true }).map(m => ({ to: m.to, promo: m.promotion }));
+  return 'abcdefgh'.split('').flatMap(f => [1, 2, 3, 4, 5, 6, 7, 8].map(r => ({ to: f + r }))).filter(x => x.to !== sq && !myPiece(parseFen(game.fen)[x.to]));
+}
+function clickSq(sq, pc) {
+  if (game.solved || !game.p) return;
+  if (game.sel && game.targets.some(t => t.to === sq)) { tryMove(game.sel, sq); return }
+  if (myPiece(pc)) { game.sel = sq; game.targets = legalFrom(sq) } else { game.sel = null; game.targets = [] }
+  drawBoard();
+}
+function tryMove(from, to) {
+  const t = game.targets.find(x => x.to === to);
+  const uci = from + to + (t && t.promo ? 'q' : '');
+  game.sel = null; game.targets = [];
+  const p = game.p;
+  const ok = p.ok.some(u => u.slice(0, 4) === uci.slice(0, 4));
+  let san = uci;
+  if (HAS_CHESS) { const c = new Chess(p.fen); const m = c.move({ from, to, promotion: 'q' }); if (m) san = m.san }
+  if (ok) {
+    game.fen = fenAfter(p.fen, [uci]) || game.fen;
+    game.marks = { [from]: 'good', [to]: 'good' };
+    game.solved = true;
+    const same = uci.slice(0, 4) === p.ok[0].slice(0, 4) || san === p.best_san;
+    fb(`Riktig! ${san}${same ? '' : ` holder også. Motoren foretrakk ${p.best_san}.`}`, 'good');
+    finish(game.wrongs === 0 && !game.hint ? 'right' : 'wrong');
+  } else {
+    game.wrongs++;
+    game.marks = { ...prevMarks(), [from]: 'bad', [to]: 'bad' };
+    fb(`${san} holder ikke. Prøv igjen${game.wrongs >= 2 ? ', eller vis løsningen' : ''}.`, 'bad');
+    const el = $('board'); el.classList.remove('shake'); void el.offsetWidth; el.classList.add('shake');
+  }
+  drawBoard();
+}
+function fenAfter(fen, ucis) {
+  if (!HAS_CHESS) return null;
+  const c = new Chess(fen);
+  for (const u of ucis) { if (!c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] || 'q' })) return null }
+  return c.fen();
+}
+function prevMarks() { const p = game.p; return p.prev ? { [p.prev.slice(0, 2)]: 'prev', [p.prev.slice(2, 4)]: 'prev' } : {} }
+function fb(t, cls) { const e = $('fb'); e.textContent = t; e.className = 'feedback' + (cls ? ' ' + cls : '') }
+
+/* ---------- oppgaveflyt ---------- */
+function load() {
+  const p = st.list[st.idx] || null;
+  Object.assign(game, { p, sel: null, targets: [], solved: false, wrongs: 0, hint: false, recorded: false, positions: [], pos: 0 });
+  $('story').hidden = true; $('replay').hidden = true; fb('');
+  if (!p) {
+    $('board').innerHTML = '';
+    $('task').textContent = st.which === 'new' ? 'Ingen nye oppgaver i dette utvalget' : 'Ingen oppgaver i dette utvalget';
+    $('meta').textContent = 'Endre tema, fase eller «Vis» over brettet.';
+    ['hint', 'show', 'next'].forEach(i => $(i).disabled = true);
+    return;
+  }
+  ['hint', 'show', 'next'].forEach(i => $(i).disabled = false);
+  game.fen = p.fen; game.marks = prevMarks();
+  if (HAS_CHESS) game.chess = new Chess(p.fen);
+  const side = p.color === 'white' ? 'Hvit' : 'Svart';
+  $('task').textContent = `${side} i trekket. Finn et trekk som holder.`;
+  const r = store.recs[p.k];
+  $('meta').innerHTML = `Trekk ${p.move_no} · ${PHASE[p.phase] || ''} · ${p.date} · ${esc(p.opening)}` +
+    (r ? ` · <span class="pill">forsøkt ${r.right + r.wrong}×, sist ${r.lastres === 'right' ? 'riktig' : 'bom'}</span>` : '') +
+    `<br><span class="meta">Oppgave ${st.idx + 1} av ${st.list.length} i utvalget</span>`;
+  drawBoard();
+}
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])) }
+function finish(res) {
+  const p = game.p;
+  if (!game.recorded) {
+    game.recorded = true;
+    const old = store.recs[p.k] || { right: 0, wrong: 0 };
+    const rec = { k: p.k, cat: p.cat, phase: p.phase, first: old.first || res, lastres: res,
+      right: old.right + (res === 'right' ? 1 : 0), wrong: old.wrong + (res === 'right' ? 0 : 1),
+      last: new Date().toISOString().slice(0, 10) };
+    store.save(p, rec);
+  }
+  game.solved = true;
+  showStory();
+  refreshStats();
+}
+function showStory() {
+  const p = game.p, s = $('story');
+  const clock = p.clock != null ? `${Math.round(p.clock)} s igjen` : '';
+  s.innerHTML =
+    `<p><span class="pill cat">${esc(p.cat_name)}</span> <span class="pill">${PHASE[p.phase] || ''}</span></p>` +
+    `<p>Beste trekk: <b class="mono">${esc(p.best_san)}</b>.</p>` +
+    `<p>I partiet spilte du <b class="mono">${esc(p.played_san)}</b>${clock ? ' med ' + clock : ''}. Vinnersjansen falt fra ${Math.round(p.wp_before)} % til ${Math.round(p.wp_after)} %.</p>` +
+    (p.punish.length ? `<p>Straffen: <span class="mono">${esc(p.punish.join(' '))}</span></p>` : '') +
+    (p.maia_san ? `<p class="meta">Maia-1900 ville spilt ${esc(p.maia_san)}${p.maia_ok ? ', som holder' : ''}.</p>` : '') +
+    `<p><a href="${p.url}" target="_blank" rel="noopener">Åpne partiet på Lichess</a></p>`;
+  s.hidden = false;
+  if (HAS_CHESS) {
+    const seq = [p.played].concat(sanToUci(p.fen, p.played, p.punish));
+    const pos = [{ fen: p.fen, label: 'Stillingen før bukken', mv: p.prev }];
+    let fen = p.fen;
+    seq.forEach((u, i) => { const f = fenAfter(fen, [u]); if (f) { fen = f; pos.push({ fen, mv: u, label: i === 0 ? `Du spilte ${p.played_san}` : 'Straffen, trekk ' + i }) } });
+    game.positions = pos; game.pos = 0;
+    $('replay').hidden = game.positions.length < 2;
+    updRp(false);
+  }
+}
+function sanToUci(fen, played, sans) {
+  const c = new Chess(fen); c.move({ from: played.slice(0, 2), to: played.slice(2, 4), promotion: played[4] || 'q' });
+  const out = [];
+  for (const s of sans) { const m = c.move(s); if (!m) break; out.push(m.from + m.to + (m.promotion || '')) }
+  return out;
+}
+function updRp(draw = true) {
+  const x = game.positions[game.pos];
+  $('rpLabel').textContent = x ? `Gjennomgang: ${x.label} (${game.pos}/${game.positions.length - 1})` : '';
+  $('rpBack').disabled = $('rpStart').disabled = game.pos === 0;
+  $('rpFwd').disabled = game.pos >= game.positions.length - 1;
+  if (draw && x) { game.fen = x.fen; game.marks = x.mv ? { [x.mv.slice(0, 2)]: 'prev', [x.mv.slice(2, 4)]: 'prev' } : {}; drawBoard() }
+}
+$('rpStart').onclick = () => { game.pos = 0; updRp() };
+$('rpBack').onclick = () => { if (game.pos > 0) { game.pos--; updRp() } };
+$('rpFwd').onclick = () => { if (game.pos < game.positions.length - 1) { game.pos++; updRp() } };
+$('hint').onclick = () => {
+  if (!game.p || game.solved) return;
+  game.hint = true;
+  const from = game.p.ok[0].slice(0, 2);
+  game.marks = { ...prevMarks(), [from]: 'hint' };
+  fb(`Hint: flytt brikken på ${from}. Temaet er «${game.p.cat_name}».`);
+  drawBoard();
+};
+$('show').onclick = () => {
+  if (!game.p || game.solved) return;
+  const p = game.p, u = p.ok[0];
+  game.fen = fenAfter(p.fen, [u]) || p.fen;
+  game.marks = { [u.slice(0, 2)]: 'good', [u.slice(2, 4)]: 'good' };
+  fb(`Løsning: ${p.best_san}`, '');
+  drawBoard();
+  finish('wrong');
+};
+$('next').onclick = () => {
+  const cur = game.p && game.p.k;
+  rebuild(false);
+  if (st.which === 'all' || st.which === 'failed') {
+    const i = st.list.findIndex(p => p.k === cur);
+    st.idx = i >= 0 ? (i + 1) % Math.max(1, st.list.length) : 0;
+  }
+  load();
+};
+['phase', 'which', 'order'].forEach(id => $(id).onchange = e => { st[id] = e.target.value; if (id === 'order') st.seed = Math.random(); renderChips(); rebuild(false); load() });
+$('maia').onchange = e => { st.maia = e.target.checked; renderChips(); rebuild(false); load() };
+
+/* ---------- statistikk ---------- */
+function refreshStats() {
+  const recs = Object.values(store.recs);
+  const tot = recs.length, firstRight = recs.filter(r => r.first === 'right').length;
+  const pool = filtered(true).length;
+  const rows = CATS.slice(1).map(([id, name]) => {
+    const rs = recs.filter(r => r.cat === id), n = rs.length, ok = rs.filter(r => r.first === 'right').length;
+    return { name, n, pct: n ? Math.round(100 * ok / n) : null };
+  });
+  $('stats').innerHTML =
+    `<div class="kpis"><div><span>Oppgaver forsøkt</span><b class="big">${tot}</b></div>` +
+    `<div><span>Riktig på første forsøk</span><b class="big">${tot ? Math.round(100 * firstRight / tot) + ' %' : '–'}</b></div>` +
+    `<div><span>I utvalget nå</span><b class="big">${pool}</b></div></div>` +
+    `<table><thead><tr><th>Tema</th><th class="r">Forsøkt</th><th class="r">Riktig første gang</th><th></th></tr></thead><tbody>` +
+    rows.map(r => `<tr><td>${r.name}</td><td class="r">${r.n}</td><td class="r">${r.pct == null ? '–' : r.pct + ' %'}</td>` +
+      `<td><div class="bar"><i style="width:${r.pct || 0}%"></i></div></td></tr>`).join('') +
+    `</tbody></table><p class="note">Bruk av hint eller «Vis løsning» teller som bom. Oppgavene der Maia-1900 fant et godt trekk er feil du burde unngå på ditt nivå.</p>`;
+}
+function refreshAll() {
+  renderChips(); rebuild(true);
+  const untouched = !game.p || (!game.solved && game.wrongs === 0 && !game.hint && !game.sel);
+  if (untouched) load();
+  refreshStats();
+}
+
+renderChips(); rebuild(false); load(); refreshStats();
+store.init();
+})();
+</script>
