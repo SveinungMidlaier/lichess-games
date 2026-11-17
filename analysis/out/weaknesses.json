@@ -1,54 +1,54 @@
 {
  "180+0": {
   "label": "blitz 3+0",
-  "games": 9553,
+  "games": 9589,
   "me": {
-   "moves": 388321,
+   "moves": 389670,
    "blunder_per100": 6.9,
-   "mistake_per100": 3.52,
-   "avg_winpct_loss": 3.8
+   "mistake_per100": 3.51,
+   "avg_winpct_loss": 3.79
   },
   "opponents": {
-   "moves": 388510,
+   "moves": 389860,
    "blunder_per100": 6.53,
    "mistake_per100": 3.33,
    "avg_winpct_loss": 3.67
   },
   "by_phase": {
    "1 åpning (trekk 1-12)": {
-    "moves": 113901,
-    "blunder_per100": 3.85,
+    "moves": 114332,
+    "blunder_per100": 3.84,
     "mistake_per100": 3.08,
     "avg_winpct_loss": 2.9
    },
    "2 midtspill": {
-    "moves": 134515,
+    "moves": 135037,
     "blunder_per100": 11.15,
     "mistake_per100": 5.3,
     "avg_winpct_loss": 5.49
    },
    "3 sluttspill": {
-    "moves": 139905,
-    "blunder_per100": 5.31,
+    "moves": 140301,
+    "blunder_per100": 5.3,
     "mistake_per100": 2.15,
     "avg_winpct_loss": 2.9
    }
   },
   "by_phase_opponents": {
    "1 åpning (trekk 1-12)": {
-    "moves": 113870,
-    "blunder_per100": 3.22,
+    "moves": 114300,
+    "blunder_per100": 3.21,
     "mistake_per100": 2.76,
     "avg_winpct_loss": 2.71
    },
    "2 midtspill": {
-    "moves": 134659,
+    "moves": 135184,
     "blunder_per100": 10.43,
     "mistake_per100": 5.15,
     "avg_winpct_loss": 5.23
    },
    "3 sluttspill": {
-    "moves": 139981,
+    "moves": 140376,
     "blunder_per100": 5.47,
     "mistake_per100": 2.04,
     "avg_winpct_loss": 2.96
@@ -56,37 +56,37 @@
   },
   "by_clock_left": {
    "a: <5 s": {
-    "moves": 6515,
-    "blunder_per100": 6.02,
-    "mistake_per100": 1.17,
-    "avg_winpct_loss": 3.3
+    "moves": 6531,
+    "blunder_per100": 6.05,
+    "mistake_per100": 1.16,
+    "avg_winpct_loss": 3.31
    },
    "b: 5-10 s": {
-    "moves": 5984,
+    "moves": 5995,
     "blunder_per100": 5.92,
-    "mistake_per100": 1.32,
+    "mistake_per100": 1.35,
     "avg_winpct_loss": 3.12
    },
    "c: 10 s-15%": {
-    "moves": 17336,
-    "blunder_per100": 5.16,
-    "mistake_per100": 1.62,
-    "avg_winpct_loss": 2.82
+    "moves": 17419,
+    "blunder_per100": 5.15,
+    "mistake_per100": 1.61,
+    "avg_winpct_loss": 2.81
    },
    "d: 15-35%": {
-    "moves": 50413,
-    "blunder_per100": 5.87,
+    "moves": 50608,
+    "blunder_per100": 5.86,
     "mistake_per100": 2.06,
     "avg_winpct_loss": 3.11
    },
    "e: 35-65%": {
-    "moves": 102452,
+    "moves": 102773,
     "blunder_per100": 8.06,
     "mistake_per100": 3.46,
     "avg_winpct_loss": 4.11
    },
    "f: >65%": {
-    "moves": 205552,
+    "moves": 206275,
     "blunder_per100": 6.78,
     "mistake_per100": 4.2,
     "avg_winpct_loss": 3.92
@@ -94,66 +94,66 @@
   },
   "by_time_spent": {
    "a: <1 s": {
-    "moves": 62277,
+    "moves": 62461,
     "blunder_per100": 2.34,
     "mistake_per100": 1.14,
     "avg_winpct_loss": 1.68
    },
    "b: 1-2 s": {
-    "moves": 139734,
+    "moves": 140188,
     "blunder_per100": 4.46,
     "mistake_per100": 2.61,
     "avg_winpct_loss": 2.85
    },
    "c: 2-4 s": {
-    "moves": 92728,
-    "blunder_per100": 8.11,
+    "moves": 93050,
+    "blunder_per100": 8.1,
     "mistake_per100": 4.39,
-    "avg_winpct_loss": 4.41
+    "avg_winpct_loss": 4.4
    },
    "d: 4-8 s": {
-    "moves": 59633,
-    "blunder_per100": 12.4,
+    "moves": 59874,
+    "blunder_per100": 12.39,
     "mistake_per100": 5.87,
-    "avg_winpct_loss": 6.12
+    "avg_winpct_loss": 6.11
    },
    "e: 8+ s": {
-    "moves": 24329,
+    "moves": 24441,
     "blunder_per100": 17.21,
-    "mistake_per100": 7.07,
-    "avg_winpct_loss": 7.91
+    "mistake_per100": 7.06,
+    "avg_winpct_loss": 7.9
    }
   },
   "by_eval_before": {
    "a: tapt (<15%)": {
-    "moves": 97429,
+    "moves": 97704,
     "blunder_per100": 0.0,
     "mistake_per100": 0.22,
     "avg_winpct_loss": 0.75
    },
    "b: dårligere (15-35%)": {
-    "moves": 26750,
-    "blunder_per100": 10.12,
+    "moves": 26813,
+    "blunder_per100": 10.11,
     "mistake_per100": 10.29,
     "avg_winpct_loss": 5.35
    },
    "c: lik (35-65%)": {
-    "moves": 183825,
+    "moves": 184476,
     "blunder_per100": 7.35,
     "mistake_per100": 3.92,
-    "avg_winpct_loss": 4.09
+    "avg_winpct_loss": 4.08
    },
    "d: bedre (65-85%)": {
-    "moves": 27514,
-    "blunder_per100": 21.57,
+    "moves": 27630,
+    "blunder_per100": 21.56,
     "mistake_per100": 8.88,
-    "avg_winpct_loss": 9.11
+    "avg_winpct_loss": 9.1
    },
    "e: vunnet (>85%)": {
-    "moves": 52803,
-    "blunder_per100": 8.8,
-    "mistake_per100": 1.97,
-    "avg_winpct_loss": 4.84
+    "moves": 53047,
+    "blunder_per100": 8.78,
+    "mistake_per100": 1.96,
+    "avg_winpct_loss": 4.83
    }
   },
   "by_year": {
@@ -200,50 +200,50 @@
     "avg_winpct_loss": 3.9
    },
    "2026": {
-    "moves": 57111,
-    "blunder_per100": 6.89,
-    "mistake_per100": 3.73,
-    "avg_winpct_loss": 3.85
+    "moves": 58460,
+    "blunder_per100": 6.86,
+    "mistake_per100": 3.72,
+    "avg_winpct_loss": 3.83
    }
   },
   "blunder_types": {
-   "posisjonell/stille trekk": 9141,
-   "overså gevinst av materiell": 5344,
-   "hengte offiser/dronning": 4801,
-   "hengte bonde/byttet feil": 3175,
-   "overså sjakk/taktikk med sjakk": 2561,
-   "overså motstanderens sjakk/kongeangrep": 1781
+   "posisjonell/stille trekk": 9164,
+   "overså gevinst av materiell": 5360,
+   "hengte offiser/dronning": 4818,
+   "hengte bonde/byttet feil": 3188,
+   "overså sjakk/taktikk med sjakk": 2567,
+   "overså motstanderens sjakk/kongeangrep": 1783
   },
   "blunder_types_by_phase": {
    "1 åpning (trekk 1-12)": {
-    "posisjonell/stille trekk": 1624,
-    "hengte offiser/dronning": 908,
-    "overså gevinst av materiell": 869,
-    "overså sjakk/taktikk med sjakk": 242,
-    "hengte bonde/byttet feil": 570,
+    "posisjonell/stille trekk": 1627,
+    "hengte offiser/dronning": 910,
+    "overså gevinst av materiell": 872,
+    "overså sjakk/taktikk med sjakk": 243,
+    "hengte bonde/byttet feil": 572,
     "overså motstanderens sjakk/kongeangrep": 168
    },
    "2 midtspill": {
-    "hengte bonde/byttet feil": 1795,
-    "posisjonell/stille trekk": 5050,
-    "hengte offiser/dronning": 3134,
-    "overså sjakk/taktikk med sjakk": 1038,
-    "overså gevinst av materiell": 3350,
-    "overså motstanderens sjakk/kongeangrep": 633
+    "hengte bonde/byttet feil": 1805,
+    "posisjonell/stille trekk": 5064,
+    "hengte offiser/dronning": 3147,
+    "overså sjakk/taktikk med sjakk": 1043,
+    "overså gevinst av materiell": 3360,
+    "overså motstanderens sjakk/kongeangrep": 634
    },
    "3 sluttspill": {
-    "posisjonell/stille trekk": 2467,
-    "hengte offiser/dronning": 759,
-    "overså motstanderens sjakk/kongeangrep": 980,
-    "hengte bonde/byttet feil": 810,
+    "posisjonell/stille trekk": 2473,
+    "hengte offiser/dronning": 761,
+    "overså motstanderens sjakk/kongeangrep": 981,
+    "hengte bonde/byttet feil": 811,
     "overså sjakk/taktikk med sjakk": 1281,
-    "overså gevinst av materiell": 1125
+    "overså gevinst av materiell": 1128
    }
   },
   "won_positions": {
-   "won_positions": 4310,
-   "converted": 3614,
-   "drawn": 121,
+   "won_positions": 4329,
+   "converted": 3632,
+   "drawn": 122,
    "lost": 575,
    "lost_how": {
     "mate": 307,
@@ -254,36 +254,36 @@
    "conversion_pct": 83.9
   },
   "lost_positions": {
-   "lost_positions": 6456,
-   "saved_draw": 343,
-   "won": 1695
+   "lost_positions": 6475,
+   "saved_draw": 344,
+   "won": 1698
   },
   "punishing_opp_blunders": {
-   "opp_blunders": 14978,
-   "punished": 9352,
-   "missed": 5626,
-   "punish_pct": 62.4
+   "opp_blunders": 15037,
+   "punished": 9393,
+   "missed": 5644,
+   "punish_pct": 62.5
   },
   "endgame_entry_score": {
    "a: tapt (<15%)": {
-    "n": 2711,
+    "n": 2721,
     "score": 20.8
    },
    "b: dårligere (15-35%)": {
-    "n": 626,
-    "score": 42.4
+    "n": 627,
+    "score": 42.3
    },
    "c: lik (35-65%)": {
-    "n": 1778,
+    "n": 1783,
     "score": 55.0
    },
    "d: bedre (65-85%)": {
-    "n": 569,
-    "score": 68.1
+    "n": 571,
+    "score": 68.0
    },
    "e: vunnet (>85%)": {
-    "n": 1395,
-    "score": 86.0
+    "n": 1401,
+    "score": 86.1
    }
   },
   "openings_by_eval_move12_worst": [
@@ -314,7 +314,7 @@
    {
     "color": "black",
     "opening": "Sicilian Defense: Alapin Variation",
-    "n": 142,
+    "n": 143,
     "avg_winpct_after_move12": 38.9
    },
    {
@@ -322,6 +322,12 @@
     "opening": "Sicilian Defense: Delayed Alapin Variation",
     "n": 152,
     "avg_winpct_after_move12": 39.0
+   },
+   {
+    "color": "white",
+    "opening": "Elephant Gambit: Paulsen Countergambit",
+    "n": 33,
+    "avg_winpct_after_move12": 39.6
    },
    {
     "color": "black",
@@ -332,20 +338,20 @@
    {
     "color": "black",
     "opening": "English Opening: King's English Variation",
-    "n": 134,
+    "n": 135,
     "avg_winpct_after_move12": 40.1
-   },
-   {
-    "color": "white",
-    "opening": "Elephant Gambit: Paulsen Countergambit",
-    "n": 32,
-    "avg_winpct_after_move12": 40.6
    },
    {
     "color": "black",
     "opening": "Queen's Gambit Declined: Baltic Defense",
     "n": 57,
     "avg_winpct_after_move12": 41.0
+   },
+   {
+    "color": "white",
+    "opening": "Scandinavian Defense: Panov Transfer",
+    "n": 54,
+    "avg_winpct_after_move12": 41.1
    },
    {
     "color": "black",
@@ -358,12 +364,6 @@
     "opening": "Scandinavian Defense: Icelandic-Palme Gambit",
     "n": 48,
     "avg_winpct_after_move12": 41.3
-   },
-   {
-    "color": "white",
-    "opening": "Scandinavian Defense: Panov Transfer",
-    "n": 53,
-    "avg_winpct_after_move12": 41.7
    },
    {
     "color": "black",
@@ -394,8 +394,8 @@
    {
     "color": "white",
     "opening": "Owen Defense",
-    "n": 112,
-    "avg_winpct_after_move12": 55.7
+    "n": 113,
+    "avg_winpct_after_move12": 55.8
    },
    {
     "color": "white",
@@ -412,8 +412,8 @@
    {
     "color": "black",
     "opening": "Slav Defense: Exchange Variation",
-    "n": 26,
-    "avg_winpct_after_move12": 52.9
+    "n": 28,
+    "avg_winpct_after_move12": 52.1
    },
    {
     "color": "black",
@@ -436,7 +436,7 @@
    {
     "color": "white",
     "opening": "Modern Defense",
-    "n": 154,
+    "n": 156,
     "avg_winpct_after_move12": 51.4
    }
   ]
