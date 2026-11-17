@@ -59,6 +59,17 @@ select { font: inherit; font-size: .88rem; color: var(--fg); background: var(--p
 .arrows line { stroke-width: .17; stroke-linecap: round; opacity: .85 }
 .arrows .good { stroke: var(--good) } .arrows .bad { stroke: var(--bad) }
 .arrows .mgood { fill: var(--good) } .arrows .mbad { fill: var(--bad) }
+.arrows .opp { stroke: var(--warn) } .arrows .mine { stroke: var(--muted) }
+.arrows .mopp { fill: var(--warn) } .arrows .mmine { fill: var(--muted) }
+.moves { display: flex; flex-wrap: wrap; gap: 4px; font-family: var(--f-mono); font-size: .9rem }
+.moves button { font: inherit; border: 1px solid transparent; background: none; color: var(--fg); padding: 1px 5px; border-radius: 5px; cursor: pointer }
+.moves button.blunder { color: var(--bad); font-weight: 600 }
+.moves button.opp { color: var(--warn) }
+.moves button[aria-current="true"] { border-color: var(--line); background: var(--chip) }
+.wp { display: flex; flex-direction: column; gap: 4px; font-size: .85rem }
+.wpbar { position: relative; height: 12px; border-radius: 6px; background: var(--chip); border: 1px solid var(--line); overflow: hidden }
+.wpbar i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--accent); transition: width .5s }
+@media (prefers-reduced-motion: reduce) { .wpbar i { transition: none } }
 .legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: .85rem }
 .legend i { display: inline-block; width: 18px; height: 4px; border-radius: 2px; vertical-align: middle; margin-right: 6px }
 .coord { position: absolute; font: 600 10px/1 var(--f-body); pointer-events: none; opacity: .75 }
@@ -124,6 +135,8 @@ a { color: var(--accent) }
         <defs>
           <marker id="ahg" viewBox="0 0 4 4" refX="2" refY="2" markerWidth="2.6" markerHeight="2.6" orient="auto"><path class="mgood" d="M0,0 L4,2 L0,4 z"/></marker>
           <marker id="ahb" viewBox="0 0 4 4" refX="2" refY="2" markerWidth="2.6" markerHeight="2.6" orient="auto"><path class="mbad" d="M0,0 L4,2 L0,4 z"/></marker>
+          <marker id="ahw" viewBox="0 0 4 4" refX="2" refY="2" markerWidth="2.6" markerHeight="2.6" orient="auto"><path class="mopp" d="M0,0 L4,2 L0,4 z"/></marker>
+          <marker id="ahm" viewBox="0 0 4 4" refX="2" refY="2" markerWidth="2.6" markerHeight="2.6" orient="auto"><path class="mmine" d="M0,0 L4,2 L0,4 z"/></marker>
         </defs>
         <g id="arrowg"></g>
       </svg>
@@ -139,7 +152,10 @@ a { color: var(--accent) }
           <button class="b primary" id="next" type="button">Neste oppgave</button>
         </div>
         <div class="story" id="story" hidden></div>
+        <div class="wp" id="wp" hidden></div>
+        <div class="moves" id="rpMoves" hidden></div>
         <div class="btns" id="replay" hidden>
+          <button class="b primary" id="rpPlay" type="button">▶ Spill av straffen</button>
           <button class="b" id="rpStart" type="button" aria-label="Til start">⏮</button>
           <button class="b" id="rpBack" type="button" aria-label="Ett trekk tilbake">◀</button>
           <button class="b" id="rpFwd" type="button" aria-label="Ett trekk frem">▶</button>
@@ -260,7 +276,7 @@ function drawArrows(flip) {
   g.innerHTML = (game.arrows || []).map(a => {
     const [x1, y1] = xy(a.u.slice(0, 2)), [x2, y2] = xy(a.u.slice(2, 4));
     const len = Math.hypot(x2 - x1, y2 - y1) || 1, k = (len - .32) / len;
-    return `<line class="${a.c}" x1="${x1}" y1="${y1}" x2="${x1 + (x2 - x1) * k}" y2="${y1 + (y2 - y1) * k}" marker-end="url(#${a.c === 'good' ? 'ahg' : 'ahb'})"/>`;
+    return `<line class="${a.c}" x1="${x1}" y1="${y1}" x2="${x1 + (x2 - x1) * k}" y2="${y1 + (y2 - y1) * k}" marker-end="url(#${{ good: 'ahg', bad: 'ahb', opp: 'ahw', mine: 'ahm' }[a.c]})"/>`;
   }).join('');
 }
 function myPiece(pc) { return pc && ((game.p.color === 'white') === (pc === pc.toUpperCase())) }
@@ -314,7 +330,8 @@ function fb(t, cls) { const e = $('fb'); e.textContent = t; e.className = 'feedb
 function load() {
   const p = st.list[st.idx] || null;
   Object.assign(game, { p, arrows: [], byUser: false, sel: null, targets: [], solved: false, wrongs: 0, hint: false, recorded: false, positions: [], pos: 0 });
-  $('story').hidden = true; $('replay').hidden = true; fb('');
+  stopPlay();
+  $('story').hidden = true; $('replay').hidden = true; $('rpMoves').hidden = true; $('wp').hidden = true; fb('');
   if (!p) {
     $('board').innerHTML = '';
     $('task').textContent = st.which === 'new' ? 'Ingen nye oppgaver i dette utvalget' : 'Ingen oppgaver i dette utvalget';
@@ -361,16 +378,46 @@ function showStory() {
     (p.maia_san ? `<p class="meta">Maia-1900 ville spilt ${esc(p.maia_san)}${p.maia_ok ? ', som holder' : ''}.</p>` : '') +
     `<p><a href="${p.url}" target="_blank" rel="noopener">Åpne partiet på Lichess</a></p>`;
   s.hidden = false;
+  game.solArrows = game.arrows.slice();
   if (HAS_CHESS) {
     const seq = [p.played].concat(sanToUci(p.fen, p.played, p.punish));
-    const pos = [{ fen: p.fen, label: 'Stillingen før bukken', mv: p.prev }];
+    const sans = [p.played_san].concat(p.punish);
+    const pos = [{ fen: p.fen, label: 'Før bukken', c: null }];
     let fen = p.fen;
-    seq.forEach((u, i) => { const f = fenAfter(fen, [u]); if (f) { fen = f; pos.push({ fen, mv: u, label: i === 0 ? `Du spilte ${p.played_san}` : 'Straffen, trekk ' + i }) } });
+    seq.forEach((u, i) => {
+      const f = fenAfter(fen, [u]); if (!f) return;
+      fen = f;
+      const ply = p.ply + i, num = Math.floor(ply / 2) + 1, white = ply % 2 === 0;
+      const lbl = (white ? `${num}. ` : (i === 0 || i === 1 ? `${num}… ` : '')) + sans[i] + (i === 0 ? '??' : '');
+      pos.push({ fen, mv: u, san: lbl, c: i === 0 ? 'bad' : (i % 2 === 1 ? 'opp' : 'mine') });
+    });
     game.positions = pos; game.pos = 0;
-    $('replay').hidden = game.positions.length < 2;
+    const has = pos.length > 1;
+    $('replay').hidden = $('rpMoves').hidden = !has;
+    $('rpMoves').innerHTML = pos.slice(1).map((x, i) =>
+      `<button type="button" data-i="${i + 1}" class="${x.c === 'bad' ? 'blunder' : x.c === 'opp' ? 'opp' : ''}">${esc(x.san)}</button>`).join('');
+    $('rpMoves').querySelectorAll('button').forEach(b => b.onclick = () => { stopPlay(); game.pos = +b.dataset.i; updRp() });
     updRp(false);
   }
+  const w = $('wp');
+  w.hidden = false;
+  setWp(p.wp_before, `Vinnersjanse før bukken: ${Math.round(p.wp_before)} %`);
 }
+function setWp(v, txt) {
+  $('wp').innerHTML = `<span>${txt}</span><div class="wpbar" role="img" aria-label="${txt}"><i style="width:${Math.max(0, Math.min(100, v))}%"></i></div>`;
+}
+let playTimer = null;
+function stopPlay() { if (playTimer) { clearInterval(playTimer); playTimer = null; $('rpPlay').textContent = '▶ Spill av straffen' } }
+$('rpPlay').onclick = () => {
+  if (playTimer) { stopPlay(); return }
+  if (game.pos >= game.positions.length - 1) game.pos = 0;
+  $('rpPlay').textContent = '⏸ Pause';
+  updRp();
+  playTimer = setInterval(() => {
+    if (game.pos >= game.positions.length - 1) { stopPlay(); return }
+    game.pos++; updRp();
+  }, 1300);
+};
 function sanToUci(fen, played, sans) {
   const c = new Chess(fen); c.move({ from: played.slice(0, 2), to: played.slice(2, 4), promotion: played[4] || 'q' });
   const out = [];
@@ -378,15 +425,23 @@ function sanToUci(fen, played, sans) {
   return out;
 }
 function updRp(draw = true) {
-  const x = game.positions[game.pos];
-  $('rpLabel').textContent = x ? `Gjennomgang: ${x.label} (${game.pos}/${game.positions.length - 1})` : '';
+  const x = game.positions[game.pos], p = game.p, last = game.positions.length - 1;
+  $('rpLabel').textContent = x ? `${game.pos}/${last}` : '';
   $('rpBack').disabled = $('rpStart').disabled = game.pos === 0;
-  $('rpFwd').disabled = game.pos >= game.positions.length - 1;
-  if (draw && x) { game.arrows = []; game.fen = x.fen; game.marks = x.mv ? { [x.mv.slice(0, 2)]: 'prev', [x.mv.slice(2, 4)]: 'prev' } : {}; drawBoard() }
+  $('rpFwd').disabled = game.pos >= last;
+  $('rpMoves').querySelectorAll('button').forEach(b => b.setAttribute('aria-current', String(+b.dataset.i === game.pos)));
+  if (!draw || !x) return;
+  game.fen = x.fen;
+  if (game.pos === 0) { game.arrows = game.solArrows || []; game.marks = prevMarks() }
+  else { game.arrows = [{ u: x.mv, c: x.c }]; game.marks = { [x.mv.slice(0, 2)]: 'prev', [x.mv.slice(2, 4)]: 'prev' } }
+  drawBoard();
+  if (game.pos === 0) setWp(p.wp_before, `Vinnersjanse før bukken: ${Math.round(p.wp_before)} %`);
+  else if (game.pos < last) setWp(p.wp_after, `Etter ${p.played_san}: ${Math.round(p.wp_after)} % (−${Math.round(p.drop)} poeng). Motstanderen straffer …`);
+  else setWp(p.wp_after, `Etter straffen: ${Math.round(p.wp_after)} % vinnersjanse igjen, ned fra ${Math.round(p.wp_before)} %.`);
 }
-$('rpStart').onclick = () => { game.pos = 0; updRp() };
-$('rpBack').onclick = () => { if (game.pos > 0) { game.pos--; updRp() } };
-$('rpFwd').onclick = () => { if (game.pos < game.positions.length - 1) { game.pos++; updRp() } };
+$('rpStart').onclick = () => { stopPlay(); game.pos = 0; updRp() };
+$('rpBack').onclick = () => { stopPlay(); if (game.pos > 0) { game.pos--; updRp() } };
+$('rpFwd').onclick = () => { stopPlay(); if (game.pos < game.positions.length - 1) { game.pos++; updRp() } };
 $('hint').onclick = () => {
   if (!game.p || game.solved) return;
   game.hint = true;
