@@ -320,8 +320,16 @@ function fenAfter(fen, ucis) {
   for (const u of ucis) { if (!c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] || 'q' })) return null }
   return c.fen();
 }
+function secs(x) { return x < 10 ? x.toFixed(1).replace('.', ',') : String(Math.round(x)) }
+function timeText(p) {
+  const t = [];
+  if (p.spent != null) t.push(`brukte ${secs(p.spent)} s på trekket`);
+  if (p.clock != null) t.push(`hadde ${Math.round(p.clock)} s igjen`);
+  return t.join(' og ');
+}
 function lossText(p) {
-  return `I partiet spilte du ${p.played_san}, som kostet ${Math.round(p.drop)} prosentpoeng vinnersjanse (${Math.round(p.wp_before)} % → ${Math.round(p.wp_after)} %).`;
+  const t = timeText(p);
+  return `I partiet spilte du ${p.played_san}${t ? ' (' + t + ')' : ''}, som kostet ${Math.round(p.drop)} prosentpoeng vinnersjanse (${Math.round(p.wp_before)} % → ${Math.round(p.wp_after)} %).`;
 }
 function prevMarks() { const p = game.p; return p.prev ? { [p.prev.slice(0, 2)]: 'prev', [p.prev.slice(2, 4)]: 'prev' } : {} }
 function fb(t, cls) { const e = $('fb'); e.textContent = t; e.className = 'feedback' + (cls ? ' ' + cls : '') }
@@ -367,13 +375,13 @@ function finish(res) {
 }
 function showStory() {
   const p = game.p, s = $('story');
-  const clock = p.clock != null ? `${Math.round(p.clock)} s igjen` : '';
+  const clock = timeText(p);
   s.innerHTML =
     `<div class="legend"><span><i style="background:var(--good)"></i>${game.byUser ? 'Ditt trekk' : 'Løsningen'}</span>` +
     `<span><i style="background:var(--bad)"></i>Det du spilte i partiet: <b class="mono">${esc(p.played_san)}</b> (−${Math.round(p.drop)} poeng)</span></div>` +
     `<p><span class="pill cat">${esc(p.cat_name)}</span> <span class="pill">${PHASE[p.phase] || ''}</span></p>` +
     `<p>Beste trekk: <b class="mono">${esc(p.best_san)}</b>.</p>` +
-    `<p>I partiet spilte du <b class="mono">${esc(p.played_san)}</b>${clock ? ' med ' + clock : ''}. Vinnersjansen falt fra ${Math.round(p.wp_before)} % til ${Math.round(p.wp_after)} %.</p>` +
+    `<p>I partiet spilte du <b class="mono">${esc(p.played_san)}</b>${clock ? ' – du ' + clock : ''}. Vinnersjansen falt fra ${Math.round(p.wp_before)} % til ${Math.round(p.wp_after)} %.</p>` +
     (p.punish.length ? `<p>Straffen: <span class="mono">${esc(p.punish.join(' '))}</span></p>` : '') +
     (p.maia_san ? `<p class="meta">Maia-1900 ville spilt ${esc(p.maia_san)}${p.maia_ok ? ', som holder' : ''}.</p>` : '') +
     `<p><a href="${p.url}" target="_blank" rel="noopener">Åpne partiet på Lichess</a></p>`;

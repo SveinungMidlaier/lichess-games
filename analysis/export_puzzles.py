@@ -126,7 +126,7 @@ def main():
             "played": m["move"], "played_san": m["san"],
             "punish": san_line(after, m.get("pv", [])),
             "drop": m["drop"], "wp_before": m["wp_before"], "wp_after": m["wp_after"],
-            "clock": m.get("clock"), "move_no": m["move_no"], "phase": m["phase"],
+            "clock": m.get("clock"), "spent": m.get("spent"), "move_no": m["move_no"], "phase": m["phase"],
             "opening": m.get("opening") or "", "cat": cat_id, "cat_name": cat_name,
             "maia_ok": maia is not None and m.get("maia_drop", 99) < 10,
             "maia_san": board.san(chess.Move.from_uci(maia)) if maia else None,
