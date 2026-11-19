@@ -50,5 +50,8 @@
    "baseline_points_per50": 2.13,
    "baseline_excess_per50": 0.16
   }
- ]
+ ],
+ "block_starts": {
+  "2": "2026-11-19 12:38"
+ }
 }

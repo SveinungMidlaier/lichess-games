@@ -1,39 +1,39 @@
 {
- "n_standard": 15840,
+ "n_standard": 15856,
  "180+0": {
   "label": "blitz 3+0",
   "overall": {
-   "n": 9591,
+   "n": 9607,
    "score": 49.9,
    "vs_exp": -0.2,
-   "w": 4559,
-   "d": 453,
-   "l": 4579
+   "w": 4564,
+   "d": 455,
+   "l": 4588
   },
   "recent_2y": {
-   "n": 2065,
-   "score": 49.9,
-   "vs_exp": -0.4,
-   "w": 989,
-   "d": 82,
-   "l": 994
+   "n": 2081,
+   "score": 49.8,
+   "vs_exp": -0.5,
+   "w": 994,
+   "d": 84,
+   "l": 1003
   },
   "by_color": {
    "white": {
-    "n": 4786,
+    "n": 4793,
     "score": 50.6,
     "vs_exp": 0.4,
-    "w": 2308,
-    "d": 226,
-    "l": 2252
+    "w": 2309,
+    "d": 228,
+    "l": 2256
    },
    "black": {
-    "n": 4805,
+    "n": 4814,
     "score": 49.2,
-    "vs_exp": -0.8,
-    "w": 2251,
+    "vs_exp": -0.9,
+    "w": 2255,
     "d": 227,
-    "l": 2327
+    "l": 2332
    }
   },
   "by_year": {
@@ -94,12 +94,12 @@
     "l": 289
    },
    "2026": {
-    "n": 1479,
-    "score": 50.1,
-    "vs_exp": -0.1,
-    "w": 709,
-    "d": 65,
-    "l": 705
+    "n": 1495,
+    "score": 50.0,
+    "vs_exp": -0.3,
+    "w": 714,
+    "d": 67,
+    "l": 714
    }
   },
   "rating": {
@@ -174,11 +174,11 @@
     "2026-08": 1863,
     "2026-09": 1879,
     "2026-10": 1850,
-    "2026-11": 1853
+    "2026-11": 1830
    },
    "peak": 2045,
    "peak_date": "2021-12-05",
-   "current": 1853
+   "current": 1830
   },
   "by_hour": {
    "00-03": {
@@ -206,18 +206,18 @@
     "l": 760
    },
    "09-12": {
-    "n": 1963,
+    "n": 1965,
     "score": 50.1,
     "vs_exp": 0.0,
-    "w": 936,
+    "w": 937,
     "d": 95,
-    "l": 932
+    "l": 933
    },
    "12-15": {
-    "n": 1650,
-    "score": 47.9,
+    "n": 1651,
+    "score": 48.0,
     "vs_exp": -2.4,
-    "w": 748,
+    "w": 749,
     "d": 86,
     "l": 816
    },
@@ -230,20 +230,20 @@
     "l": 535
    },
    "18-21": {
-    "n": 1395,
-    "score": 49.7,
-    "vs_exp": -0.2,
-    "w": 662,
-    "d": 63,
-    "l": 670
+    "n": 1407,
+    "score": 49.6,
+    "vs_exp": -0.4,
+    "w": 665,
+    "d": 65,
+    "l": 677
    },
    "21-24": {
-    "n": 1545,
-    "score": 49.6,
-    "vs_exp": -0.7,
+    "n": 1546,
+    "score": 49.5,
+    "vs_exp": -0.8,
     "w": 725,
     "d": 82,
-    "l": 738
+    "l": 739
    }
   },
   "by_weekday": {
@@ -256,20 +256,20 @@
     "l": 735
    },
    "2 Tue": {
-    "n": 1381,
-    "score": 48.2,
-    "vs_exp": -1.6,
-    "w": 635,
-    "d": 62,
-    "l": 684
+    "n": 1395,
+    "score": 48.1,
+    "vs_exp": -1.7,
+    "w": 639,
+    "d": 64,
+    "l": 692
    },
    "3 Wed": {
-    "n": 1469,
+    "n": 1471,
     "score": 50.2,
     "vs_exp": 0.1,
-    "w": 701,
+    "w": 702,
     "d": 73,
-    "l": 695
+    "l": 696
    },
    "4 Thu": {
     "n": 1382,
@@ -314,28 +314,28 @@
     "l": 4
    },
    "b: 50-150 høyere": {
-    "n": 758,
-    "score": 39.4,
-    "vs_exp": 0.1,
+    "n": 760,
+    "score": 39.3,
+    "vs_exp": 0.0,
     "w": 281,
     "d": 35,
-    "l": 442
+    "l": 444
    },
    "c: ±50": {
-    "n": 8081,
+    "n": 8093,
     "score": 50.4,
     "vs_exp": 0.2,
-    "w": 3883,
-    "d": 376,
-    "l": 3822
+    "w": 3887,
+    "d": 378,
+    "l": 3828
    },
    "d: 50-150 lavere": {
-    "n": 744,
+    "n": 746,
     "score": 55.6,
-    "vs_exp": -5.1,
-    "w": 393,
+    "vs_exp": -5.2,
+    "w": 394,
     "d": 41,
-    "l": 310
+    "l": 311
    },
    "e: 150+ lavere": {
     "n": 1,
@@ -348,97 +348,97 @@
   },
   "by_length": {
    "a: <=20 trekk": {
-    "n": 833,
-    "score": 60.7,
+    "n": 837,
+    "score": 60.6,
     "vs_exp": 10.2,
-    "w": 502,
+    "w": 504,
     "d": 7,
-    "l": 324
+    "l": 326
    },
    "b: 21-40": {
-    "n": 4279,
-    "score": 52.4,
+    "n": 4283,
+    "score": 52.3,
     "vs_exp": 2.2,
     "w": 2219,
     "d": 43,
-    "l": 2017
+    "l": 2021
    },
    "c: 41-60": {
-    "n": 3216,
+    "n": 3219,
     "score": 48.9,
     "vs_exp": -1.1,
-    "w": 1478,
+    "w": 1480,
     "d": 189,
-    "l": 1549
+    "l": 1550
    },
    "d: 60+": {
-    "n": 1263,
+    "n": 1268,
     "score": 37.0,
     "vs_exp": -13.2,
-    "w": 360,
-    "d": 214,
-    "l": 689
+    "w": 361,
+    "d": 216,
+    "l": 691
    }
   },
   "time": {
    "move10": {
     "my_pct_left": 91.8,
     "opp_pct_left": 92.7,
-    "n": 9485
+    "n": 9500
    },
    "move20": {
     "my_pct_left": 71.2,
     "opp_pct_left": 70.5,
-    "n": 8867
+    "n": 8879
    },
    "move30": {
     "my_pct_left": 48.5,
     "opp_pct_left": 44.9,
-    "n": 7030
+    "n": 7039
    },
    "move40": {
     "my_pct_left": 31.3,
     "opp_pct_left": 26.1,
-    "n": 4674
+    "n": 4682
    },
    "loss_terminations": {
-    "mate": 3526,
-    "outoftime": 658,
-    "resign": 366,
+    "mate": 3532,
+    "outoftime": 660,
+    "resign": 367,
     "timeout": 29
    },
    "win_terminations": {
-    "resign": 2049,
-    "outoftime": 1333,
+    "resign": 2052,
+    "outoftime": 1335,
     "mate": 1097,
     "timeout": 80
    },
    "timeout_loss_pct_of_losses": 14.4,
-   "timeout_win_pct_of_wins": 29.2,
+   "timeout_win_pct_of_wins": 29.3,
    "by_clock_diff_move20": {
     "a: >20% mindre tid": {
-     "n": 263,
-     "score": 24.5,
-     "vs_exp": -24.9,
+     "n": 267,
+     "score": 24.2,
+     "vs_exp": -25.3,
      "w": 59,
      "d": 11,
-     "l": 193
+     "l": 197
     },
     "b: 5-20% mindre": {
-     "n": 2406,
+     "n": 2408,
      "score": 40.0,
-     "vs_exp": -9.9,
+     "vs_exp": -10.0,
      "w": 910,
      "d": 104,
-     "l": 1392
+     "l": 1394
     },
     "c: omtrent likt": {
-     "n": 3092,
+     "n": 3098,
      "score": 49.1,
      "vs_exp": -1.0,
-     "w": 1426,
-     "d": 184,
-     "l": 1482
+     "w": 1429,
+     "d": 186,
+     "l": 1483
     },
     "d: 5-20% mer": {
      "n": 2426,
@@ -461,28 +461,28 @@
   "sessions": {
    "by_index_in_session": {
     "1": {
-     "n": 6595,
+     "n": 6601,
      "score": 50.6,
      "vs_exp": 0.5,
-     "w": 3186,
+     "w": 3189,
      "d": 301,
-     "l": 3108
+     "l": 3111
     },
     "2-5": {
-     "n": 2676,
+     "n": 2684,
      "score": 48.0,
      "vs_exp": -2.1,
-     "w": 1220,
-     "d": 129,
-     "l": 1327
+     "w": 1222,
+     "d": 131,
+     "l": 1331
     },
     "6-10": {
-     "n": 256,
-     "score": 53.1,
-     "vs_exp": 2.9,
+     "n": 258,
+     "score": 52.7,
+     "vs_exp": 2.6,
      "w": 127,
      "d": 18,
-     "l": 111
+     "l": 113
     },
     "11-20": {
      "n": 64,
@@ -496,12 +496,12 @@
    },
    "by_streak": {
     "0: første i økt": {
-     "n": 6595,
+     "n": 6601,
      "score": 50.6,
      "vs_exp": 0.5,
-     "w": 3186,
+     "w": 3189,
      "d": 301,
-     "l": 3108
+     "l": 3111
     },
     "1: etter 3+ tap på rad": {
      "n": 44,
@@ -512,52 +512,52 @@
      "l": 19
     },
     "2: etter 2 tap på rad": {
-     "n": 165,
+     "n": 166,
      "score": 47.3,
      "vs_exp": -3.2,
      "w": 75,
-     "d": 6,
+     "d": 7,
      "l": 84
     },
     "3: etter 1 tap": {
-     "n": 932,
-     "score": 47.9,
-     "vs_exp": -2.2,
+     "n": 936,
+     "score": 47.7,
+     "vs_exp": -2.3,
      "w": 422,
-     "d": 48,
-     "l": 462
+     "d": 49,
+     "l": 465
     },
     "4: etter remis": {
-     "n": 123,
-     "score": 41.9,
-     "vs_exp": -7.5,
+     "n": 125,
+     "score": 41.2,
+     "vs_exp": -8.1,
      "w": 50,
      "d": 3,
-     "l": 70
+     "l": 72
     },
     "5: etter 1 seier": {
-     "n": 1301,
-     "score": 47.8,
-     "vs_exp": -2.2,
-     "w": 587,
+     "n": 1302,
+     "score": 47.9,
+     "vs_exp": -2.1,
+     "w": 588,
      "d": 71,
      "l": 643
     },
     "6: etter 2+ seire": {
-     "n": 431,
+     "n": 433,
      "score": 52.7,
      "vs_exp": 2.1,
-     "w": 216,
+     "w": 217,
      "d": 22,
-     "l": 193
+     "l": 194
     }
    },
-   "n_sessions": 6595,
+   "n_sessions": 6601,
    "median_session_len": 1,
    "pct_sessions_20plus": 0.0,
    "session_ends_with": {
-    "tap": 3438,
-    "seier": 2827,
+    "tap": 3442,
+    "seier": 2829,
     "remis": 330
    }
   },
@@ -565,28 +565,28 @@
    "white": {
     "families": {
      "Sicilian Defense": {
-      "n": 1107,
-      "score": 53.3,
+      "n": 1108,
+      "score": 53.2,
       "vs_exp": 3.3,
       "w": 563,
-      "d": 53,
+      "d": 54,
       "l": 491
      },
      "Italian Game": {
-      "n": 712,
-      "score": 51.3,
-      "vs_exp": 0.6,
+      "n": 713,
+      "score": 51.2,
+      "vs_exp": 0.5,
       "w": 351,
       "d": 28,
-      "l": 333
+      "l": 334
      },
      "Scandinavian Defense": {
-      "n": 561,
-      "score": 48.4,
-      "vs_exp": -1.9,
+      "n": 564,
+      "score": 48.2,
+      "vs_exp": -2.0,
       "w": 254,
-      "d": 35,
-      "l": 272
+      "d": 36,
+      "l": 274
      },
      "French Defense": {
       "n": 518,
@@ -597,12 +597,12 @@
       "l": 259
      },
      "Caro-Kann Defense": {
-      "n": 477,
+      "n": 479,
       "score": 48.7,
       "vs_exp": -1.2,
-      "w": 222,
+      "w": 223,
       "d": 21,
-      "l": 234
+      "l": 235
      },
      "Ruy Lopez": {
       "n": 208,
@@ -695,20 +695,20 @@
     },
     "variations": {
      "Sicilian Defense: Old Sicilian": {
-      "n": 428,
+      "n": 429,
       "score": 55.1,
       "vs_exp": 4.6,
       "w": 231,
-      "d": 10,
+      "d": 11,
       "l": 187
      },
      "Scandinavian Defense: Mieses-Kotroc Variation": {
-      "n": 361,
-      "score": 49.4,
-      "vs_exp": -1.1,
+      "n": 364,
+      "score": 49.2,
+      "vs_exp": -1.4,
       "w": 168,
-      "d": 21,
-      "l": 172
+      "d": 22,
+      "l": 174
      },
      "French Defense: Exchange Variation": {
       "n": 329,
@@ -727,12 +727,12 @@
       "l": 138
      },
      "Caro-Kann Defense: Exchange Variation": {
-      "n": 185,
-      "score": 46.8,
-      "vs_exp": -2.9,
+      "n": 186,
+      "score": 46.5,
+      "vs_exp": -3.2,
       "w": 82,
       "d": 9,
-      "l": 94
+      "l": 95
      },
      "Italian Game: Giuoco Piano": {
       "n": 179,
@@ -767,10 +767,10 @@
       "l": 88
      },
      "Caro-Kann Defense": {
-      "n": 135,
-      "score": 52.2,
-      "vs_exp": 2.3,
-      "w": 67,
+      "n": 136,
+      "score": 52.6,
+      "vs_exp": 2.6,
+      "w": 68,
       "d": 7,
       "l": 61
      },
@@ -907,12 +907,12 @@
    "black": {
     "families": {
      "Sicilian Defense": {
-      "n": 2609,
+      "n": 2615,
       "score": 49.5,
-      "vs_exp": -0.7,
-      "w": 1234,
+      "vs_exp": -0.8,
+      "w": 1236,
       "d": 117,
-      "l": 1258
+      "l": 1262
      },
      "Queen's Pawn Game": {
       "n": 477,
@@ -923,18 +923,18 @@
       "l": 233
      },
      "Horwitz Defense": {
-      "n": 470,
+      "n": 472,
       "score": 50.0,
       "vs_exp": 0.1,
-      "w": 224,
+      "w": 225,
       "d": 22,
-      "l": 224
+      "l": 225
      },
      "Slav Defense": {
-      "n": 220,
-      "score": 45.9,
-      "vs_exp": -4.2,
-      "w": 92,
+      "n": 221,
+      "score": 46.2,
+      "vs_exp": -4.0,
+      "w": 93,
       "d": 18,
       "l": 110
      },
@@ -1005,28 +1005,28 @@
     },
     "variations": {
      "Sicilian Defense": {
-      "n": 611,
-      "score": 54.0,
-      "vs_exp": 3.7,
+      "n": 612,
+      "score": 53.9,
+      "vs_exp": 3.6,
       "w": 316,
       "d": 28,
-      "l": 267
+      "l": 268
      },
      "Horwitz Defense": {
-      "n": 470,
+      "n": 472,
       "score": 50.0,
       "vs_exp": 0.1,
-      "w": 224,
+      "w": 225,
       "d": 22,
-      "l": 224
+      "l": 225
      },
      "Sicilian Defense: Modern Variations": {
-      "n": 349,
-      "score": 50.9,
-      "vs_exp": 0.9,
+      "n": 350,
+      "score": 50.7,
+      "vs_exp": 0.7,
       "w": 169,
       "d": 17,
-      "l": 163
+      "l": 164
      },
      "Sicilian Defense: Closed": {
       "n": 261,
@@ -1045,20 +1045,20 @@
       "l": 109
      },
      "Sicilian Defense: McDonnell Attack": {
-      "n": 160,
-      "score": 43.4,
-      "vs_exp": -6.3,
-      "w": 66,
+      "n": 161,
+      "score": 43.8,
+      "vs_exp": -6.0,
+      "w": 67,
       "d": 7,
       "l": 87
      },
      "Sicilian Defense: Delayed Alapin Variation": {
-      "n": 155,
-      "score": 44.8,
-      "vs_exp": -5.1,
+      "n": 156,
+      "score": 44.6,
+      "vs_exp": -5.4,
       "w": 65,
       "d": 9,
-      "l": 81
+      "l": 82
      },
      "Slav Defense": {
       "n": 146,
@@ -1101,12 +1101,12 @@
       "l": 58
      },
      "Sicilian Defense: Smith-Morra Gambit Accepted": {
-      "n": 118,
-      "score": 45.8,
-      "vs_exp": -3.5,
+      "n": 119,
+      "score": 45.4,
+      "vs_exp": -3.9,
       "w": 51,
       "d": 6,
-      "l": 61
+      "l": 62
      },
      "Queen's Pawn Game: Zukertort Variation": {
       "n": 117,
@@ -1149,10 +1149,10 @@
       "l": 31
      },
      "Sicilian Defense: Smith-Morra Gambit": {
-      "n": 60,
-      "score": 46.7,
-      "vs_exp": -3.6,
-      "w": 27,
+      "n": 61,
+      "score": 47.5,
+      "vs_exp": -2.8,
+      "w": 28,
       "d": 2,
       "l": 31
      },
@@ -1200,22 +1200,22 @@
    },
    "first_move_white": {
     "e4": {
-     "n": 4769,
-     "score": 50.6,
+     "n": 4776,
+     "score": 50.5,
      "vs_exp": 0.4,
-     "w": 2299,
-     "d": 226,
-     "l": 2244
+     "w": 2300,
+     "d": 228,
+     "l": 2248
     }
    },
    "reply_to_e4": {
     "c5": {
-     "n": 2518,
+     "n": 2524,
      "score": 49.4,
      "vs_exp": -0.8,
-     "w": 1190,
+     "w": 1192,
      "d": 110,
-     "l": 1218
+     "l": 1222
     },
     "e6": {
      "n": 156,
@@ -1236,25 +1236,25 @@
    },
    "reply_to_d4": {
     "d5": {
-     "n": 781,
-     "score": 47.3,
-     "vs_exp": -2.7,
-     "w": 346,
+     "n": 782,
+     "score": 47.4,
+     "vs_exp": -2.6,
+     "w": 347,
      "d": 47,
      "l": 388
     },
     "e6": {
-     "n": 536,
+     "n": 538,
      "score": 50.4,
      "vs_exp": 0.4,
-     "w": 258,
+     "w": 259,
      "d": 24,
-     "l": 254
+     "l": 255
     }
    },
    "short_losses_by_family": {
-    "white: Scandinavian Defense: Mieses-Kotroc Variation": 41,
-    "black: Sicilian Defense": 40,
+    "white: Scandinavian Defense: Mieses-Kotroc Variation": 42,
+    "black: Sicilian Defense": 41,
     "black: Horwitz Defense": 36,
     "white: Sicilian Defense: Old Sicilian": 31,
     "black: Sicilian Defense: Modern Variations": 21,
@@ -1269,42 +1269,42 @@
     "white: Italian Game: Giuoco Piano": 16,
     "white: Caro-Kann Defense: Exchange Variation": 16
    },
-   "n_short_losses": 711
+   "n_short_losses": 714
   },
   "openings_recent": {
    "white": {
     "families": {
      "Sicilian Defense": {
-      "n": 230,
+      "n": 231,
       "score": 53.9,
       "vs_exp": 4.0,
       "w": 120,
-      "d": 8,
+      "d": 9,
       "l": 102
      },
      "Italian Game": {
-      "n": 139,
-      "score": 51.1,
-      "vs_exp": 0.4,
+      "n": 140,
+      "score": 50.7,
+      "vs_exp": -0.1,
       "w": 68,
       "d": 6,
-      "l": 65
+      "l": 66
      },
      "Scandinavian Defense": {
-      "n": 133,
-      "score": 45.1,
-      "vs_exp": -5.6,
+      "n": 136,
+      "score": 44.5,
+      "vs_exp": -6.1,
       "w": 56,
-      "d": 8,
-      "l": 69
+      "d": 9,
+      "l": 71
      },
      "Caro-Kann Defense": {
-      "n": 118,
+      "n": 120,
       "score": 47.5,
       "vs_exp": -2.6,
-      "w": 54,
+      "w": 55,
       "d": 4,
-      "l": 60
+      "l": 61
      },
      "French Defense": {
       "n": 94,
@@ -1381,20 +1381,20 @@
     },
     "variations": {
      "Sicilian Defense: Old Sicilian": {
-      "n": 99,
-      "score": 56.6,
+      "n": 100,
+      "score": 56.5,
       "vs_exp": 6.2,
       "w": 55,
-      "d": 2,
+      "d": 3,
       "l": 42
      },
      "Scandinavian Defense: Mieses-Kotroc Variation": {
-      "n": 88,
-      "score": 48.3,
-      "vs_exp": -2.9,
+      "n": 91,
+      "score": 47.3,
+      "vs_exp": -3.7,
       "w": 40,
-      "d": 5,
-      "l": 43
+      "d": 6,
+      "l": 45
      },
      "Sicilian Defense: Modern Variations": {
       "n": 61,
@@ -1413,12 +1413,12 @@
       "l": 30
      },
      "Caro-Kann Defense: Exchange Variation": {
-      "n": 56,
-      "score": 46.4,
-      "vs_exp": -3.5,
+      "n": 57,
+      "score": 45.6,
+      "vs_exp": -4.3,
       "w": 25,
       "d": 2,
-      "l": 29
+      "l": 30
      },
      "Italian Game: Giuoco Piano": {
       "n": 43,
@@ -1445,10 +1445,10 @@
       "l": 15
      },
      "Caro-Kann Defense": {
-      "n": 31,
-      "score": 50.0,
-      "vs_exp": 0.4,
-      "w": 15,
+      "n": 32,
+      "score": 51.6,
+      "vs_exp": 1.8,
+      "w": 16,
       "d": 1,
       "l": 15
      },
@@ -1537,12 +1537,12 @@
    "black": {
     "families": {
      "Sicilian Defense": {
-      "n": 546,
-      "score": 50.2,
-      "vs_exp": -0.3,
-      "w": 265,
+      "n": 552,
+      "score": 50.0,
+      "vs_exp": -0.5,
+      "w": 267,
       "d": 18,
-      "l": 263
+      "l": 267
      },
      "Queen's Pawn Game": {
       "n": 151,
@@ -1553,10 +1553,10 @@
       "l": 74
      },
      "Slav Defense": {
-      "n": 71,
-      "score": 44.4,
-      "vs_exp": -6.5,
-      "w": 28,
+      "n": 72,
+      "score": 45.1,
+      "vs_exp": -5.8,
+      "w": 29,
       "d": 7,
       "l": 36
      },
@@ -1569,12 +1569,12 @@
       "l": 17
      },
      "Horwitz Defense": {
-      "n": 28,
-      "score": 48.2,
-      "vs_exp": -0.5,
-      "w": 13,
+      "n": 30,
+      "score": 48.3,
+      "vs_exp": -0.2,
+      "w": 14,
       "d": 1,
-      "l": 14
+      "l": 15
      },
      "Hungarian Opening": {
       "n": 21,
@@ -1603,20 +1603,20 @@
     },
     "variations": {
      "Sicilian Defense": {
-      "n": 124,
-      "score": 54.4,
-      "vs_exp": 3.6,
+      "n": 125,
+      "score": 54.0,
+      "vs_exp": 3.1,
       "w": 66,
       "d": 3,
-      "l": 55
+      "l": 56
      },
      "Sicilian Defense: Modern Variations": {
-      "n": 76,
-      "score": 53.3,
-      "vs_exp": 3.2,
+      "n": 77,
+      "score": 52.6,
+      "vs_exp": 2.7,
       "w": 38,
       "d": 5,
-      "l": 33
+      "l": 34
      },
      "Sicilian Defense: Closed": {
       "n": 52,
@@ -1667,10 +1667,10 @@
       "l": 21
      },
      "Sicilian Defense: McDonnell Attack": {
-      "n": 36,
-      "score": 45.8,
-      "vs_exp": -4.5,
-      "w": 16,
+      "n": 37,
+      "score": 47.3,
+      "vs_exp": -3.3,
+      "w": 17,
       "d": 1,
       "l": 19
      },
@@ -1691,28 +1691,28 @@
       "l": 16
      },
      "Sicilian Defense: Delayed Alapin Variation": {
-      "n": 31,
-      "score": 46.8,
-      "vs_exp": -3.4,
+      "n": 32,
+      "score": 45.3,
+      "vs_exp": -4.9,
       "w": 14,
       "d": 1,
-      "l": 16
+      "l": 17
      },
      "Sicilian Defense: Smith-Morra Gambit Accepted": {
-      "n": 29,
-      "score": 34.5,
-      "vs_exp": -15.0,
+      "n": 30,
+      "score": 33.3,
+      "vs_exp": -16.0,
       "w": 10,
       "d": 0,
-      "l": 19
+      "l": 20
      },
      "Horwitz Defense": {
-      "n": 28,
-      "score": 48.2,
-      "vs_exp": -0.5,
-      "w": 13,
+      "n": 30,
+      "score": 48.3,
+      "vs_exp": -0.2,
+      "w": 14,
       "d": 1,
-      "l": 14
+      "l": 15
      },
      "Hungarian Opening": {
       "n": 19,
@@ -1742,22 +1742,22 @@
    },
    "first_move_white": {
     "e4": {
-     "n": 1030,
-     "score": 50.4,
-     "vs_exp": 0.1,
-     "w": 499,
-     "d": 40,
-     "l": 491
+     "n": 1037,
+     "score": 50.2,
+     "vs_exp": -0.0,
+     "w": 500,
+     "d": 42,
+     "l": 495
     }
    },
    "reply_to_e4": {
     "c5": {
-     "n": 542,
-     "score": 50.2,
-     "vs_exp": -0.3,
-     "w": 263,
+     "n": 548,
+     "score": 50.0,
+     "vs_exp": -0.5,
+     "w": 265,
      "d": 18,
-     "l": 261
+     "l": 265
     },
     "e5": {
      "n": 24,
@@ -1770,40 +1770,40 @@
    },
    "reply_to_d4": {
     "d5": {
-     "n": 243,
-     "score": 44.0,
-     "vs_exp": -6.2,
-     "w": 100,
+     "n": 244,
+     "score": 44.3,
+     "vs_exp": -6.0,
+     "w": 101,
      "d": 14,
      "l": 129
     },
     "e6": {
-     "n": 35,
+     "n": 37,
      "score": 51.4,
      "vs_exp": 3.0,
-     "w": 17,
+     "w": 18,
      "d": 2,
-     "l": 16
+     "l": 17
     }
    },
    "short_losses_by_family": {
-    "white: Scandinavian Defense: Mieses-Kotroc Variation": 11,
-    "black: Sicilian Defense": 11,
+    "white: Scandinavian Defense: Mieses-Kotroc Variation": 12,
+    "black: Sicilian Defense": 12,
     "white: Sicilian Defense: Old Sicilian": 10,
     "black: Sicilian Defense: Smith-Morra Gambit Accepted": 8,
     "white: Sicilian Defense: Modern Variations": 6,
     "white: Modern Defense": 5,
+    "black: Sicilian Defense: Delayed Alapin Variation": 5,
     "white: Caro-Kann Defense: Exchange Variation": 5,
     "black: Sicilian Defense: Bowdler Attack": 5,
     "white: French Defense: Exchange Variation": 5,
     "white: Italian Game: Giuoco Pianissimo": 5,
     "black: Sicilian Defense: Alapin Variation": 4,
-    "black: Sicilian Defense: Delayed Alapin Variation": 4,
     "black: Sicilian Defense: Closed": 4,
     "black: Queen's Pawn Game: Accelerated London System": 4,
     "white: Caro-Kann Defense: Advance Variation": 4
    },
-   "n_short_losses": 188
+   "n_short_losses": 191
   }
  },
  "60+0": {

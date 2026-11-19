@@ -51,13 +51,17 @@
     "baseline_points_per50": 2.13,
     "baseline_excess_per50": 0.16
    }
-  ]
+  ],
+  "block_starts": {
+   "2": "2026-11-19 12:38"
+  }
  },
  "blocks": [
   {
    "block": 1,
    "focus": "opening",
    "focus_name": "Opening, moves 9-12 (mostly Black Sicilian and vs London/Zukertort)",
+   "start": "2026-11-15 18:16",
    "games": 50,
    "analysed": 50,
    "complete": true,
@@ -78,20 +82,21 @@
    "block": 2,
    "focus": "fork",
    "focus_name": "Allowing forks",
-   "games": 3,
-   "analysed": 3,
+   "start": "2026-11-19 12:38",
+   "games": 0,
+   "analysed": 0,
    "complete": false,
-   "from": "2026-11-17",
-   "to": "2026-11-18",
+   "from": null,
+   "to": null,
    "focus_blunders": 0,
-   "focus_blunders_per50": 0.0,
+   "focus_blunders_per50": null,
    "baseline_per50": 8.1,
    "baseline_sd": 2.4,
-   "points_lost_per50": 0.0,
-   "all_blunders_per_game": 1.33,
-   "score_pct": 33.3,
-   "vs_expected": -20.1,
-   "rating_end": 1830,
+   "points_lost_per50": null,
+   "all_blunders_per_game": null,
+   "score_pct": null,
+   "vs_expected": null,
+   "rating_end": null,
    "verdict": "for få partier ennå"
   }
  ]

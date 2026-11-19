@@ -47,10 +47,24 @@ def main():
             if "cp" in r:
                 ev_ids.add(r["id"])
 
+    # Blokkene følger etter hverandre. "block_starts" ({"2": "YYYY-MM-DD HH:MM"}) lar en blokk starte senere
+    # enn rett etter forrige; partier i mellomrommet telles ikke med i noen blokk.
+    starts = {int(k): datetime.strptime(v, "%Y-%m-%d %H:%M") for k, v in plan.get("block_starts", {}).items()}
+    chunks, rest, bi = [], games, 1
+    while True:
+        if bi in starts:
+            rest = [g for g in rest if g["local"] >= starts[bi]]
+        chunks.append(rest[:size])
+        rest = rest[size:]
+        if len(chunks[-1]) < size or (not rest and (bi + 1) not in starts):
+            break
+        bi += 1
+    if max(starts, default=0) > len(chunks):
+        chunks.append([])
+
     preds = {c[0]: c[3] for c in CATS}
     blocks = []
-    for bi in range(0, max(1, (len(games) + size - 1) // size)):
-        chunk = games[bi * size:(bi + 1) * size]
+    for bi, chunk in enumerate(chunks):
         focus = plan["queue"][bi % len(plan["queue"])]
         analysed = [g for g in chunk if g["id"] in ev_ids]
         hits, pts, all_bl = 0, 0.0, 0
@@ -82,6 +96,7 @@ def main():
             verdict = "innenfor normal variasjon"
         blocks.append({
             "block": bi + 1, "focus": focus["id"], "focus_name": focus["name"],
+            "start": (starts[bi + 1] if bi + 1 in starts else start if bi == 0 else chunk[0]["local"] if chunk else None),
             "games": len(chunk), "analysed": n, "complete": len(chunk) == size,
             "from": chunk[0]["local"].strftime("%Y-%m-%d") if chunk else None,
             "to": chunk[-1]["local"].strftime("%Y-%m-%d") if chunk else None,
@@ -96,7 +111,7 @@ def main():
         })
 
     FOCUS_DIR.mkdir(exist_ok=True)
-    (FOCUS_DIR / "progress.json").write_text(json.dumps({"plan": plan, "blocks": blocks}, indent=1, ensure_ascii=False),
+    (FOCUS_DIR / "progress.json").write_text(json.dumps({"plan": plan, "blocks": blocks}, indent=1, ensure_ascii=False, default=lambda d: d.strftime("%Y-%m-%d %H:%M")),
                                              encoding="utf-8")
     cur = blocks[-1]
     lines = [

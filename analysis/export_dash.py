@@ -199,7 +199,7 @@ def main():
             blocks = json.loads(prp.read_text(encoding="utf-8"))["blocks"]
             T["progress"] = [{
                 "block": b["block"], "name": PLAN_NO.get(b["focus"], (b["focus_name"],))[0],
-                "games": b["games"], "size": size, "analysed": b["analysed"], "complete": b["complete"],
+                "start": b.get("start") or b["from"], "games": b["games"], "size": size, "analysed": b["analysed"], "complete": b["complete"],
                 "from": b["from"], "to": b["to"], "focus_blunders": b["focus_blunders"],
                 "per50": b["focus_blunders_per50"], "baseline": b["baseline_per50"], "sd": b["baseline_sd"],
                 "target": round(b["baseline_per50"] - 1.5 * b["baseline_sd"], 1),
