@@ -309,7 +309,7 @@ function tryMove(from, to) {
   } else {
     game.wrongs++;
     game.marks = { ...prevMarks(), [from]: 'bad', [to]: 'bad' };
-    fb(`${san} holder ikke. Prøv igjen${game.wrongs >= 2 ? ', eller vis løsningen' : ''}.`, 'bad');
+    fb(`${san} holder ikke.${costText(p, uci)} Prøv igjen${game.wrongs >= 2 ? ', eller vis løsningen' : ''}.`, 'bad');
     const el = $('board'); el.classList.remove('shake'); void el.offsetWidth; el.classList.add('shake');
   }
   drawBoard();
@@ -326,6 +326,13 @@ function timeText(p) {
   if (p.spent != null) t.push(`brukte ${secs(p.spent)} s på trekket`);
   if (p.clock != null) t.push(`hadde ${Math.round(p.clock)} s igjen`);
   return t.join(' og ');
+}
+// Hvor mye et feil trekk er dårligere enn det beste, i prosentpoeng vinnersjanse (Stockfish, alle lovlige trekk).
+function costText(p, uci) {
+  const ev = p.ev || {}, mine = ev[uci.slice(0, 4)], vals = Object.values(ev);
+  if (mine == null || !vals.length) return '';
+  const best = Math.max(...vals), d = Math.max(0, best - mine);
+  return ` Det er ${d} prosentpoeng dårligere enn det beste trekket (vinnersjanse ${mine} % mot ${best} %).`;
 }
 function lossText(p) {
   const t = timeText(p);

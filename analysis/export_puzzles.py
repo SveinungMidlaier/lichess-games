@@ -23,8 +23,7 @@ from common import OUT, load_games, win_pct  # noqa: E402
 from engine import SF  # noqa: E402
 
 ACCEPT = 6.0      # win%-poeng under beste trekk som fortsatt godtas
-NODES = 300_000
-MULTIPV = 5
+NODES = 400_000   # alle lovlige trekk analyseres (multipv = antall trekk)
 
 CAT_ORDER = [
     ("mate", "Matt", lambda t: any(x.startswith("mate") or x.endswith("Mate") for x in t)),
@@ -48,7 +47,8 @@ def accepted(task):
     key, fen = task
     board = chess.Board(fen)
     pov = board.turn
-    infos = _eng.analyse(board, chess.engine.Limit(nodes=NODES), multipv=MULTIPV)
+    n = board.legal_moves.count()
+    infos = _eng.analyse(board, chess.engine.Limit(nodes=NODES), multipv=max(1, n))
     scored = []
     for inf in infos:
         if not inf.get("pv"):
@@ -56,10 +56,13 @@ def accepted(task):
         cp = inf["score"].pov(pov).score(mate_score=1000)
         scored.append((inf["pv"][0].uci(), win_pct(max(-1000, min(1000, cp)))))
     if not scored:
-        return key, [], None
+        return key, [], None, {}
     top = max(w for _, w in scored)
     ok = [m for m, w in scored if w >= top - ACCEPT]
-    return key, ok, round(top, 1)
+    ev = {}
+    for m, w in scored:                      # vinnersjanse etter hvert trekk (promotering: beste variant)
+        ev[m[:4]] = max(ev.get(m[:4], -1), round(w))
+    return key, ok, round(top, 1), ev
 
 
 def san_line(board, ucis):
@@ -95,12 +98,12 @@ def main():
     print(f"{len(sel)} oppgaver, analyserer godkjente trekk ...", flush=True)
 
     with mp.Pool(a.workers, initializer=_init) as pool:
-        acc = dict((k, (ok, top)) for k, ok, top in
+        acc = dict((k, (ok, top, ev)) for k, ok, top, ev in
                    pool.imap_unordered(accepted, [(m["key"], m["fen"]) for m, _ in sel], chunksize=4))
 
     out = []
     for m, g in sel:
-        ok, top = acc.get(m["key"], ([], None))
+        ok, top, ev = acc.get(m["key"], ([], None, {}))
         if m["best"] not in ok:
             ok = [m["best"]] + ok
         if m["move"] in ok:          # dypere analyse sier at trekket ditt var greit: ikke en oppgave
@@ -125,7 +128,7 @@ def main():
             "best_line": san_line(board, [m["best"]]),
             "played": m["move"], "played_san": m["san"],
             "punish": san_line(after, m.get("pv", [])),
-            "drop": m["drop"], "wp_before": m["wp_before"], "wp_after": m["wp_after"],
+            "drop": m["drop"], "ev": ev, "wp_before": m["wp_before"], "wp_after": m["wp_after"],
             "clock": m.get("clock"), "spent": m.get("spent"), "move_no": m["move_no"], "phase": m["phase"],
             "opening": m.get("opening") or "", "cat": cat_id, "cat_name": cat_name,
             "maia_ok": maia is not None and m.get("maia_drop", 99) < 10,
