@@ -1,6 +1,6 @@
 # Fokusplan – fremdrift
 
-Oppdatert 2026-11-19 12:39. Blitz 3+0, rated, fra 2026-11-15 18:16. Hver blokk = 50 partier med ett fokus.
+Oppdatert 2026-11-20 06:32. Blitz 3+0, rated, fra 2026-11-15 18:16. Hver blokk = 50 partier med ett fokus.
 
 ## Nå: Allowing forks (blokk 2)
 
