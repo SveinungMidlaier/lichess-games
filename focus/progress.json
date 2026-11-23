@@ -83,21 +83,21 @@
    "focus": "fork",
    "focus_name": "Allowing forks",
    "start": "2026-11-19 12:38",
-   "games": 28,
-   "analysed": 28,
+   "games": 44,
+   "analysed": 44,
    "complete": false,
    "from": "2026-11-19",
-   "to": "2026-11-21",
-   "focus_blunders": 7,
-   "focus_blunders_per50": 12.5,
+   "to": "2026-11-22",
+   "focus_blunders": 8,
+   "focus_blunders_per50": 9.1,
    "baseline_per50": 8.1,
    "baseline_sd": 2.4,
-   "points_lost_per50": 3.7,
-   "all_blunders_per_game": 3.0,
-   "score_pct": 55.4,
-   "vs_expected": 4.4,
-   "rating_end": 1834,
-   "verdict": "dårligere enn vanlig"
+   "points_lost_per50": 2.79,
+   "all_blunders_per_game": 2.89,
+   "score_pct": 59.1,
+   "vs_expected": 7.8,
+   "rating_end": 1860,
+   "verdict": "innenfor normal variasjon"
   }
  ]
 }
