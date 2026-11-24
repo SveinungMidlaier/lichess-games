@@ -16685,3 +16685,73 @@
 {"key": "XcHNgtBI-39", "pv": ["b3b4"], "solver_cp": -272}
 {"key": "XcHNgtBI-47", "pv": ["d3e4"], "solver_cp": 276}
 {"key": "XcHNgtBI-48", "pv": ["d7d4", "a4d4", "f6d4", "d3e4", "d4a1"], "solver_cp": 252, "maia": "d3e4", "maia_drop": 0.0}
+{"key": "qACKYtq6-76", "pv": ["f6e5"], "solver_cp": -20, "maia": "b3b4", "maia_drop": 31.7}
+{"key": "qACKYtq6-84", "pv": ["f3e4", "d3d2", "e4c2", "d2c2", "e5f4"], "solver_cp": 635, "maia": "d3c4", "maia_drop": 0.0}
+{"key": "qACKYtq6-85", "pv": ["c2c4", "f3g4", "c4a4", "g4d1", "a4a5"], "solver_cp": -86}
+{"key": "qACKYtq6-86", "pv": ["f3e4", "d3d2", "e4c2", "b4a5", "c2a4"], "solver_cp": 720, "maia": "c2c4", "maia_drop": 0.0}
+{"key": "pI33LpsO-18", "pv": ["c4d3", "e2d3", "d8d3", "f1e1", "e7c5"], "solver_cp": 248, "maia": "d1c2", "maia_drop": 3.8}
+{"key": "pI33LpsO-24", "pv": ["c6a7", "c1g5", "d3d5", "a1d1", "d5a5"], "solver_cp": 704, "maia": "c1f4", "maia_drop": 12.4}
+{"key": "OdOvZ7CS-67", "pv": ["f7f3", "d5c4", "f3b3"], "solver_cp": 999999998, "maia": "f8e6", "maia_drop": 21.7}
+{"key": "OdOvZ7CS-74", "pv": ["d4e3", "c6c3", "e3e4", "d1d3", "e4e5"], "solver_cp": -493}
+{"key": "OdOvZ7CS-75", "pv": ["d1e1", "e5f4", "c6e6", "f8f5", "b1a1"], "solver_cp": 705, "maia": "d4e5", "maia_drop": 15.2}
+{"key": "OdOvZ7CS-76", "pv": ["f8d6", "c6d6", "e5d6", "b1c2", "d6d5"], "solver_cp": 967}
+{"key": "OdOvZ7CS-77", "pv": ["d6e6", "f5f4", "e6e1", "f8f5", "b1a1"], "solver_cp": 633, "maia": "f8d6", "maia_drop": 0.0}
+{"key": "f5yWhQqP-43", "pv": ["a4a5", "d6c7", "a5b6", "c7b6", "f2f3"], "solver_cp": 327}
+{"key": "f5yWhQqP-52", "pv": ["f5g5"], "solver_cp": -229, "maia": "h4g5", "maia_drop": 17.8}
+{"key": "f5yWhQqP-59", "pv": ["f2g3", "g8h8", "f1f8", "g7f8", "d5f6"], "solver_cp": 793}
+{"key": "xB333fwA-79", "pv": ["b2b4"], "solver_cp": 457}
+{"key": "xB333fwA-82", "pv": ["b7b5"], "solver_cp": -25, "maia": "a5c5", "maia_drop": 0.0}
+{"key": "xB333fwA-83", "pv": ["b2b4", "c4b3", "a2b3", "f7e8", "c3c4"], "solver_cp": 341}
+{"key": "xB333fwA-84", "pv": ["f7e8"], "solver_cp": -39, "maia": "e5c5", "maia_drop": 16.6}
+{"key": "xB333fwA-88", "pv": ["e6e5", "c4b4", "e5d4", "b4d4", "d6e5"], "solver_cp": 51, "maia": "c5c4", "maia_drop": 15.4}
+{"key": "xB333fwA-90", "pv": ["e6e5", "d4c5", "d6d7", "a3a4", "h2h4"], "solver_cp": 608, "maia": "c2b3", "maia_drop": 29.3}
+{"key": "xB333fwA-115", "pv": ["g5g6", "c5f5", "f7e6", "f5g5", "e6f6"], "solver_cp": 0}
+{"key": "OdOvZ7CS-34", "pv": ["h6g5"], "solver_cp": 123}
+{"key": "OPw13L9f-44", "pv": ["g7h6", "a3b2", "d5d4", "e2c4", "d7e6"], "solver_cp": 874}
+{"key": "qACKYtq6-39", "pv": ["f3g5"], "solver_cp": 303}
+{"key": "qACKYtq6-53", "pv": ["d3c4"], "solver_cp": 513}
+{"key": "qACKYtq6-58", "pv": ["e4g2", "c4d3", "g2f1", "d3f1", "c6g6"], "solver_cp": 452, "maia": "f2f3", "maia_drop": 0.3}
+{"key": "qACKYtq6-63", "pv": ["e1e6", "c6a8", "c4b5", "h8h7", "b5d3"], "solver_cp": 731}
+{"key": "qACKYtq6-64", "pv": ["c6e6", "e1e6", "g2d5", "e6b6", "a5a4"], "solver_cp": -388, "maia": "c4e6", "maia_drop": 29.4}
+{"key": "qACKYtq6-65", "pv": ["e6g6", "f3b3", "e1e8", "b3g8", "g1g2"], "solver_cp": 990}
+{"key": "qACKYtq6-66", "pv": ["f3g4"], "solver_cp": -261, "maia": "e6e8", "maia_drop": 10.2}
+{"key": "4TuFwdpX-19", "pv": ["g2g4"], "solver_cp": 294, "maia": "g4d7", "maia_drop": 0.8}
+{"key": "NpHHGXmR-43", "pv": ["c2e3", "d6f4", "h4f4", "g5f4", "e3f5"], "solver_cp": 295}
+{"key": "NpHHGXmR-44", "pv": ["h6g5", "h4g5", "g7f8", "h2h3", "h8h5"], "solver_cp": 270, "maia": "h4g3", "maia_drop": 19.4}
+{"key": "NpHHGXmR-48", "pv": ["d6h2", "g1f1", "h2h1"], "solver_cp": 999999998, "maia": "h2h3", "maia_drop": 3.1}
+{"key": "yRF3VJmi-25", "pv": ["f2f4", "g5f5", "f4e5", "f8d8", "f1g2"], "solver_cp": 541, "maia": "f8d8", "maia_drop": 0.9}
+{"key": "yRF3VJmi-86", "pv": ["e5h5", "g1g2", "h5f7", "f2f7", "g8f7"], "solver_cp": 0}
+{"key": "yRF3VJmi-96", "pv": ["f7f3", "h3h4", "g7g6", "g3g4", "f3e3", "g4g5", "e3f3", "h2h3", "f3f4"], "solver_cp": 999999998}
+{"key": "xB333fwA-29", "pv": ["e1c1"], "solver_cp": 184}
+{"key": "99p62dH5-28", "pv": ["d7d6", "d3e4", "c8b7", "e5d6", "d8d6"], "solver_cp": 556}
+{"key": "99p62dH5-35", "pv": ["b4b5", "c6b4", "b3b4", "a5b4", "b5a6"], "solver_cp": -27, "maia": "a5b4", "maia_drop": 0.0}
+{"key": "99p62dH5-36", "pv": ["c6d4", "f3d1", "d4b3", "d1b3", "a8b8"], "solver_cp": 884}
+{"key": "99p62dH5-51", "pv": ["f3f5"], "solver_cp": -572, "maia": "a8b8", "maia_drop": 3.5}
+{"key": "99p62dH5-65", "pv": ["g5h6"], "solver_cp": -284, "maia": "b6g1", "maia_drop": 4.2}
+{"key": "99p62dH5-69", "pv": ["g5h6", "f8e7", "f6d5", "b7d5", "h6b6"], "solver_cp": 887, "maia": "h6g6", "maia_drop": 0.0}
+{"key": "99p62dH5-72", "pv": ["d8g8", "h6g5", "g8g5", "g4h4", "g5g8", "g1f1", "b6e6", "f1f4", "e5f4"], "solver_cp": 999999998}
+{"key": "99p62dH5-89", "pv": ["c3d5", "e7d6", "d5f4", "d6e5", "h3g3"], "solver_cp": 428, "maia": "f4f3", "maia_drop": 0.0}
+{"key": "OdOvZ7CS-35", "pv": ["e3e4"], "solver_cp": 224, "maia": "b8d7", "maia_drop": 58.5}
+{"key": "OdOvZ7CS-36", "pv": ["h6g5", "h4g5", "f7f5", "g5f6", "d5f5"], "solver_cp": 0}
+{"key": "OdOvZ7CS-39", "pv": ["e3e4"], "solver_cp": 370, "maia": "b8d7", "maia_drop": 8.3}
+{"key": "OdOvZ7CS-40", "pv": ["b8a6"], "solver_cp": -52}
+{"key": "OdOvZ7CS-41", "pv": ["h1h8", "f8e7", "h8c8", "a5a4", "e3e4"], "solver_cp": 792, "maia": "b8d7", "maia_drop": 17.7}
+{"key": "OdOvZ7CS-54", "pv": ["d7c8", "d4d5", "b8a6", "e5f6", "e7d6"], "solver_cp": -526}
+{"key": "OdOvZ7CS-60", "pv": ["d6c7"], "solver_cp": -137}
+{"key": "OdOvZ7CS-61", "pv": ["f7g6", "d7e5", "d4e5", "d5c5", "d1d6"], "solver_cp": 774, "maia": "d6c7", "maia_drop": 0.0}
+{"key": "xB333fwA-30", "pv": ["h7g6"], "solver_cp": 97, "maia": "e1c1", "maia_drop": 2.5}
+{"key": "xB333fwA-32", "pv": ["h8h3", "h1h3", "d7h3", "c3d5", "b6d5"], "solver_cp": 512, "maia": "h3d7", "maia_drop": 31.4}
+{"key": "xB333fwA-53", "pv": ["d5b6"], "solver_cp": 371}
+{"key": "xB333fwA-55", "pv": ["b6a8", "e6e4", "h8h4", "e4f5", "h4f4"], "solver_cp": 673}
+{"key": "xB333fwA-56", "pv": ["e6e4", "b6a8", "e4f4", "c1d1", "e7e5"], "solver_cp": -29, "maia": "b6a8", "maia_drop": 0.0}
+{"key": "xB333fwA-57", "pv": ["b2b3"], "solver_cp": 558}
+{"key": "xB333fwA-58", "pv": ["e6c4", "c3c4", "b5c4", "h8h7", "e7e5"], "solver_cp": -6, "maia": "b6c4", "maia_drop": 35.6}
+{"key": "xB333fwA-75", "pv": ["a8a6"], "solver_cp": 238}
+{"key": "OPw13L9f-22", "pv": ["d7c5", "b3c2", "a8c8", "c2b1", "d8d7"], "solver_cp": 310}
+{"key": "OPw13L9f-23", "pv": ["d3d4", "g8h8", "f3h4", "f5e6", "d2e4"], "solver_cp": -73, "maia": "f5e6", "maia_drop": 17.9}
+{"key": "OPw13L9f-24", "pv": ["d7c5", "b3c2", "a8c8", "c2b1", "d8d7"], "solver_cp": 262}
+{"key": "OPw13L9f-25", "pv": ["d3d4"], "solver_cp": -102, "maia": "f5e6", "maia_drop": 17.4}
+{"key": "OPw13L9f-26", "pv": ["d7c5", "b3c2", "a8c8", "f3h4", "c5d3"], "solver_cp": 320}
+{"key": "OPw13L9f-38", "pv": ["d6a3", "b2a3", "e5e4", "f1b1", "f8e8"], "solver_cp": 498}
+{"key": "OPw13L9f-41", "pv": ["d4e5", "d7f5", "h4g3", "b3c5", "a3b2"], "solver_cp": -160, "maia": "f8e8", "maia_drop": 21.7}
+{"key": "OPw13L9f-43", "pv": ["f3g5", "d8g5", "h4g5", "b3d2", "f1a1"], "solver_cp": 681, "maia": "f6e5", "maia_drop": 54.6}
