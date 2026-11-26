@@ -83,21 +83,21 @@
    "focus": "fork",
    "focus_name": "Allowing forks",
    "start": "2026-11-23 09:30",
-   "games": 9,
-   "analysed": 9,
+   "games": 20,
+   "analysed": 20,
    "complete": false,
    "from": "2026-11-23",
-   "to": "2026-11-24",
-   "focus_blunders": 0,
-   "focus_blunders_per50": 0.0,
+   "to": "2026-11-25",
+   "focus_blunders": 1,
+   "focus_blunders_per50": 2.5,
    "baseline_per50": 8.1,
    "baseline_sd": 2.4,
-   "points_lost_per50": 0.0,
-   "all_blunders_per_game": 2.44,
-   "score_pct": 55.6,
-   "vs_expected": 1.5,
-   "rating_end": 1859,
-   "verdict": "for få partier ennå"
+   "points_lost_per50": 0.48,
+   "all_blunders_per_game": 2.5,
+   "score_pct": 45.0,
+   "vs_expected": -7.0,
+   "rating_end": 1842,
+   "verdict": "klar forbedring"
   }
  ]
 }
