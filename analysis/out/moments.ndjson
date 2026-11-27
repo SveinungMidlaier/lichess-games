@@ -16828,3 +16828,11 @@
 {"key": "9acsQfU0-60", "pv": ["b8a8", "d3b3", "a8e8", "h3h4", "g5h7"], "solver_cp": 693, "maia": "a8b8", "maia_drop": 8.0}
 {"key": "7RwVyzSO-20", "pv": ["c8c4"], "solver_cp": 268}
 {"key": "7RwVyzSO-23", "pv": ["c3e4"], "solver_cp": -76, "maia": "d8c7", "maia_drop": 18.4}
+{"key": "zz7mBqEN-40", "pv": ["e7g5", "f4g3", "g5c1", "f1c1", "a8b8"], "solver_cp": 300, "maia": "f1d1", "maia_drop": 0.0}
+{"key": "zz7mBqEN-41", "pv": ["f1d1", "a8d8", "g2g3", "c7a5", "f4b4"], "solver_cp": 0}
+{"key": "zz7mBqEN-45", "pv": ["f4a4", "d8b8", "h2h4", "h7h6", "a4e4"], "solver_cp": 695}
+{"key": "zz7mBqEN-46", "pv": ["a4d1", "d2d1", "c7c5", "d6c4", "d8d1"], "solver_cp": 690, "maia": "f4a4", "maia_drop": 0.0}
+{"key": "s1hxySmD-55", "pv": ["b4c4", "c7b6", "g1h2", "c6c4", "c1c4"], "solver_cp": 652, "maia": "d5e6", "maia_drop": 1.1}
+{"key": "2a2L2U1f-10", "pv": ["d4e4", "d1e2", "e4e2", "e1e2", "e8f7"], "solver_cp": 625, "maia": "e5f3", "maia_drop": 0.0}
+{"key": "2a2L2U1f-11", "pv": ["d2d3"], "solver_cp": -180}
+{"key": "2a2L2U1f-20", "pv": ["f6g6", "b1c3", "h6f5", "e3e4", "h8f8"], "solver_cp": 488, "maia": "e4e5", "maia_drop": 16.9}
