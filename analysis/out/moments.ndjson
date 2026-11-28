@@ -16836,3 +16836,43 @@
 {"key": "2a2L2U1f-10", "pv": ["d4e4", "d1e2", "e4e2", "e1e2", "e8f7"], "solver_cp": 625, "maia": "e5f3", "maia_drop": 0.0}
 {"key": "2a2L2U1f-11", "pv": ["d2d3"], "solver_cp": -180}
 {"key": "2a2L2U1f-20", "pv": ["f6g6", "b1c3", "h6f5", "e3e4", "h8f8"], "solver_cp": 488, "maia": "e4e5", "maia_drop": 16.9}
+{"key": "1niXEk1h-41", "pv": ["e5e6", "d7c7", "e6f7", "g8h8", "g5e7"], "solver_cp": 683}
+{"key": "1niXEk1h-64", "pv": ["f6e5", "e1e5", "f5f6", "e5e8", "h7h5"], "solver_cp": 0, "maia": "e5d7", "maia_drop": 4.3}
+{"key": "1niXEk1h-69", "pv": ["e7e4", "b3d2", "e4e7", "h7h5", "e7e2"], "solver_cp": 653}
+{"key": "1niXEk1h-70", "pv": ["b3d4", "g1f2", "d4b5", "h2h3", "g4f5"], "solver_cp": -6, "maia": "e7e4", "maia_drop": 0.0}
+{"key": "1niXEk1h-84", "pv": ["c5e6"], "solver_cp": 390, "maia": "e3d4", "maia_drop": 24.9}
+{"key": "1niXEk1h-85", "pv": ["d4e3", "g2d5", "h4h5", "g6h5", "g4h5"], "solver_cp": 10}
+{"key": "1niXEk1h-95", "pv": ["f6g6", "b7d5", "g6d6", "d5a2", "g5g6"], "solver_cp": 211}
+{"key": "1niXEk1h-97", "pv": ["g6b6", "b7e4", "g5g6", "g4h5", "g6g7"], "solver_cp": 521}
+{"key": "IapdinGD-56", "pv": ["c6b6"], "solver_cp": -149, "maia": "f3g5", "maia_drop": 17.4}
+{"key": "IapdinGD-57", "pv": ["b4e1", "d7c8", "b3b6", "c8d7", "b6b5"], "solver_cp": 374}
+{"key": "IapdinGD-62", "pv": ["d7e6", "g5e6", "e7h4", "f2f3", "g8f7"], "solver_cp": 0, "maia": "g5e6", "maia_drop": 0.0}
+{"key": "IapdinGD-65", "pv": ["e6g5", "f7e8", "g5f3", "e7d6", "d2c3"], "solver_cp": 228}
+{"key": "IapdinGD-74", "pv": ["f6d7"], "solver_cp": -33, "maia": "g1f2", "maia_drop": 62.2}
+{"key": "IapdinGD-104", "pv": ["h5h4"], "solver_cp": 354, "maia": "c7b5", "maia_drop": 17.0}
+{"key": "IapdinGD-105", "pv": ["g2g3"], "solver_cp": -19}
+{"key": "xmy9dGLp-13", "pv": ["f3e5"], "solver_cp": 195, "maia": "f8e7", "maia_drop": 7.4}
+{"key": "hwwYX1Dx-22", "pv": ["b6c5", "d4c5", "h7h6", "g5e3", "f6e4"], "solver_cp": 35, "maia": "b1c3", "maia_drop": 0.0}
+{"key": "hwwYX1Dx-42", "pv": ["d6d5", "b3d5", "a8d8", "d5b3", "g5g4"], "solver_cp": 16, "maia": "d1d5", "maia_drop": 15.5}
+{"key": "hwwYX1Dx-47", "pv": ["d5f5"], "solver_cp": 68}
+{"key": "hwwYX1Dx-50", "pv": ["g8h8"], "solver_cp": 103, "maia": "e7f7", "maia_drop": 14.5}
+{"key": "hwwYX1Dx-51", "pv": ["f5f7", "g8h8", "f7h7"], "solver_cp": 999999998}
+{"key": "WYbSNykW-19", "pv": ["g3d6", "c5d4", "c3d4", "f8e8", "d3g6"], "solver_cp": 724, "maia": "c7c5", "maia_drop": 44.7}
+{"key": "WYbSNykW-20", "pv": ["d6g3", "e4e5", "g3e5", "d3g6", "c5d4"], "solver_cp": 401}
+{"key": "WYbSNykW-27", "pv": ["g3d6", "e4f3", "e2f3", "a7a5", "e1g1"], "solver_cp": 652, "maia": "d7f6", "maia_drop": 3.6}
+{"key": "WYbSNykW-47", "pv": ["g3h4", "f7f6", "f4h6", "f5g6", "g1g6"], "solver_cp": 555, "maia": "b5b4", "maia_drop": 19.5}
+{"key": "WYbSNykW-50", "pv": ["e8f8"], "solver_cp": -124}
+{"key": "WYbSNykW-51", "pv": ["g4f6", "d8f6", "g1g5", "f6g6", "g5g6"], "solver_cp": 618, "maia": "b4a3", "maia_drop": 19.9}
+{"key": "WYbSNykW-52", "pv": ["b4a3"], "solver_cp": 4}
+{"key": "WYbSNykW-53", "pv": ["g4f6", "h7h6", "f6g4", "f5g4", "g3g4"], "solver_cp": 358, "maia": "b4a3", "maia_drop": 4.2}
+{"key": "IapdinGD-42", "pv": ["c5c4", "b3c1", "d7c5", "a1a2", "c4d3"], "solver_cp": 326, "maia": "c2d2", "maia_drop": 24.4}
+{"key": "IapdinGD-43", "pv": ["c3c4", "b5c4", "d3c4", "c6a4", "c2d3"], "solver_cp": 55}
+{"key": "IapdinGD-55", "pv": ["b4e1", "c6c8", "b3a2", "c8d7", "g2g3"], "solver_cp": 334}
+{"key": "xmy9dGLp-21", "pv": ["c1f4", "c7d8", "f4b8", "d8b8", "f3d2"], "solver_cp": 461, "maia": "f8b4", "maia_drop": 0.0}
+{"key": "xmy9dGLp-22", "pv": ["g6h5"], "solver_cp": -278}
+{"key": "xmy9dGLp-26", "pv": ["c7b7"], "solver_cp": -186}
+{"key": "xmy9dGLp-56", "pv": ["e4e5"], "solver_cp": -1}
+{"key": "xmy9dGLp-71", "pv": ["e5e6", "c6c5", "d5d6", "c5c6", "d6e7"], "solver_cp": 626, "maia": "c7d7", "maia_drop": 24.5}
+{"key": "1niXEk1h-33", "pv": ["d3b5"], "solver_cp": 80}
+{"key": "1niXEk1h-34", "pv": ["c6b4", "d3b3", "b4c2", "a1c1", "c2e1"], "solver_cp": 355, "maia": "a4b5", "maia_drop": 35.8}
+{"key": "1niXEk1h-35", "pv": ["d4d5"], "solver_cp": 80}
